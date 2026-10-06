@@ -1,4 +1,4 @@
-name: Refresh FAA repos
+name: Refresh SWIM repos
 
 on:
   schedule:
@@ -9,11 +9,11 @@ permissions:
   contents: write
 
 concurrency:
-  group: refresh-adsb
+  group: refresh-swim
   cancel-in-progress: true
 
 jobs:
-  faa:
+  swim:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -23,8 +23,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Pull FAA AADC repos
-        run: python scripts/refresh_faa.py
+      - name: Install TFMS client
+        run: pip install solace-pubsubplus
+      - name: Read TFMS flight plans
+        env:
+          SWIM_PASSWORD: ${{ secrets.SWIM_PASSWORD }}
+        run: python scripts/refresh_swim.py
       - name: Commit flights
         run: |
           git config user.name "github-actions[bot]"
@@ -34,6 +38,6 @@ jobs:
             echo "No change"
             exit 0
           fi
-          git commit -m "FAA AADC repo flights"
+          git commit -m "TFMS SWIM repo flights"
           git pull --rebase origin main
           git push origin HEAD:main
