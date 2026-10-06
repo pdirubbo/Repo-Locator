@@ -22,7 +22,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install TFMS client
+        run: pip install solace-pubsubplus
       - name: Find airborne 8xxx/9xxx flights
+        env:
+          SWIM_PASSWORD: ${{ secrets.SWIM_PASSWORD }}
         run: python scripts/refresh_repos.py
       - name: Commit updated flights
         run: |
