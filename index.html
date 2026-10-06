@@ -21,12 +21,15 @@
 </style>
 </head>
 <body>
-<header><div><h1><span>REPO</span> LOCATOR</h1><div class="sub" id="sub">Loading flights.json</div></div><div class="chip">Airborne <b id="air">0</b></div></header>
-<main><div id="map"></div><section class="side"><div class="toolbar"><button id="refresh">Refresh</button><button class="filter on" data-f="all">All repos</button><button class="filter" data-f="9">9xxx</button><button class="filter" data-f="8">8xxx</button><button class="filter" data-f="reg">Regional</button><button class="filter" data-f="pax">Passenger</button></div><div class="table-wrap"><table><thead><tr><th>Callsign</th><th>Operator</th><th>Origin</th><th>Destination</th><th>Alt</th><th>GS</th></tr></thead><tbody id="rows"></tbody></table></div><div class="note">Refresh reloads flights.json every 15 minutes. A canceled flight is added only when the tail's next flight number is not a normal schedule on that city pair.</div></section></main>
+<header><div><h1><span>REPO</span> LOCATOR</h1><div class="sub" id="sub">Loading</div></div><div class="chip">Airborne <b id="air">0</b></div></header>
+<main><div id="map"></div><section class="side"><div class="toolbar"><button id="refresh">Refresh</button><button class="filter on" data-f="all">All repos</button><button class="filter" data-f="9">9xxx</button><button class="filter" data-f="8">8xxx</button><button class="filter" data-f="reg">Regional</button><button class="filter" data-f="pax">Passenger</button></div><div class="table-wrap"><table><thead><tr><th>Callsign</th><th>Operator</th><th>Origin</th><th>Destination</th><th>Alt</th><th>GS</th></tr></thead><tbody id="rows"></tbody></table></div><div class="note">Refresh now asks ADS-B directly. The old button only reloaded a file that had not changed.</div></section></main>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 let FLIGHTS = [];
 const REG = new Set("SKW RPA EDV ENY JIA PDT ASH QXE UCA GJS AWI JZA POE SIL KAP".split(" "));
+const OPS = {DAL:"Delta",SWA:"Southwest",FFT:"Frontier",JBU:"JetBlue",AAL:"American",UAL:"United",ASA:"Alaska",SKW:"SkyWest",RPA:"Republic",EDV:"Endeavor",ENY:"Envoy",JIA:"PSA",PDT:"Piedmont",GTI:"Atlas Air",UAE:"Emirates SkyCargo",QTR:"Qatar Cargo"};
+const CARGO = new Set("GTI UAE QTR FDX UPS CJT".split(" "));
+const HUBS = [[33.64,-84.43],[40.64,-73.78],[32.90,-97.04],[33.94,-118.41],[39.86,-104.67],[41.97,-87.91],[44.88,-93.22],[42.21,-83.35],[35.21,-80.94],[39.87,-75.24]];
 const regional = f => f.regional || REG.has((f.callsign||"").slice(0,3));
 const color = f => f.cargo ? "#b388ff" : regional(f) ? "#7ddea2" : f.band === "9" ? "#f0b429" : "#3ec6e0";
 const flying = f => f.alt !== "ground" && Number(f.alt) > 100;
@@ -53,22 +56,48 @@ function render(){
   document.getElementById("air").textContent=shown.filter(flying).length;
   document.querySelectorAll("#rows tr").forEach(tr=>tr.addEventListener("click",()=>select(tr.dataset.cs)));
 }
-document.querySelectorAll("button.filter").forEach(b=>b.addEventListener("click",()=>{ document.querySelectorAll("button.filter").forEach(x=>x.classList.remove("on")); b.classList.add("on"); active=b.dataset.f; render(); }));
+async function liveScan(){
+  const found = {};
+  for (const [lat,lon] of HUBS){
+    for (const base of [`https://api.adsb.lol/v2/point/${lat}/${lon}/200`,`https://api.airplanes.live/v2/point/${lat}/${lon}/200`]){
+      try {
+        const data = await (await fetch(base)).json();
+        for (const ac of data.ac||[]){
+          const cs = (ac.flight||"").trim().toUpperCase();
+          const m = cs.match(/^[A-Z]{0,3}([89]\d{3})$/);
+          if (!m || ac.lat==null) continue;
+          const prefix = cs.length>4 ? cs.slice(0,3) : "";
+          const alt = ac.alt_baro;
+          const flyingNow = String(alt).match(/^\d+$/) && Number(alt)>100;
+          const prev = FLIGHTS.find(f=>f.callsign===cs) || {};
+          found[cs] = Object.assign({}, prev, {callsign:cs, reg:ac.r||prev.reg||"", type:ac.t||prev.type||"", lat:ac.lat, lon:ac.lon, alt: flyingNow?Number(alt):"ground", gs:ac.gs||0, track:ac.track||0, hex:ac.hex||"", op:OPS[prefix]||prefix||"Unknown", band:m[1][0], cargo:CARGO.has(prefix), regional:REG.has(prefix)});
+        }
+        break;
+      } catch(e) {}
+    }
+  }
+  return Object.values(found);
+}
 async function refresh(){
   const btn=document.getElementById("refresh");
   btn.textContent="Refreshing";
-  try {
-    const res=await fetch("flights.json?t="+Date.now(), {cache:"no-store"});
-    const data=await res.json();
-    FLIGHTS=data.flights||[];
-    const stamp=new Date().toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"});
-    document.getElementById("sub").textContent="Updated "+stamp+" \u00b7 file "+(data.updated||"")+" \u00b7 every 15 min";
-    render();
-  } catch(e) {
-    document.getElementById("sub").textContent="Refresh failed";
+  let live = [];
+  try { live = await liveScan(); } catch(e) {}
+  if (live.length){
+    const seen = new Set(live.map(f=>f.callsign));
+    FLIGHTS = live.concat(FLIGHTS.filter(f=>!seen.has(f.callsign) && f.olat!=null).map(f=>Object.assign({}, f, {alt:"ground", gs:0})));
+    document.getElementById("sub").textContent="Live ADS-B "+new Date().toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"})+" \u00b7 "+live.length+" repos";
+  } else {
+    try {
+      const data = await (await fetch("flights.json?t="+Date.now(), {cache:"no-store"})).json();
+      FLIGHTS = data.flights||[];
+      document.getElementById("sub").textContent="File "+(data.updated||"")+" \u00b7 ADS-B blocked from the browser";
+    } catch(e) { document.getElementById("sub").textContent="Refresh failed"; }
   }
+  render();
   btn.textContent="Refresh";
 }
+document.querySelectorAll("button.filter").forEach(b=>b.addEventListener("click",()=>{ document.querySelectorAll("button.filter").forEach(x=>x.classList.remove("on")); b.classList.add("on"); active=b.dataset.f; render(); }));
 document.getElementById("refresh").addEventListener("click", refresh);
 refresh();
 setInterval(refresh, 15*60*1000);
