@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -27,5 +29,6 @@ jobs:
             echo "No change"
           else
             git commit -m "Refresh airborne 8xxx/9xxx repos"
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
