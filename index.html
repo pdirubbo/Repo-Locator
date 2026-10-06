@@ -12,7 +12,9 @@
   h1 { font-size:18px; margin:0; } h1 span { color:var(--amber); } .sub,.note { color:var(--muted); font-size:12px; }
   .chip { border:1px solid var(--line); background:#1a2330; border-radius:999px; padding:4px 10px; color:var(--muted); } .chip b { color:var(--text); }
   main { display:grid; grid-template-columns:1.15fr .85fr; height:calc(100% - 62px); } #map { height:100%; } .side { display:flex; flex-direction:column; border-left:1px solid var(--line); min-width:0; }
-  .toolbar { display:flex; gap:8px; padding:10px; border-bottom:1px solid var(--line); flex-wrap:wrap; } button.filter { background:#1a2330; color:var(--text); border:1px solid var(--line); border-radius:8px; padding:6px 10px; } button.filter.on { border-color:var(--amber); color:var(--amber); }
+  .toolbar { display:flex; gap:8px; padding:10px; border-bottom:1px solid var(--line); flex-wrap:wrap; align-items:center; }
+  button.filter, #refresh { background:#1a2330; color:var(--text); border:1px solid var(--line); border-radius:8px; padding:6px 10px; cursor:pointer; }
+  button.filter.on, #refresh { border-color:var(--amber); color:var(--amber); }
   .table-wrap { overflow:auto; flex:1; } table { width:100%; border-collapse:collapse; font-size:12.5px; } th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); white-space:nowrap; } th { position:sticky; top:0; background:#182230; color:var(--muted); } tr { cursor:pointer; } tr:hover,tr.active { background:#1c2836; }
   .note { padding:8px 10px; border-top:1px solid var(--line); } .plane { background:none; border:0; } .leaflet-tooltip.apt { background:#101720; color:#e7eef6; border:1px solid #263140; }
   @media (max-width:900px) { main { grid-template-columns:1fr; grid-template-rows:46% 54%; height:auto; } #map { min-height:320px; } .side { border-left:0; border-top:1px solid var(--line); } }
@@ -20,11 +22,11 @@
 </head>
 <body>
 <header><div><h1><span>REPO</span> LOCATOR</h1><div class="sub" id="sub">Loading flights.json</div></div><div class="chip">Airborne <b id="air">0</b></div></header>
-<main><div id="map"></div><section class="side"><div class="toolbar"><button class="filter on" data-f="all">All repos</button><button class="filter" data-f="9">9xxx</button><button class="filter" data-f="8">8xxx</button><button class="filter" data-f="reg">Regional</button><button class="filter" data-f="pax">Passenger</button></div><div class="table-wrap"><table><thead><tr><th>Callsign</th><th>Operator</th><th>Origin</th><th>Destination</th><th>Alt</th><th>GS</th></tr></thead><tbody id="rows"></tbody></table></div><div class="note">Regionals are included: SkyWest, Republic, Endeavor, Envoy, PSA, Piedmont, Mesa, Horizon, CommutAir, GoJet, Jazz, and the European cityhoppers. Click a row to draw the route.</div></section></main>
+<main><div id="map"></div><section class="side"><div class="toolbar"><button id="refresh">Refresh</button><button class="filter on" data-f="all">All repos</button><button class="filter" data-f="9">9xxx</button><button class="filter" data-f="8">8xxx</button><button class="filter" data-f="reg">Regional</button><button class="filter" data-f="pax">Passenger</button></div><div class="table-wrap"><table><thead><tr><th>Callsign</th><th>Operator</th><th>Origin</th><th>Destination</th><th>Alt</th><th>GS</th></tr></thead><tbody id="rows"></tbody></table></div><div class="note" id="note">Refresh reloads the latest flights.json. GitHub also writes that file every 15 minutes.</div></section></main>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 let FLIGHTS = [];
-const REG = new Set("SKW RPA EDV ENY JIA PDT ASH QXE UCA GJS AWI JZA POE SIL KAP VTE AMF BTK WSN FDY RVF CFE KLC CLH DLA HOP LOG WIF".split(" "));
+const REG = new Set("SKW RPA EDV ENY JIA PDT ASH QXE UCA GJS AWI JZA POE SIL KAP".split(" "));
 const regional = f => f.regional || REG.has((f.callsign||"").slice(0,3));
 const color = f => f.cargo ? "#b388ff" : regional(f) ? "#7ddea2" : f.band === "9" ? "#f0b429" : "#3ec6e0";
 const flying = f => f.alt !== "ground" && Number(f.alt) > 100;
@@ -47,12 +49,30 @@ function render(){
   for (const k in markers) delete markers[k];
   FLIGHTS.forEach(f=>{ if(!flying(f)||!show(f)) return; const m=L.marker([f.lat,f.lon],{icon:planeIcon(f),zIndexOffset:500}).addTo(map); m.bindPopup(`<b>${f.callsign}</b> ${f.op}<br>${f.origin} \u2192 ${f.dest}`); m.on("click",()=>select(f.callsign)); markers[f.callsign]=m; });
   const shown=FLIGHTS.filter(show);
-  document.getElementById("rows").innerHTML=shown.map(f=>`<tr data-cs="${f.callsign}"><td><b>${f.callsign}</b></td><td>${f.op}${regional(f)?" · regional":""}</td><td>${f.origin}</td><td>${f.dest}${f.via?" via "+f.via:""}</td><td>${altText(f.alt)}</td><td>${Math.round(f.gs||0)}</td></tr>`).join("");
+  document.getElementById("rows").innerHTML=shown.map(f=>`<tr data-cs="${f.callsign}"><td><b>${f.callsign}</b></td><td>${f.op}${regional(f)?" \u00b7 regional":""}</td><td>${f.origin}</td><td>${f.dest}${f.via?" via "+f.via:""}</td><td>${altText(f.alt)}</td><td>${Math.round(f.gs||0)}</td></tr>`).join("");
   document.getElementById("air").textContent=shown.filter(flying).length;
   document.querySelectorAll("#rows tr").forEach(tr=>tr.addEventListener("click",()=>select(tr.dataset.cs)));
 }
 document.querySelectorAll("button.filter").forEach(b=>b.addEventListener("click",()=>{ document.querySelectorAll("button.filter").forEach(x=>x.classList.remove("on")); b.classList.add("on"); active=b.dataset.f; render(); }));
-fetch("flights.json").then(r=>r.json()).then(data=>{ FLIGHTS=data.flights||[]; document.getElementById("sub").textContent="ADS-B refresh "+(data.updated||"")+" · regionals included"; render(); setTimeout(()=>map.invalidateSize(),200); }).catch(()=>{ document.getElementById("sub").textContent="Could not load flights.json"; });
+async function refresh(){
+  const btn=document.getElementById("refresh");
+  btn.textContent="Refreshing";
+  try {
+    const res=await fetch("flights.json?t="+Date.now(), {cache:"no-store"});
+    const data=await res.json();
+    FLIGHTS=data.flights||[];
+    const stamp=new Date().toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"});
+    document.getElementById("sub").textContent="Updated "+stamp+" \u00b7 file "+(data.updated||"")+" \u00b7 every 15 min";
+    render();
+  } catch(e) {
+    document.getElementById("sub").textContent="Refresh failed";
+  }
+  btn.textContent="Refresh";
+}
+document.getElementById("refresh").addEventListener("click", refresh);
+refresh();
+setInterval(refresh, 15*60*1000);
+setTimeout(()=>map.invalidateSize(), 200);
 </script>
 </body>
 </html>
