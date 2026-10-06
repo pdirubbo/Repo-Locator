@@ -1,4 +1,4 @@
-name: Refresh ADS-B
+name: Refresh FAA repos
 
 on:
   schedule:
@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  positions:
+  faa:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -23,17 +23,17 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Pull positions
-        run: python scripts/refresh_adsb.py
-      - name: Commit positions
+      - name: Pull FAA AADC repos
+        run: python scripts/refresh_faa.py
+      - name: Commit flights
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add flights.json
           if git diff --cached --quiet; then
-            echo "No position change"
+            echo "No change"
             exit 0
           fi
-          git commit -m "ADS-B positions"
+          git commit -m "FAA AADC repo flights"
           git pull --rebase origin main
           git push origin HEAD:main
