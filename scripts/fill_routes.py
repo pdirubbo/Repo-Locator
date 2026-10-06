@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fill missing routes from adsb.lol, adsbdb, then TFMS."""
+"""Fill missing routes from adsb.lol, adsbdb, FlightAware, then TFMS."""
 import json, os, re, time, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -39,12 +39,12 @@ def pack(origin, dest, route, note):
     return row
 
 def get(url):
-    req = urllib.request.Request(url, headers={"User-Agent":"repo-locator/1.0"})
-    with urllib.request.urlopen(req, timeout=15) as resp:
-        return json.loads(resp.read().decode() or "{}")
+    req = urllib.request.Request(url, headers={"User-Agent":"Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=20) as resp:
+        return resp.read().decode("utf-8", "replace")
 
 def adsb_lol(key):
-    data = get(f"https://api.adsb.lol/api/0/route/{key}")
+    data = json.loads(get(f"https://api.adsb.lol/api/0/route/{key}") or "{}")
     airports = data.get("_airports") or []
     if len(airports) < 2:
         return {}
@@ -59,7 +59,7 @@ def adsb_lol(key):
     return row
 
 def adsbdb(cs):
-    data = get(f"https://api.adsbdb.com/v0/callsign/{cs}")
+    data = json.loads(get(f"https://api.adsbdb.com/v0/callsign/{cs}") or "{}")
     fr = (data.get("response") or {}).get("flightroute") or {}
     o, d = fr.get("origin") or {}, fr.get("destination") or {}
     oc, dc = o.get("iata_code") or o.get("icao_code"), d.get("iata_code") or d.get("icao_code")
@@ -70,8 +70,26 @@ def adsbdb(cs):
         row.update(olat=o.get("latitude"), olon=o.get("longitude"), dlat=d.get("latitude"), dlon=d.get("longitude"))
     return row
 
+def flightaware(cs):
+    body = get(f"https://www.flightaware.com/live/flight/{cs}")
+    m = re.search(r"var trackpollBootstrap = (\{.*?\});\s*</script>", body, re.S)
+    if not m:
+        return {}
+    data = json.loads(m.group(1))
+    flight = next(iter((data.get("flights") or {}).values()), {})
+    legs = ((flight.get("activityLog") or {}).get("flights") or [])
+    if not legs:
+        return {}
+    o, d = legs[0].get("origin") or {}, legs[0].get("destination") or {}
+    oc, dc = o.get("iata"), d.get("iata")
+    if not oc or not dc:
+        return {}
+    city = lambda a: (a.get("friendlyLocation") or "").split(",")[0]
+    return pack(oc, dc, f"{oc}-{dc}", "FlightAware") | {"origin": f"{oc} {city(o)}".strip(), "dest": f"{dc} {city(d)}".strip()}
+
 def lookup(row):
-    for fn, key in ((adsb_lol, row.get("callsign")), (adsbdb, row.get("callsign")), (adsb_lol, row.get("reg"))):
+    cs = row.get("callsign")
+    for fn, key in ((adsb_lol, cs), (adsbdb, cs), (flightaware, cs), (adsb_lol, row.get("reg"))):
         if not key:
             continue
         try:
@@ -80,7 +98,7 @@ def lookup(row):
             found = {}
         if found:
             return found
-        time.sleep(0.1)
+        time.sleep(0.2)
     return {}
 
 def tfms(needed):
