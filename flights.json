@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-06T17:37:34Z",
-  "source": "adsb",
+  "updated": "2026-10-06T17:39:18Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9786",
@@ -39,10 +39,14 @@
       "cargo": false,
       "regional": false,
       "callsign": "AAY9204",
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B"
+      "origin": "VPS VPS",
+      "dest": "PIE PIE",
+      "route": "VPS-PIE",
+      "routeNote": "adsbdb route",
+      "olat": 30.4832,
+      "olon": -86.525398,
+      "dlat": 27.91020012,
+      "dlon": -82.68740082
     },
     {
       "callsign": "ANA8418",
@@ -159,10 +163,14 @@
       "cargo": false,
       "regional": false,
       "callsign": "DAL8933",
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B"
+      "origin": "CLT Charlotte",
+      "dest": "PHL Philadelphia",
+      "route": "CLT-PHL",
+      "routeNote": "adsb.lol route",
+      "olat": 35.214001,
+      "olon": -80.9431,
+      "dlat": 39.871899,
+      "dlon": -75.241096
     },
     {
       "lat": 42.307232,
@@ -178,10 +186,14 @@
       "cargo": false,
       "regional": false,
       "callsign": "DAL9925",
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B"
+      "origin": "BOS Boston",
+      "dest": "AMS AMS",
+      "route": "BOS-AMS",
+      "routeNote": "adsbdb route",
+      "olat": 42.3643,
+      "olon": -71.005203,
+      "dlat": 52.308601,
+      "dlon": 4.76389
     },
     {
       "lat": 31.230081,
@@ -197,10 +209,14 @@
       "cargo": false,
       "regional": false,
       "callsign": "DAL9969",
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B"
+      "origin": "JFK New York",
+      "dest": "ATL Atlanta",
+      "route": "JFK-ATL",
+      "routeNote": "adsbdb route",
+      "olat": 40.639801,
+      "olon": -73.7789,
+      "dlat": 33.6367,
+      "dlon": -84.428101
     },
     {
       "lat": 32.931798,
@@ -216,10 +232,14 @@
       "cargo": false,
       "regional": true,
       "callsign": "ENY9868",
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B"
+      "origin": "ORD Chicago",
+      "dest": "MKE MKE",
+      "route": "ORD-MKE",
+      "routeNote": "adsbdb route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 42.94720077514648,
+      "dlon": -87.89659881591797
     },
     {
       "callsign": "FFT9401",
@@ -256,10 +276,14 @@
       "cargo": true,
       "regional": false,
       "callsign": "GTI8254",
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B"
+      "origin": "ORD Chicago",
+      "dest": "EHU EHU",
+      "route": "ORD-ICN-EHU",
+      "routeNote": "adsb.lol route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 30.342778,
+      "dlon": 115.029722
     },
     {
       "callsign": "GTI8814",
@@ -382,10 +406,14 @@
       "cargo": false,
       "regional": false,
       "callsign": "SWA8504",
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B"
+      "origin": "BWI Baltimore",
+      "dest": "BUF BUF",
+      "route": "BWI-BUF",
+      "routeNote": "adsbdb route",
+      "olat": 39.1754,
+      "olon": -76.668297,
+      "dlat": 42.94049835,
+      "dlon": -78.73220062
     },
     {
       "callsign": "SWA9000",
@@ -468,10 +496,14 @@
       "cargo": false,
       "regional": false,
       "callsign": "UAL8160",
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B"
+      "origin": "YYZ YYZ",
+      "dest": "DEL DEL",
+      "route": "YYZ-DEL",
+      "routeNote": "adsbdb route",
+      "olat": 43.6772003174,
+      "olon": -79.63059997559999,
+      "dlat": 28.5665,
+      "dlon": 77.103104
     },
     {
       "callsign": "UPS9504",
