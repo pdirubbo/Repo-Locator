@@ -1,0 +1,40 @@
+name: Refresh ADS-B
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-adsb
+  cancel-in-progress: false
+
+jobs:
+  positions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Pull positions once a minute
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for i in 1 2 3 4 5; do
+            python scripts/refresh_adsb.py
+            git add flights.json
+            if git diff --cached --quiet; then
+              echo "No position change"
+            else
+              git commit -m "ADS-B positions"
+              git pull --rebase origin main
+              git push origin HEAD:main
+            fi
+            if [ "$i" != 5 ]; then sleep 60; fi
+          done
