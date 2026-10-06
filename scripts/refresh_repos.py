@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh commercial 8xxx/9xxx repos. Filed plans come from TFMS when SWIM_PASSWORD is set."""
+"""Refresh commercial 8xxx/9xxx repos. Filed TFMS plans stay in the table with no ADS-B position."""
 import json, os, re, time, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -142,6 +142,17 @@ def scan():
         time.sleep(0.15)
     return found
 
+def filed_row(cs, plan):
+    prefix = cs[:3]
+    row = {
+        "callsign": cs, "reg": "", "type": "", "lat": None, "lon": None,
+        "alt": "filed", "gs": 0, "track": 0, "hex": "",
+        "op": OPS.get(prefix, prefix), "band": cs[3],
+        "cargo": prefix in CARGO, "regional": prefix in REGIONAL,
+    }
+    row.update(plan)
+    return row
+
 def main():
     plans = {}
     try:
@@ -151,10 +162,7 @@ def main():
     prev = json.loads(OUT.read_text()) if OUT.exists() else {"flights": []}
     old = {f["callsign"]: f for f in prev.get("flights", []) if CALL.match(f.get("callsign",""))}
     live = scan()
-    if not live:
-        print("no commercial ADS-B results, leaving flights.json unchanged")
-        return
-    merged = []
+    merged, seen = [], set()
     for cs, row in live.items():
         kept = old.get(cs, {})
         for key in ("origin","dest","olat","olon","dlat","dlon","routeNote"):
@@ -163,9 +171,22 @@ def main():
         if cs in plans:
             row.update(plans[cs])
         merged.append(row)
+        seen.add(cs)
+    for cs, plan in plans.items():
+        if cs not in seen:
+            merged.append(filed_row(cs, plan))
+            seen.add(cs)
+    for cs, kept in old.items():
+        if cs in seen:
+            continue
+        if kept.get("routeNote") == "TFMS filed plan" and kept.get("lat") in (None, ""):
+            merged.append(kept)
+    if not merged:
+        print("no ADS-B flights and no filed repo plans")
+        return
     merged.sort(key=lambda f: f["callsign"])
     OUT.write_text(json.dumps({"updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "source": "adsb+tfms", "flights": merged}, indent=2) + "\n")
-    print(f"wrote {len(merged)} flights, TFMS matches {sum(cs in plans for cs in live)}")
+    print(f"wrote {len(merged)} flights, filed without ADS-B {sum(f.get('alt')=='filed' for f in merged)}")
 
 if __name__ == "__main__":
     main()
