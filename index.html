@@ -21,39 +21,58 @@
 </style>
 </head>
 <body>
-<header><div><h1><span>REPO</span> LOCATOR</h1><div class="sub" id="sub">Loading flights.json</div></div><div class="chip">Airborne <b id="air">0</b></div></header>
-<main><div id="map"></div><section class="side"><div class="toolbar"><button id="refresh">Refresh</button><button class="filter on" data-f="all">All repos</button><button class="filter" data-f="9">9xxx</button><button class="filter" data-f="8">8xxx</button><button class="filter" data-f="reg">Regional</button><button class="filter" data-f="cargo">Cargo</button></div><div class="table-wrap"><table><thead><tr><th>Callsign</th><th>Operator</th><th>Origin</th><th>Destination</th><th>Route</th><th>Alt</th></tr></thead><tbody id="rows"></tbody></table></div><div class="note">Positions refresh about once a minute. Filed routes come from the separate TFMS job. Landed flights are removed.</div></section></main>
+<header><div><h1><span>REPO</span> LOCATOR</h1><div class="sub" id="sub">Loading flights.json</div></div><div class="chip">Routes <b id="air">0</b></div></header>
+<main><div id="map"></div><section class="side"><div class="toolbar"><button id="refresh">Refresh</button><button class="filter on" data-f="all">All repos</button><button class="filter" data-f="9">9xxx</button><button class="filter" data-f="8">8xxx</button><button class="filter" data-f="reg">Regional</button><button class="filter" data-f="cargo">Cargo</button></div><div class="table-wrap"><table><thead><tr><th>Callsign</th><th>Operator</th><th>Origin</th><th>Destination</th><th>Route</th><th>Alt</th></tr></thead><tbody id="rows"></tbody></table></div><div class="note">Every filed route is a line. Click a row to highlight that city pair.</div></section></main>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 let FLIGHTS = [];
 const REG = new Set("SKW RPA EDV ENY JIA PDT ASH QXE UCA GJS AWI JZA POE SIL".split(" "));
-const CARGO = new Set("GTI UAE QTR FDX UPS CJT KAL AJT CLX MTN BVN IRO".split(" "));
+const CARGO = new Set("GTI UAE QTR FDX UPS CJT KAL AJT CLX MTN BVN IRO CAO CCA".split(" "));
 const GA = new Set("C172 C152 C182 C206 C210 PA28 PA32 BE35 BE36 BE58 SR22 CH7A".split(" "));
 const regional = f => f.regional || REG.has((f.callsign||"").slice(0,3));
 const color = f => f.cargo ? "#b388ff" : regional(f) ? "#7ddea2" : f.band === "9" ? "#f0b429" : "#3ec6e0";
 const flying = f => f.lat != null && f.alt !== "ground" && f.alt !== "filed" && Number(f.alt) > 100;
 const keep = f => /^[A-Z]{3}[89]\d{3}$/.test(f.callsign||"") && !GA.has((f.type||"").toUpperCase()) && f.alt !== "ground";
 const altText = a => a === "filed" ? "FILED" : Number(a).toLocaleString()+" ft";
-const map = L.map("map", {worldCopyJump:true}).setView([36,-30], 3);
+const map = L.map("map", {worldCopyJump:true}).setView([39,-97], 4);
 L.tileLayer("https://basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png?key=cb1_4b02_1_f58b8a12fcfccf5a56049c12", {attribution:"&copy; OSM &copy; CARTO", maxZoom:20}).addTo(map);
 const markers = {};
-let active = "all", routeLine = null, routeEnds = [];
+const routeLayer = L.layerGroup().addTo(map);
+let active = "all", selected = null;
 function planeIcon(f) {
   const h = Number(f.track)||0;
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><g transform="rotate(${h} 14 14)"><path d="M14 2 L16.2 12 L24 15.2 L24 17.2 L16.2 15.6 L15.2 24 L17.4 25.4 L17.4 26.6 L14 25.4 L10.6 26.6 L10.6 25.4 L12.8 24 L11.8 15.6 L4 17.2 L4 15.2 L11.8 12 Z" fill="${color(f)}" stroke="#101720" stroke-width="1"/></g></svg>`;
   return L.divIcon({className:"plane", html:svg, iconSize:[28,28], iconAnchor:[14,14]});
 }
 function show(f){ if(!keep(f)) return false; if(active==="9") return f.band==="9"; if(active==="8") return f.band==="8"; if(active==="reg") return regional(f); if(active==="cargo") return !!f.cargo || CARGO.has((f.callsign||"").slice(0,3)); return true; }
-function gc(a,b,n=72){ const r=d=>d*Math.PI/180, lat1=r(a[0]), lon1=r(a[1]), lat2=r(b[0]), lon2=r(b[1]); const d=2*Math.asin(Math.sqrt(Math.sin((lat2-lat1)/2)**2+Math.cos(lat1)*Math.cos(lat2)*Math.sin((lon2-lon1)/2)**2)); if(!d) return [a,b]; const pts=[]; for(let i=0;i<=n;i++){ const f=i/n,A=Math.sin((1-f)*d)/Math.sin(d),B=Math.sin(f*d)/Math.sin(d); const x=A*Math.cos(lat1)*Math.cos(lon1)+B*Math.cos(lat2)*Math.cos(lon2); const y=A*Math.cos(lat1)*Math.sin(lon1)+B*Math.cos(lat2)*Math.sin(lon2); const z=A*Math.sin(lat1)+B*Math.sin(lat2); pts.push([Math.atan2(z,Math.sqrt(x*x+y*y))*180/Math.PI, Math.atan2(y,x)*180/Math.PI]); } return pts; }
-function drawRoute(f){ if(routeLine){ map.removeLayer(routeLine); routeLine=null; } routeEnds.forEach(m=>map.removeLayer(m)); routeEnds=[]; if(f.olat==null||f.dlat==null) return; const stops=[[f.olat,f.olon,f.origin]]; if(f.vlat!=null) stops.push([f.vlat,f.vlon,f.via]); stops.push([f.dlat,f.dlon,f.dest]); let line=[]; for(let i=0;i<stops.length-1;i++) line.push(...gc(stops[i], stops[i+1])); routeLine=L.polyline(line,{color:color(f),weight:3}).addTo(map); stops.forEach(([la,lo,name],i)=>{ const tag=i===0?"Origin":i===stops.length-1?"Destination":"Via"; routeEnds.push(L.circleMarker([la,lo],{radius:6,color:"#fff",weight:2,fillColor:color(f),fillOpacity:1}).bindTooltip(tag+": "+name,{permanent:true,direction:"top",className:"apt"}).addTo(map)); }); map.fitBounds(routeLine.getBounds().pad(0.3)); }
-function select(cs){ document.querySelectorAll("tr").forEach(tr=>tr.classList.toggle("active", tr.dataset.cs===cs)); const f=FLIGHTS.find(x=>x.callsign===cs); if(!f) return; if(flying(f)&&markers[cs]){ map.setView([f.lat,f.lon], Math.max(map.getZoom(),5)); markers[cs].openPopup(); } drawRoute(f); }
+function gc(a,b,n=48){ const r=d=>d*Math.PI/180, lat1=r(a[0]), lon1=r(a[1]), lat2=r(b[0]), lon2=r(b[1]); const d=2*Math.asin(Math.sqrt(Math.sin((lat2-lat1)/2)**2+Math.cos(lat1)*Math.cos(lat2)*Math.sin((lon2-lon1)/2)**2)); if(!d) return [a,b]; const pts=[]; for(let i=0;i<=n;i++){ const f=i/n,A=Math.sin((1-f)*d)/Math.sin(d),B=Math.sin(f*d)/Math.sin(d); const x=A*Math.cos(lat1)*Math.cos(lon1)+B*Math.cos(lat2)*Math.cos(lon2); const y=A*Math.cos(lat1)*Math.sin(lon1)+B*Math.cos(lat2)*Math.sin(lon2); const z=A*Math.sin(lat1)+B*Math.sin(lat2); pts.push([Math.atan2(z,Math.sqrt(x*x+y*y))*180/Math.PI, Math.atan2(y,x)*180/Math.PI]); } return pts; }
+function lineFor(f){ if(f.olat==null||f.dlat==null) return null; const stops=[[f.olat,f.olon]]; if(f.vlat!=null) stops.push([f.vlat,f.vlon]); stops.push([f.dlat,f.dlon]); let line=[]; for(let i=0;i<stops.length-1;i++) line.push(...gc(stops[i], stops[i+1])); return line; }
+function select(cs){ selected=cs; document.querySelectorAll("tr").forEach(tr=>tr.classList.toggle("active", tr.dataset.cs===cs)); render(); const f=FLIGHTS.find(x=>x.callsign===cs); const line=f&&lineFor(f); if(line) map.fitBounds(L.latLngBounds(line).pad(0.3)); }
 function render(){
+  routeLayer.clearLayers();
   Object.values(markers).forEach(m=>map.removeLayer(m));
   for (const k in markers) delete markers[k];
-  FLIGHTS.forEach(f=>{ if(!flying(f)||!show(f)) return; const m=L.marker([f.lat,f.lon],{icon:planeIcon(f),zIndexOffset:500}).addTo(map); m.bindPopup(`<b>${f.callsign}</b> ${f.op}<br>${f.origin} \u2192 ${f.dest}<br>${f.route||""}`); m.on("click",()=>select(f.callsign)); markers[f.callsign]=m; });
   const shown=FLIGHTS.filter(show);
+  shown.forEach(f=>{
+    const line=lineFor(f);
+    if(!line) return;
+    const on=f.callsign===selected;
+    const pl=L.polyline(line,{color:color(f),weight:on?4:2,opacity:on?1:0.75}).bindTooltip(`${f.callsign} ${f.origin} \u2192 ${f.dest}`,{sticky:true});
+    pl.on("click",()=>select(f.callsign));
+    routeLayer.addLayer(pl);
+    if(on){
+      [[f.olat,f.olon,f.origin],[f.dlat,f.dlon,f.dest]].forEach(([la,lo,name])=>{
+        routeLayer.addLayer(L.circleMarker([la,lo],{radius:5,color:"#fff",weight:2,fillColor:color(f),fillOpacity:1}).bindTooltip(name,{permanent:true,direction:"top",className:"apt"}));
+      });
+    }
+    if(flying(f)){
+      const m=L.marker([f.lat,f.lon],{icon:planeIcon(f),zIndexOffset:500}).addTo(map);
+      m.on("click",()=>select(f.callsign));
+      markers[f.callsign]=m;
+    }
+  });
   document.getElementById("rows").innerHTML=shown.map(f=>`<tr data-cs="${f.callsign}"><td><b>${f.callsign}</b></td><td>${f.op}${regional(f)?" \u00b7 regional":""}</td><td>${f.origin}</td><td>${f.dest}</td><td>${f.route||"\u2014"}</td><td>${altText(f.alt)}</td></tr>`).join("");
-  document.getElementById("air").textContent=shown.filter(flying).length;
+  document.getElementById("air").textContent=shown.filter(f=>lineFor(f)).length;
   document.querySelectorAll("#rows tr").forEach(tr=>tr.addEventListener("click",()=>select(tr.dataset.cs)));
 }
 async function refresh(){
