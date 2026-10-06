@@ -31,12 +31,8 @@
   th { position: sticky; top: 0; background: #182230; color: var(--muted); font-weight: 600; }
   tr { cursor: pointer; }
   tr:hover, tr.active { background: #1c2836; }
-  .tag { border-radius: 999px; padding: 2px 7px; font-size: 11px; }
-  .tag.n { background: rgba(240,180,41,.15); color: var(--amber); }
-  .tag.e { background: rgba(62,198,224,.14); color: var(--cyan); }
-  .tag.c { background: rgba(179,136,255,.16); color: var(--violet); }
   .note { padding: 8px 10px; color: var(--muted); font-size: 11px; border-top: 1px solid var(--line); }
-  .leaflet-popup-content { margin: 8px 10px; font-size: 12.5px; }
+  .leaflet-tooltip.apt { background: #101720; color: #e7eef6; border: 1px solid #263140; }
   @media (max-width: 900px) {
     main { grid-template-columns: 1fr; grid-template-rows: 46% 54%; height: auto; }
     #map { min-height: 320px; }
@@ -74,7 +70,7 @@
       </table>
     </div>
     <div class="note">
-      Routes from the adsb.lol route lookup. A dash means no filed route was returned. Ground flights with no route show the airport they were sitting at as origin.
+      Planes on the map are airborne ADS-B positions only. Ground repos stay in the table. Click a verified row to draw the route.
     </div>
   </section>
 </main>
@@ -83,18 +79,18 @@
 const FLIGHTS = [
   {"callsign":"JBU9999","reg":"N4062J","type":"A21N","lat":42.3657,"lon":-71.0268,"alt":"ground","gs":0,"track":0,"hex":"a4c592","region":"BOS","op":"JetBlue","band":"9","cargo":false,"origin":"BOS Boston","dest":"\u2014","via":"","routeNote":"on ground at BOS, no filed route"},
   {"callsign":"FFT9135","reg":"N335FR","type":"A20N","lat":28.575,"lon":-80.332,"alt":20400,"gs":388.2,"track":333,"hex":"a3a8ef","region":"MCO","op":"Frontier","band":"9","cargo":false,"origin":"\u2014","dest":"\u2014","via":"","routeNote":"no route filed"},
-  {"callsign":"RYR9534","reg":"EI-EKN","type":"B738","lat":47.211,"lon":10.448,"alt":25150,"gs":400.4,"track":6,"hex":"4ca80e","region":"FRA","op":"Ryanair","band":"9","cargo":false,"origin":"FMM Memmingen","dest":"MLA Luqa","via":"","routeNote":"EDJA-LMML"},
-  {"callsign":"SKW9912","reg":"N613SK","type":"CRJ7","lat":36.852,"lon":-106.931,"alt":30825,"gs":467.9,"track":330,"hex":"a7fb7d","region":"DEN","op":"SkyWest","band":"9","cargo":false,"origin":"\u2014","dest":"\u2014","via":"","routeNote":"no route filed"},
-  {"callsign":"UAE9710","reg":"A6-EWN","type":"B77L","lat":24.837,"lon":55.353,"alt":7575,"gs":281.4,"track":106,"hex":"8966f0","region":"DXB","op":"Emirates SkyCargo","band":"9","cargo":true,"origin":"DWC Dubai","dest":"BLR Bengaluru","via":"","routeNote":"OMDW-VOBL"},
+  {"callsign":"RYR9534","reg":"EI-EKN","type":"B738","lat":44.6068,"lon":11.5712,"alt":37025,"gs":454.9,"track":164,"hex":"4ca80e","region":"FRA","op":"Ryanair","band":"9","cargo":false,"origin":"FMM Memmingen","dest":"MLA Luqa","via":"","routeNote":"FlightAware FMM-MLA","olat":47.9888,"olon":10.2395,"dlat":35.8575,"dlon":14.4775},
+  {"callsign":"SKW9912","reg":"N613SK","type":"CRJ7","lat":38.5651,"lon":-104.6258,"alt":11275,"gs":285.4,"track":6,"hex":"a7fb7d","region":"DEN","op":"SkyWest","band":"9","cargo":false,"origin":"\u2014","dest":"\u2014","via":"","routeNote":"no route filed"},
+  {"callsign":"UAE9710","reg":"A6-EWN","type":"B77L","lat":24.837,"lon":55.353,"alt":7575,"gs":281.4,"track":106,"hex":"8966f0","region":"DXB","op":"Emirates SkyCargo","band":"9","cargo":true,"origin":"DWC Dubai","dest":"BLR Bengaluru","via":"","routeNote":"DWC-BLR, matches Dubai climb","olat":24.8964,"olon":55.1614,"dlat":13.1989,"dlon":77.7066},
   {"callsign":"CJT9002","reg":"C-GCJS","type":"B752","lat":33.4262,"lon":-112.3651,"alt":"ground","gs":0,"track":0,"hex":"c04aed","region":"PHX","op":"Cargojet","band":"9","cargo":true,"origin":"CVG Cincinnati","dest":"YHM Hamilton","via":"","routeNote":"KCVG-CYHM"},
   {"callsign":"GBB9230","reg":"","type":"","lat":52.308,"lon":4.764,"alt":"ground","gs":19.5,"track":0,"hex":"484213","region":"AMS","op":"Unknown","band":"9","cargo":false,"origin":"AMS Amsterdam","dest":"\u2014","via":"","routeNote":"on ground at AMS, no filed route"},
-  {"callsign":"DAL8803","reg":"N397DN","type":"A321","lat":41.902,"lon":-108.028,"alt":39000,"gs":464.1,"track":80,"hex":"a49d22","region":"DEN","op":"Delta","band":"8","cargo":false,"origin":"BOS Boston","dest":"PBI West Palm Beach","via":"","routeNote":"KBOS-KPBI"},
+  {"callsign":"DAL8803","reg":"N397DN","type":"A321","lat":41.902,"lon":-108.028,"alt":39000,"gs":464.1,"track":80,"hex":"a49d22","region":"DEN","op":"Delta","band":"8","cargo":false,"origin":"SLC Salt Lake City","dest":"MSP Minneapolis","via":"","routeNote":"AirNav 5 Oct SLC-MSP, tail N397DN","olat":40.7899,"olon":-111.9791,"dlat":44.882,"dlon":-93.2218},
   {"callsign":"SWA8507","reg":"N8893L","type":"B38M","lat":39.486,"lon":-122.624,"alt":31475,"gs":468.2,"track":340,"hex":"ac4210","region":"SFO","op":"Southwest","band":"8","cargo":false,"origin":"\u2014","dest":"\u2014","via":"","routeNote":"no route filed"},
   {"callsign":"SWA8508","reg":"N8583Z","type":"B738","lat":30.612,"lon":-81.772,"alt":41000,"gs":402.7,"track":20,"hex":"abc7e9","region":"MCO","op":"Southwest","band":"8","cargo":false,"origin":"\u2014","dest":"\u2014","via":"","routeNote":"no route filed"},
   {"callsign":"FHY8013","reg":"TC-FBV","type":"A320","lat":50.901,"lon":4.498,"alt":"ground","gs":134.4,"track":40,"hex":"4b9856","region":"AMS","op":"Freebird","band":"8","cargo":false,"origin":"BRU Brussels","dest":"AYT Antalya","via":"","routeNote":"EBBR-LTAI"},
   {"callsign":"HLF8816","reg":"","type":"","lat":51.413,"lon":12.236,"alt":"ground","gs":0,"track":0,"hex":"7824fa","region":"FRA","op":"TUIfly","band":"8","cargo":false,"origin":"LEJ Leipzig","dest":"SZX Shenzhen","via":"ICN","routeNote":"EDDP-RKSI-ZGSZ"},
-  {"callsign":"QTR8166","reg":"A7-BFD","type":"B77L","lat":50.636,"lon":5.429,"alt":"ground","gs":9.8,"track":0,"hex":"06a0dd","region":"LGG","op":"Qatar Cargo","band":"8","cargo":true,"origin":"DOH Doha","dest":"ORD Chicago","via":"MXP","routeNote":"OTHH-LIMC-KORD"},
-  {"callsign":"GTI8173","reg":"N485MC","type":"B744","lat":33.934,"lon":-118.385,"alt":"ground","gs":0,"track":0,"hex":"a5fc42","region":"LAX","op":"Atlas Air","band":"8","cargo":true,"origin":"LAX Los Angeles","dest":"PVG Shanghai","via":"","routeNote":"KLAX-ZSPD"},
+  {"callsign":"QTR8166","reg":"A7-BFD","type":"B77L","lat":50.636,"lon":5.429,"alt":"ground","gs":9.8,"track":0,"hex":"06a0dd","region":"LGG","op":"Qatar Cargo","band":"8","cargo":true,"origin":"LGG Liege","dest":"ORD Chicago","via":"","routeNote":"FlightAware LGG-ORD","olat":50.6374,"olon":5.4432,"dlat":41.9742,"dlon":-87.9073},
+  {"callsign":"GTI8173","reg":"N485MC","type":"B744","lat":33.934,"lon":-118.385,"alt":"ground","gs":0,"track":0,"hex":"a5fc42","region":"LAX","op":"Atlas Air","band":"8","cargo":true,"origin":"LAX Los Angeles","dest":"PVG Shanghai","via":"","routeNote":"FlightAware LAX-PVG","olat":33.9416,"olon":-118.4085,"dlat":31.1434,"dlon":121.8052},
   {"callsign":"GTI8975","reg":"N860GT","type":"B748","lat":32.896,"lon":-97.042,"alt":"ground","gs":0,"track":0,"hex":"abcf7f","region":"DFW","op":"Atlas Air","band":"8","cargo":true,"origin":"DFW Dallas","dest":"\u2014","via":"","routeNote":"on ground at DFW, no filed route"}
 ];
 const TYPE = {A20N:"A320neo",A21N:"A321neo",A320:"A320",A321:"A321",B738:"737-800",B38M:"737 MAX 8",B752:"757-200",B744:"747-400",B748:"747-8F",B77L:"777F",CRJ7:"CRJ-700"};
@@ -105,10 +101,12 @@ const map = L.map("map", { worldCopyJump: true }).setView([36, -30], 3);
 L.tileLayer("https://basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png?key=cb1_4b02_1_f58b8a12fcfccf5a56049c12", {
   attribution: "&copy; OSM &copy; CARTO", maxZoom: 20
 }).addTo(map);
+const flying = f => f.alt !== "ground" && Number(f.alt) > 100;
 const markers = {};
 FLIGHTS.forEach(f => {
+  if (!flying(f)) return;
   const m = L.circleMarker([f.lat, f.lon], { radius: 7, color: color(f), weight: 2, fillColor: color(f), fillOpacity: 0.88 }).addTo(map);
-  m.bindPopup(`<b>${f.callsign}</b> ${f.op}<br>${f.origin} \u2192 ${f.dest}${f.via ? " via "+f.via : ""}<br>${f.reg || "no reg"} \u00b7 ${TYPE[f.type] || f.type || "type unknown"}<br>${altText(f.alt)} \u00b7 ${f.gs} kt<br><a href="https://adsb.lol/?icao=${f.hex}" target="_blank">Open on adsb.lol</a>`);
+  m.bindPopup(`<b>${f.callsign}</b> ${f.op}<br>${f.origin} \u2192 ${f.dest}${f.via ? " via "+f.via : ""}<br>${f.reg || "no reg"} \u00b7 ${TYPE[f.type] || f.type || "type unknown"}<br>${altText(f.alt)} \u00b7 ${Math.round(f.gs)} kt<br>ADS-B ${f.lat.toFixed(2)}, ${f.lon.toFixed(2)}`);
   m.on("click", () => select(f.callsign));
   markers[f.callsign] = m;
 });
@@ -128,16 +126,53 @@ function render() {
     <td>${TYPE[f.type] || f.type || "\u2014"}</td>
     <td>${altText(f.alt)}</td><td>${Math.round(f.gs)}</td></tr>`).join("");
   document.getElementById("n").textContent = shown.length;
-  document.getElementById("air").textContent = shown.filter(f => f.alt !== "ground" && Number(f.alt) > 100).length;
+  document.getElementById("air").textContent = shown.filter(flying).length;
   rows.querySelectorAll("tr").forEach(tr => tr.addEventListener("click", () => select(tr.dataset.cs)));
-  Object.entries(markers).forEach(([cs, m]) => show(FLIGHTS.find(x => x.callsign === cs)) ? m.addTo(map) : map.removeLayer(m));
+  Object.entries(markers).forEach(([cs, m]) => {
+    const f = FLIGHTS.find(x => x.callsign === cs);
+    show(f) && flying(f) ? m.addTo(map) : map.removeLayer(m);
+  });
+}
+function gc(a, b, n=72) {
+  const r = d => d * Math.PI / 180;
+  const lat1 = r(a[0]), lon1 = r(a[1]), lat2 = r(b[0]), lon2 = r(b[1]);
+  const d = 2 * Math.asin(Math.sqrt(Math.sin((lat2-lat1)/2)**2 + Math.cos(lat1)*Math.cos(lat2)*Math.sin((lon2-lon1)/2)**2));
+  if (!d) return [a, b];
+  const pts = [];
+  for (let i = 0; i <= n; i++) {
+    const f = i / n, A = Math.sin((1-f)*d)/Math.sin(d), B = Math.sin(f*d)/Math.sin(d);
+    const x = A*Math.cos(lat1)*Math.cos(lon1) + B*Math.cos(lat2)*Math.cos(lon2);
+    const y = A*Math.cos(lat1)*Math.sin(lon1) + B*Math.cos(lat2)*Math.sin(lon2);
+    const z = A*Math.sin(lat1) + B*Math.sin(lat2);
+    pts.push([Math.atan2(z, Math.sqrt(x*x+y*y))*180/Math.PI, Math.atan2(y, x)*180/Math.PI]);
+  }
+  return pts;
+}
+let routeLine = null, routeEnds = [];
+function drawRoute(f) {
+  if (routeLine) { map.removeLayer(routeLine); routeLine = null; }
+  routeEnds.forEach(m => map.removeLayer(m));
+  routeEnds = [];
+  if (f.olat == null || f.dlat == null) return;
+  routeLine = L.polyline(gc([f.olat, f.olon], [f.dlat, f.dlon]), {
+    color: color(f), weight: 2.5, opacity: 0.9, dashArray: "7 6"
+  }).addTo(map);
+  [[f.olat, f.olon, f.origin], [f.dlat, f.dlon, f.dest]].forEach(([la, lo, name]) => {
+    routeEnds.push(L.circleMarker([la, lo], {
+      radius: 5, color: "#fff", weight: 2, fillColor: color(f), fillOpacity: 1
+    }).bindTooltip(name, {permanent: true, direction: "top", className: "apt"}).addTo(map));
+  });
+  map.fitBounds(routeLine.getBounds().pad(0.25));
 }
 function select(cs) {
   document.querySelectorAll("tr").forEach(tr => tr.classList.toggle("active", tr.dataset.cs === cs));
   const f = FLIGHTS.find(x => x.callsign === cs);
   if (!f) return;
-  map.setView([f.lat, f.lon], Math.max(map.getZoom(), 5));
-  markers[cs].openPopup();
+  if (flying(f)) {
+    map.setView([f.lat, f.lon], Math.max(map.getZoom(), 5));
+    markers[cs].openPopup();
+  }
+  drawRoute(f);
 }
 document.querySelectorAll("button.filter").forEach(b => b.addEventListener("click", () => {
   document.querySelectorAll("button.filter").forEach(x => x.classList.remove("on"));
