@@ -1,29 +1,11 @@
 {
-  "updated": "2026-10-06T15:32:00Z",
+  "updated": "2026-10-06T15:32:30Z",
   "source": "flightaware",
   "flights": [
-    {
-      "callsign": "SWA9000",
-      "reg": "N458WN",
-      "type": "B737",
-      "lat": 41.82807,
-      "lon": -90.371683,
-      "alt": 37350,
-      "gs": 340,
-      "track": 273,
-      "hex": "a591d5",
-      "op": "Southwest",
-      "band": "9",
-      "cargo": false,
-      "regional": false,
-      "origin": "MDW Chicago",
-      "dest": "DEN Denver",
-      "route": "MDW-DEN",
-      "routeNote": "FlightAware",
-      "olat": 41.78598,
-      "olon": -87.7524,
-      "dlat": 39.8561,
-      "dlon": -104.6737
-    }
+    {"callsign": "AAL9786", "reg": "N169UW", "type": "A321", "lat": 37.475529, "lon": -81.648779, "alt": 30200, "gs": 418.5, "track": 192.84, "op": "American", "band": "9", "origin": "DCA Washington", "dest": "PHL Philadelphia", "route": "DCA-PHL", "routeNote": "adsbdb route", "olat": 38.8521, "olon": -77.0377, "dlat": 39.8719, "dlon": -75.2411},
+    {"callsign": "FFT9401", "reg": "N701FR", "type": "A321", "lat": 37.659597, "lon": -84.23791, "alt": 36000, "gs": 455.7, "track": 183.27, "op": "Frontier", "band": "9", "origin": "SAT San Antonio", "dest": "ATL Atlanta", "route": "SAT-ATL", "routeNote": "adsbdb route", "dlat": 33.6407, "dlon": -84.4277},
+    {"callsign": "SWA9000", "reg": "N458WN", "type": "B737", "lat": 41.82807, "lon": -90.371683, "alt": 37350, "gs": 340, "track": 273, "op": "Southwest", "band": "9", "origin": "MDW Chicago", "dest": "DEN Denver", "route": "MDW-DEN", "routeNote": "FlightAware", "olat": 41.78598, "olon": -87.7524, "dlat": 39.8561, "dlon": -104.6737},
+    {"callsign": "UPS9504", "reg": "N462UP", "type": "B752", "lat": 31.070709, "lon": -86.890977, "alt": 12150, "gs": 373.8, "track": 198.73, "op": "UPS", "band": "9", "cargo": true, "origin": "SDF Louisville", "dest": "PNS Pensacola", "route": "SDF-PNS", "routeNote": "FlightAware", "olat": 38.1744, "olon": -85.736, "dlat": 30.4734, "dlon": -87.1866},
+    {"callsign": "UAE9917", "reg": "A6-EFT", "type": "B77L", "lat": 31.89711, "lon": -83.751855, "alt": 41000, "gs": 498.1, "track": 161.75, "op": "Emirates SkyCargo", "band": "9", "cargo": true, "origin": "ORD Chicago", "dest": "UIO Quito", "route": "ORD-UIO", "routeNote": "adsbdb route", "olat": 41.9742, "olon": -87.9073, "dlat": -0.1292, "dlon": -78.3575}
   ]
 }
