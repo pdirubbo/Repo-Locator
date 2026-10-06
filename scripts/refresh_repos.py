@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh commercial 8xxx/9xxx repos. No general aviation."""
+"""Refresh commercial 8xxx/9xxx repos and fill origin/destination."""
 import json, re, time, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -44,6 +44,31 @@ def commercial(cs, ac):
         return False
     return prefix in OPS or prefix in CARGO or prefix in REGIONAL or cat in {"A3","A4","A5"}
 
+def label(airport):
+    code = airport.get("iata") or airport.get("icao") or ""
+    city = airport.get("location") or airport.get("name") or ""
+    return f"{code} {city}".strip()
+
+def route_for(cs):
+    try:
+        data = get(f"https://api.adsb.lol/api/0/route/{cs}")
+    except Exception:
+        return {}
+    airports = data.get("_airports") or []
+    if len(airports) < 2:
+        return {}
+    origin, nxt = airports[0], airports[1]
+    dest = nxt if airports[-1].get("iata") == origin.get("iata") else airports[-1]
+    out = {
+        "origin": label(origin), "dest": label(dest),
+        "olat": origin.get("lat"), "olon": origin.get("lon"),
+        "dlat": dest.get("lat"), "dlon": dest.get("lon"),
+        "routeNote": data.get("_airport_codes_iata") or data.get("airport_codes") or "adsb route",
+    }
+    if len(airports) > 2 and dest is not nxt:
+        out.update(via=label(nxt), vlat=nxt.get("lat"), vlon=nxt.get("lon"))
+    return out
+
 def scan():
     found = {}
     for lat, lon in HUBS:
@@ -69,7 +94,7 @@ def scan():
                     "origin": "\u2014", "dest": "\u2014", "routeNote": "ADS-B refresh",
                 }
             break
-        time.sleep(0.2)
+        time.sleep(0.15)
     return found
 
 def main():
@@ -80,15 +105,22 @@ def main():
         print("no commercial ADS-B results, leaving flights.json unchanged")
         return
     merged = []
+    lookups = 0
     for cs, row in live.items():
         kept = old.get(cs, {})
         for key in ("origin","dest","via","olat","olon","dlat","dlon","vlat","vlon","routeNote"):
             if kept.get(key) not in (None, "", "\u2014"):
                 row[key] = kept[key]
+        if row.get("origin") in (None, "", "\u2014") and lookups < 40:
+            found = route_for(cs)
+            lookups += 1
+            time.sleep(0.2)
+            if found.get("origin"):
+                row.update(found)
         merged.append(row)
     merged.sort(key=lambda f: f["callsign"])
     OUT.write_text(json.dumps({"updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "source": "adsb", "flights": merged}, indent=2) + "\n")
-    print(f"wrote {len(merged)} commercial flights")
+    print(f"wrote {len(merged)} flights, looked up {lookups} routes")
 
 if __name__ == "__main__":
     main()
