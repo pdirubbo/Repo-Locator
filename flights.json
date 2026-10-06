@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-06T20:27:23Z",
-  "source": "adsb",
+  "updated": "2026-10-06T20:27:54Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "ASA9460",
@@ -39,10 +39,14 @@
       "cargo": false,
       "regional": false,
       "callsign": "DAL8802",
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B"
+      "origin": "ATL Atlanta",
+      "dest": "ATW ATW",
+      "route": "ATL-ATW-ATL",
+      "routeNote": "adsb.lol route",
+      "olat": 33.6367,
+      "olon": -84.428101,
+      "dlat": 44.258099,
+      "dlon": -88.519096
     },
     {
       "callsign": "DAL8927",
@@ -173,10 +177,14 @@
       "cargo": false,
       "regional": false,
       "callsign": "GEC8222",
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B"
+      "origin": "FRA FRA",
+      "dest": "MEX MEX",
+      "route": "FRA-MEX",
+      "routeNote": "adsbdb route",
+      "olat": 50.033333,
+      "olon": 8.570556,
+      "dlat": 19.4363,
+      "dlon": -99.072098
     },
     {
       "lat": 44.294495,
@@ -192,10 +200,14 @@
       "cargo": true,
       "regional": false,
       "callsign": "GTI8719",
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B"
+      "origin": "VCP VCP",
+      "dest": "MIA Miami",
+      "route": "VCP-MIA",
+      "routeNote": "adsbdb route",
+      "dlat": 25.79319953918457,
+      "dlon": -80.29060363769531,
+      "olat": -23.0074005127,
+      "olon": -47.1344985962
     },
     {
       "lat": 24.110195,
@@ -211,10 +223,14 @@
       "cargo": true,
       "regional": false,
       "callsign": "GTI8730",
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B"
+      "origin": "GRK GRK",
+      "dest": "HHN HHN",
+      "route": "GRK-HHN",
+      "routeNote": "adsbdb route",
+      "olat": 31.0672,
+      "olon": -97.828903,
+      "dlat": 49.9487,
+      "dlon": 7.26389
     },
     {
       "lat": 38.839649,
@@ -230,10 +246,14 @@
       "cargo": true,
       "regional": false,
       "callsign": "GTI8812",
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B"
+      "origin": "DMA DMA",
+      "dest": "HHN HHN",
+      "route": "DMA-HHN",
+      "routeNote": "adsbdb route",
+      "olat": 32.1665000916,
+      "olon": -110.883003235,
+      "dlat": 49.9487,
+      "dlon": 7.26389
     },
     {
       "callsign": "GTI8824",
@@ -272,10 +292,14 @@
       "cargo": true,
       "regional": false,
       "callsign": "GTI8830",
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B"
+      "origin": "EDF EDF",
+      "dest": "SUU SUU",
+      "route": "EDF-SUU",
+      "routeNote": "adsbdb route",
+      "olat": 61.250999450683594,
+      "olon": -149.8070068359375,
+      "dlat": 38.262699,
+      "dlon": -121.927002
     },
     {
       "callsign": "GTI8837",
@@ -314,10 +338,14 @@
       "cargo": false,
       "regional": false,
       "callsign": "KAL8284",
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B"
+      "origin": "YYZ YYZ",
+      "dest": "ANC ANC",
+      "route": "YYZ-ANC",
+      "routeNote": "adsbdb route",
+      "olat": 43.6772003174,
+      "olon": -79.63059997559999,
+      "dlat": 61.1744,
+      "dlon": -149.996002
     },
     {
       "callsign": "MXY9060",
@@ -448,10 +476,14 @@
       "cargo": false,
       "regional": false,
       "callsign": "UAL8200",
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B"
+      "origin": "SFO San Francisco",
+      "dest": "IAH Houston",
+      "route": "SFO-IAH",
+      "routeNote": "adsbdb route",
+      "olat": 37.61899948120117,
+      "olon": -122.375,
+      "dlat": 29.984399795532227,
+      "dlon": -95.34140014648438
     }
   ]
 }
