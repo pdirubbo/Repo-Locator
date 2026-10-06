@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh commercial 8xxx/9xxx repos. Drop a flight after it lands."""
+"""Refresh repos. New ADS-B callsigns stay on TFMS until a filed route is found."""
 import json, os, re, time, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -60,17 +60,22 @@ def commercial(cs, ac):
         return False
     return prefix in OPS or prefix in CARGO or prefix in REGIONAL or cat in {"A3","A4","A5"}
 
-def filed(origin, dest):
+def filed(origin, dest, route):
     o = AIRPORTS.get(origin, (None, None, origin))
     d = AIRPORTS.get(dest, (None, None, dest))
-    row = {"origin": f"{origin} {o[2]}", "dest": f"{dest} {d[2]}", "routeNote": "TFMS filed plan"}
+    row = {"origin": f"{origin} {o[2]}", "dest": f"{dest} {d[2]}", "route": route or f"{origin}-{dest}", "routeNote": "TFMS filed plan"}
     if o[0] is not None:
         row.update(olat=o[0], olon=o[1])
     if d[0] is not None:
         row.update(dlat=d[0], dlon=d[1])
     return row
 
-def swim_plans():
+def route_text(block):
+    hits = re.findall(r"<[^>]*(?:route|Route)[^>]*>([^<]+)<", block)
+    text = " ".join(h.strip() for h in hits if h.strip())
+    return re.sub(r"\s+", " ", text)[:180]
+
+def swim_until(needed):
     password = os.environ.get("SWIM_PASSWORD") or ""
     if not password:
         print("SWIM_PASSWORD is not set")
@@ -99,8 +104,11 @@ def swim_plans():
     dep = re.compile(r"<[^>]*departurePoint>.*?<[^>]*airport>([A-Z0-9]{3,4})<", re.S)
     arr = re.compile(r"<[^>]*arrivalPoint>.*?<[^>]*airport>([A-Z0-9]{3,4})<", re.S)
     status = re.compile(r"<[^>]*status>([^<]+)<")
-    found, landed, n, end = {}, set(), 0, time.time() + 40
+    found, landed, n = {}, set(), 0
+    end = time.time() + (150 if needed else 40)
     while time.time() < end:
+        if needed and needed <= set(found) | landed:
+            break
         msg = receiver.receive_message(timeout=4000)
         if msg is None:
             continue
@@ -110,17 +118,18 @@ def swim_plans():
             m = pat.search(block)
             if not m or not CALL.match(m.group(1)):
                 continue
+            cs = m.group(1)
             st = (status.search(block).group(1).upper() if status.search(block) else "")
-            if st in DONE or "ARRIVAL" in body[max(0, body.find(m.group(1))-80):body.find(m.group(1))+40].upper():
-                landed.add(m.group(1))
-                found.pop(m.group(1), None)
+            if st in DONE:
+                landed.add(cs)
+                found.pop(cs, None)
                 continue
             d, a = dep.search(block), arr.search(block)
-            if d and a and m.group(1) not in landed:
-                found[m.group(1)] = filed(d.group(1), a.group(1))
+            if d and a and cs not in landed:
+                found[cs] = filed(d.group(1), a.group(1), route_text(block))
     receiver.terminate()
     svc.disconnect()
-    print(f"TFMS messages {n}, filed repos {len(found)}, landed {len(landed)}")
+    print(f"TFMS messages {n}, filed repos {len(found)}, still waiting {sorted(needed - set(found) - landed)}")
     return found, landed
 
 def scan():
@@ -140,8 +149,6 @@ def scan():
                 landed.add(cs)
                 airborne.pop(cs, None)
                 continue
-            if cs in landed:
-                continue
             prefix = cs[:3]
             airborne[cs] = {
                 "callsign": cs, "reg": ac.get("r") or "", "type": ac.get("t") or "",
@@ -149,7 +156,7 @@ def scan():
                 "gs": ac.get("gs") or 0, "track": ac.get("track") or 0, "hex": ac.get("hex") or "",
                 "op": OPS.get(prefix, prefix), "band": cs[3],
                 "cargo": prefix in CARGO, "regional": prefix in REGIONAL,
-                "origin": "\u2014", "dest": "\u2014", "routeNote": "ADS-B refresh",
+                "origin": "\u2014", "dest": "\u2014", "route": "", "routeNote": "ADS-B refresh",
             }
         time.sleep(0.15)
     return airborne, landed
@@ -158,7 +165,7 @@ def filed_row(cs, plan):
     prefix = cs[:3]
     row = {
         "callsign": cs, "reg": "", "type": "", "lat": None, "lon": None,
-        "alt": "filed", "gs": 0, "track": 0, "hex": "",
+        "alt": "filed", "gs": 0, "track": 0, "hex": "", "route": plan.get("route") or "",
         "op": OPS.get(prefix, prefix), "band": cs[3],
         "cargo": prefix in CARGO, "regional": prefix in REGIONAL,
     }
@@ -166,21 +173,22 @@ def filed_row(cs, plan):
     return row
 
 def main():
-    plans, landed = {}, set()
-    try:
-        plans, landed = swim_plans()
-    except Exception as exc:
-        print("TFMS read failed:", type(exc).__name__, exc)
     prev = json.loads(OUT.read_text()) if OUT.exists() else {"flights": []}
     old = {f["callsign"]: f for f in prev.get("flights", []) if CALL.match(f.get("callsign",""))}
     live, on_ground = scan()
+    needed = {cs for cs, row in live.items() if old.get(cs, {}).get("origin") in (None, "", "\u2014")}
+    plans, landed = {}, set()
+    try:
+        plans, landed = swim_until(needed)
+    except Exception as exc:
+        print("TFMS read failed:", type(exc).__name__, exc)
     landed |= on_ground
     merged, seen = [], set()
     for cs, row in live.items():
         if cs in landed:
             continue
         kept = old.get(cs, {})
-        for key in ("origin","dest","olat","olon","dlat","dlon","routeNote"):
+        for key in ("origin","dest","route","olat","olon","dlat","dlon","routeNote"):
             if kept.get(key) not in (None, "", "\u2014"):
                 row[key] = kept[key]
         if cs in plans:
@@ -193,9 +201,7 @@ def main():
         merged.append(filed_row(cs, plan))
         seen.add(cs)
     for cs, kept in old.items():
-        if cs in seen or cs in landed:
-            continue
-        if kept.get("alt") == "ground":
+        if cs in seen or cs in landed or kept.get("alt") == "ground":
             continue
         if kept.get("routeNote") == "TFMS filed plan" and kept.get("lat") in (None, ""):
             merged.append(kept)
