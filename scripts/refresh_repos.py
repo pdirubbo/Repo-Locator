@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh commercial 8xxx/9xxx repos. Filed TFMS plans stay in the table with no ADS-B position."""
+"""Refresh commercial 8xxx/9xxx repos. Drop a flight after it lands."""
 import json, os, re, time, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "flights.json"
 CALL = re.compile(r"^[A-Z]{3}[89]\d{3}$")
 GA = {"C172","C152","C182","C206","C208","C210","PA28","PA32","BE35","BE36","BE58","SR22","M20P","CH7A","RV10","P28A"}
+DONE = {"ARRIVED","LANDED","COMPLETED","COMPLETE","CANCELLED","CANCELED"}
 HUBS = [
     (33.64,-84.43),(33.94,-118.41),(41.97,-87.91),(32.90,-97.04),(39.86,-104.67),
     (40.64,-73.78),(28.43,-81.31),(36.08,-115.15),(35.21,-80.94),(25.80,-80.29),
@@ -73,7 +74,7 @@ def swim_plans():
     password = os.environ.get("SWIM_PASSWORD") or ""
     if not password:
         print("SWIM_PASSWORD is not set")
-        return {}
+        return {}, set()
     from solace.messaging.messaging_service import MessagingService
     from solace.messaging.config.solace_properties import (
         transport_layer_properties as tp,
@@ -97,7 +98,8 @@ def swim_plans():
     pat = re.compile(r"<[^>]*aircraftId>([A-Z0-9]{3,8})<")
     dep = re.compile(r"<[^>]*departurePoint>.*?<[^>]*airport>([A-Z0-9]{3,4})<", re.S)
     arr = re.compile(r"<[^>]*arrivalPoint>.*?<[^>]*airport>([A-Z0-9]{3,4})<", re.S)
-    found, n, end = {}, 0, time.time() + 40
+    status = re.compile(r"<[^>]*status>([^<]+)<")
+    found, landed, n, end = {}, set(), 0, time.time() + 40
     while time.time() < end:
         msg = receiver.receive_message(timeout=4000)
         if msg is None:
@@ -108,16 +110,21 @@ def swim_plans():
             m = pat.search(block)
             if not m or not CALL.match(m.group(1)):
                 continue
+            st = (status.search(block).group(1).upper() if status.search(block) else "")
+            if st in DONE or "ARRIVAL" in body[max(0, body.find(m.group(1))-80):body.find(m.group(1))+40].upper():
+                landed.add(m.group(1))
+                found.pop(m.group(1), None)
+                continue
             d, a = dep.search(block), arr.search(block)
-            if d and a:
+            if d and a and m.group(1) not in landed:
                 found[m.group(1)] = filed(d.group(1), a.group(1))
     receiver.terminate()
     svc.disconnect()
-    print(f"TFMS messages {n}, filed repos {len(found)}")
-    return found
+    print(f"TFMS messages {n}, filed repos {len(found)}, landed {len(landed)}")
+    return found, landed
 
 def scan():
-    found = {}
+    airborne, landed = {}, set()
     for lat, lon in HUBS:
         try:
             data = get(f"https://api.adsb.lol/v2/lat/{lat}/lon/{lon}/dist/200")
@@ -129,18 +136,23 @@ def scan():
                 continue
             alt = ac.get("alt_baro")
             flying = str(alt).isdigit() and int(alt) > 100
+            if not flying:
+                landed.add(cs)
+                airborne.pop(cs, None)
+                continue
+            if cs in landed:
+                continue
             prefix = cs[:3]
-            found[cs] = {
+            airborne[cs] = {
                 "callsign": cs, "reg": ac.get("r") or "", "type": ac.get("t") or "",
-                "lat": ac.get("lat"), "lon": ac.get("lon"),
-                "alt": int(alt) if flying else "ground", "gs": ac.get("gs") or 0,
-                "track": ac.get("track") or 0, "hex": ac.get("hex") or "",
+                "lat": ac.get("lat"), "lon": ac.get("lon"), "alt": int(alt),
+                "gs": ac.get("gs") or 0, "track": ac.get("track") or 0, "hex": ac.get("hex") or "",
                 "op": OPS.get(prefix, prefix), "band": cs[3],
                 "cargo": prefix in CARGO, "regional": prefix in REGIONAL,
                 "origin": "\u2014", "dest": "\u2014", "routeNote": "ADS-B refresh",
             }
         time.sleep(0.15)
-    return found
+    return airborne, landed
 
 def filed_row(cs, plan):
     prefix = cs[:3]
@@ -154,16 +166,19 @@ def filed_row(cs, plan):
     return row
 
 def main():
-    plans = {}
+    plans, landed = {}, set()
     try:
-        plans = swim_plans()
+        plans, landed = swim_plans()
     except Exception as exc:
         print("TFMS read failed:", type(exc).__name__, exc)
     prev = json.loads(OUT.read_text()) if OUT.exists() else {"flights": []}
     old = {f["callsign"]: f for f in prev.get("flights", []) if CALL.match(f.get("callsign",""))}
-    live = scan()
+    live, on_ground = scan()
+    landed |= on_ground
     merged, seen = [], set()
     for cs, row in live.items():
+        if cs in landed:
+            continue
         kept = old.get(cs, {})
         for key in ("origin","dest","olat","olon","dlat","dlon","routeNote"):
             if kept.get(key) not in (None, "", "\u2014"):
@@ -173,20 +188,20 @@ def main():
         merged.append(row)
         seen.add(cs)
     for cs, plan in plans.items():
-        if cs not in seen:
-            merged.append(filed_row(cs, plan))
-            seen.add(cs)
+        if cs in seen or cs in landed:
+            continue
+        merged.append(filed_row(cs, plan))
+        seen.add(cs)
     for cs, kept in old.items():
-        if cs in seen:
+        if cs in seen or cs in landed:
+            continue
+        if kept.get("alt") == "ground":
             continue
         if kept.get("routeNote") == "TFMS filed plan" and kept.get("lat") in (None, ""):
             merged.append(kept)
-    if not merged:
-        print("no ADS-B flights and no filed repo plans")
-        return
     merged.sort(key=lambda f: f["callsign"])
     OUT.write_text(json.dumps({"updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "source": "adsb+tfms", "flights": merged}, indent=2) + "\n")
-    print(f"wrote {len(merged)} flights, filed without ADS-B {sum(f.get('alt')=='filed' for f in merged)}")
+    print(f"wrote {len(merged)} flights, dropped {len(landed)} landed")
 
 if __name__ == "__main__":
     main()
