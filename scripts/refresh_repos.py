@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Refresh commercial 8xxx/9xxx repos and fill origin/destination."""
-import json, re, time, urllib.request
+"""Refresh commercial 8xxx/9xxx repos. Filed plans come from TFMS when SWIM_PASSWORD is set."""
+import json, os, re, time, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -14,18 +14,33 @@ HUBS = [
     (47.45,-122.31),(40.69,-74.17),(37.62,-122.38),(33.44,-112.01),(29.98,-95.34),
     (42.36,-71.01),(44.88,-93.22),(40.77,-73.87),(42.21,-83.35),(39.87,-75.24),
     (40.79,-111.98),(38.85,-77.04),(38.94,-77.46),(36.13,-86.68),(29.99,-90.26),
-    (51.47,-0.45),(50.04,8.56),(52.31,4.76),(25.25,55.36),
 ]
 OPS = {
     "DAL":"Delta","SWA":"Southwest","FFT":"Frontier","JBU":"JetBlue","AAL":"American","UAL":"United","ASA":"Alaska","NKS":"Spirit",
     "SKW":"SkyWest","RPA":"Republic","EDV":"Endeavor","ENY":"Envoy","JIA":"PSA","PDT":"Piedmont","ASH":"Mesa","QXE":"Horizon",
     "UCA":"CommutAir","GJS":"GoJet","AWI":"Air Wisconsin","JZA":"Jazz","POE":"Porter","SIL":"Silver",
     "UAE":"Emirates SkyCargo","QTR":"Qatar Cargo","GTI":"Atlas Air","CJT":"Cargojet","FDX":"FedEx","UPS":"UPS",
-    "KAL":"Korean Air Cargo","AJT":"Amerijet","CLX":"Cargolux","ABD":"Air Atlanta","BOX":"AeroLogic",
-    "MTN":"Mountain Air Cargo","BVN":"Baron Aviation","IRO":"IFL Group",
 }
-CARGO = {"UAE","QTR","GTI","CJT","FDX","UPS","KAL","AJT","CLX","ABD","BOX","MTN","BVN","IRO"}
+CARGO = {"UAE","QTR","GTI","CJT","FDX","UPS"}
 REGIONAL = {"SKW","RPA","EDV","ENY","JIA","PDT","ASH","QXE","UCA","GJS","AWI","JZA","POE","SIL"}
+AIRPORTS = {
+    "PIT": (40.4915,-80.2329,"Pittsburgh"), "CLT": (35.214,-80.9431,"Charlotte"),
+    "DTW": (42.2124,-83.3534,"Detroit"), "MCO": (28.4294,-81.3089,"Orlando"),
+    "ATL": (33.6407,-84.4277,"Atlanta"), "ORD": (41.9742,-87.9073,"Chicago"),
+    "DFW": (32.8998,-97.0403,"Dallas"), "DEN": (39.8561,-104.6737,"Denver"),
+    "LAX": (33.9425,-118.408,"Los Angeles"), "SFO": (37.6213,-122.379,"San Francisco"),
+    "SEA": (47.4502,-122.3088,"Seattle"), "JFK": (40.6398,-73.7789,"New York"),
+    "EWR": (40.6925,-74.1687,"Newark"), "MIA": (25.7959,-80.287,"Miami"),
+    "PHX": (33.4343,-112.0116,"Phoenix"), "LAS": (36.0801,-115.1522,"Las Vegas"),
+    "BOS": (42.3656,-71.0096,"Boston"), "MSP": (44.882,-93.2218,"Minneapolis"),
+    "SLC": (40.7884,-111.9778,"Salt Lake City"), "PHL": (39.8719,-75.2411,"Philadelphia"),
+    "DCA": (38.8521,-77.0377,"Washington"), "IAD": (38.9445,-77.4558,"Dulles"),
+    "IAH": (29.9844,-95.3414,"Houston"), "BWI": (39.1754,-76.6683,"Baltimore"),
+    "SAN": (32.7336,-117.1897,"San Diego"), "TPA": (27.9755,-82.5332,"Tampa"),
+    "SDF": (38.1744,-85.736,"Louisville"), "MEM": (35.0424,-89.9767,"Memphis"),
+    "CVG": (39.0488,-84.6678,"Cincinnati"), "IND": (39.7173,-86.2944,"Indianapolis"),
+}
+QUEUE = "pdirubbo0.gmail.com.TFMS.e51e74d4-cc2f-4bc2-9071-e423263d7e6a.OUT"
 
 def get(url):
     req = urllib.request.Request(url, headers={"User-Agent":"repo-locator/1.0"})
@@ -44,60 +59,95 @@ def commercial(cs, ac):
         return False
     return prefix in OPS or prefix in CARGO or prefix in REGIONAL or cat in {"A3","A4","A5"}
 
-def label(airport):
-    code = airport.get("iata") or airport.get("icao") or ""
-    city = airport.get("location") or airport.get("name") or ""
-    return f"{code} {city}".strip()
+def filed(origin, dest):
+    o = AIRPORTS.get(origin, (None, None, origin))
+    d = AIRPORTS.get(dest, (None, None, dest))
+    row = {"origin": f"{origin} {o[2]}", "dest": f"{dest} {d[2]}", "routeNote": "TFMS filed plan"}
+    if o[0] is not None:
+        row.update(olat=o[0], olon=o[1])
+    if d[0] is not None:
+        row.update(dlat=d[0], dlon=d[1])
+    return row
 
-def route_for(cs):
-    try:
-        data = get(f"https://api.adsb.lol/api/0/route/{cs}")
-    except Exception:
+def swim_plans():
+    password = os.environ.get("SWIM_PASSWORD") or ""
+    if not password:
+        print("SWIM_PASSWORD is not set")
         return {}
-    airports = data.get("_airports") or []
-    if len(airports) < 2:
-        return {}
-    origin, nxt = airports[0], airports[1]
-    dest = nxt if airports[-1].get("iata") == origin.get("iata") else airports[-1]
-    out = {
-        "origin": label(origin), "dest": label(dest),
-        "olat": origin.get("lat"), "olon": origin.get("lon"),
-        "dlat": dest.get("lat"), "dlon": dest.get("lon"),
-        "routeNote": data.get("_airport_codes_iata") or data.get("airport_codes") or "adsb route",
+    from solace.messaging.messaging_service import MessagingService
+    from solace.messaging.config.solace_properties import (
+        transport_layer_properties as tp,
+        transport_layer_security_properties as tls,
+        service_properties as sp,
+        authentication_properties as ap,
+    )
+    from solace.messaging.resources.queue import Queue
+    props = {
+        tp.HOST: "tcps://ems1.swim.faa.gov:55443",
+        sp.VPN_NAME: "TFMS",
+        ap.SCHEME_BASIC_USER_NAME: "pdirubbo0.gmail.com",
+        ap.SCHEME_BASIC_PASSWORD: password,
+        tls.CERT_VALIDATED: False,
+        tls.CERT_VALIDATE_SERVERNAME: False,
     }
-    if len(airports) > 2 and dest is not nxt:
-        out.update(via=label(nxt), vlat=nxt.get("lat"), vlon=nxt.get("lon"))
-    return out
+    svc = MessagingService.builder().from_properties(props).build()
+    svc.connect()
+    receiver = svc.create_persistent_message_receiver_builder().build(Queue.durable_exclusive_queue(QUEUE))
+    receiver.start()
+    pat = re.compile(r"<[^>]*aircraftId>([A-Z0-9]{3,8})<")
+    dep = re.compile(r"<[^>]*departurePoint>.*?<[^>]*airport>([A-Z0-9]{3,4})<", re.S)
+    arr = re.compile(r"<[^>]*arrivalPoint>.*?<[^>]*airport>([A-Z0-9]{3,4})<", re.S)
+    found, n, end = {}, 0, time.time() + 40
+    while time.time() < end:
+        msg = receiver.receive_message(timeout=4000)
+        if msg is None:
+            continue
+        body = msg.get_payload_as_string() or ""
+        n += 1
+        for block in re.split(r"<[^>]*flight[ >]", body)[1:]:
+            m = pat.search(block)
+            if not m or not CALL.match(m.group(1)):
+                continue
+            d, a = dep.search(block), arr.search(block)
+            if d and a:
+                found[m.group(1)] = filed(d.group(1), a.group(1))
+    receiver.terminate()
+    svc.disconnect()
+    print(f"TFMS messages {n}, filed repos {len(found)}")
+    return found
 
 def scan():
     found = {}
     for lat, lon in HUBS:
-        for base in (f"https://api.adsb.lol/v2/lat/{lat}/lon/{lon}/dist/200", f"https://api.airplanes.live/v2/point/{lat}/{lon}/200"):
-            try:
-                data = get(base)
-            except Exception:
+        try:
+            data = get(f"https://api.adsb.lol/v2/lat/{lat}/lon/{lon}/dist/200")
+        except Exception:
+            continue
+        for ac in data.get("ac") or []:
+            cs = (ac.get("flight") or "").strip().upper()
+            if not commercial(cs, ac) or ac.get("lat") is None:
                 continue
-            for ac in data.get("ac") or []:
-                cs = (ac.get("flight") or "").strip().upper()
-                if not commercial(cs, ac) or ac.get("lat") is None:
-                    continue
-                alt = ac.get("alt_baro")
-                flying = str(alt).isdigit() and int(alt) > 100
-                prefix = cs[:3]
-                found[cs] = {
-                    "callsign": cs, "reg": ac.get("r") or "", "type": ac.get("t") or "",
-                    "lat": ac.get("lat"), "lon": ac.get("lon"),
-                    "alt": int(alt) if flying else "ground", "gs": ac.get("gs") or 0,
-                    "track": ac.get("track") or 0, "hex": ac.get("hex") or "",
-                    "op": OPS.get(prefix, prefix), "band": cs[3],
-                    "cargo": prefix in CARGO, "regional": prefix in REGIONAL,
-                    "origin": "\u2014", "dest": "\u2014", "routeNote": "ADS-B refresh",
-                }
-            break
+            alt = ac.get("alt_baro")
+            flying = str(alt).isdigit() and int(alt) > 100
+            prefix = cs[:3]
+            found[cs] = {
+                "callsign": cs, "reg": ac.get("r") or "", "type": ac.get("t") or "",
+                "lat": ac.get("lat"), "lon": ac.get("lon"),
+                "alt": int(alt) if flying else "ground", "gs": ac.get("gs") or 0,
+                "track": ac.get("track") or 0, "hex": ac.get("hex") or "",
+                "op": OPS.get(prefix, prefix), "band": cs[3],
+                "cargo": prefix in CARGO, "regional": prefix in REGIONAL,
+                "origin": "\u2014", "dest": "\u2014", "routeNote": "ADS-B refresh",
+            }
         time.sleep(0.15)
     return found
 
 def main():
+    plans = {}
+    try:
+        plans = swim_plans()
+    except Exception as exc:
+        print("TFMS read failed:", type(exc).__name__, exc)
     prev = json.loads(OUT.read_text()) if OUT.exists() else {"flights": []}
     old = {f["callsign"]: f for f in prev.get("flights", []) if CALL.match(f.get("callsign",""))}
     live = scan()
@@ -105,22 +155,17 @@ def main():
         print("no commercial ADS-B results, leaving flights.json unchanged")
         return
     merged = []
-    lookups = 0
     for cs, row in live.items():
         kept = old.get(cs, {})
-        for key in ("origin","dest","via","olat","olon","dlat","dlon","vlat","vlon","routeNote"):
+        for key in ("origin","dest","olat","olon","dlat","dlon","routeNote"):
             if kept.get(key) not in (None, "", "\u2014"):
                 row[key] = kept[key]
-        if row.get("origin") in (None, "", "\u2014") and lookups < 40:
-            found = route_for(cs)
-            lookups += 1
-            time.sleep(0.2)
-            if found.get("origin"):
-                row.update(found)
+        if cs in plans:
+            row.update(plans[cs])
         merged.append(row)
     merged.sort(key=lambda f: f["callsign"])
-    OUT.write_text(json.dumps({"updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "source": "adsb", "flights": merged}, indent=2) + "\n")
-    print(f"wrote {len(merged)} flights, looked up {lookups} routes")
+    OUT.write_text(json.dumps({"updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "source": "adsb+tfms", "flights": merged}, indent=2) + "\n")
+    print(f"wrote {len(merged)} flights, TFMS matches {sum(cs in plans for cs in live)}")
 
 if __name__ == "__main__":
     main()
