@@ -8,22 +8,21 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "flights.json"
 CALL = re.compile(r"^[A-Z]{0,3}([89]\d{3})$")
 HUBS = [
-    (42.36, -71.01), (28.43, -81.31), (33.64, -84.43), (32.90, -97.04),
-    (33.94, -118.41), (37.62, -122.38), (47.45, -122.31), (39.86, -104.67),
-    (41.98, -87.90), (25.80, -80.29), (40.64, -73.78), (33.44, -112.01),
-    (51.47, -0.45), (50.04, 8.56), (52.31, 4.76), (49.01, 2.55),
-    (25.25, 55.36), (1.36, 103.99), (35.55, 139.78),
+    (42.36, -71.01), (40.64, -73.78), (40.78, -73.87), (38.85, -77.04),
+    (39.87, -75.24), (40.49, -80.23), (35.21, -80.94), (42.21, -83.35),
+    (39.05, -84.67), (41.98, -87.90), (33.64, -84.43), (28.43, -81.31),
+    (25.80, -80.29), (32.90, -97.04), (29.98, -95.34), (33.94, -118.41),
+    (37.62, -122.38), (47.45, -122.31), (39.86, -104.67), (33.44, -112.01),
+    (51.47, -0.45), (50.04, 8.56), (52.31, 4.76), (25.25, 55.36),
 ]
 OPS = {
     "DAL":"Delta","SWA":"Southwest","FFT":"Frontier","JBU":"JetBlue","AAL":"American","UAL":"United","ASA":"Alaska","NKS":"Spirit",
-    "RYR":"Ryanair","UAE":"Emirates SkyCargo","QTR":"Qatar Cargo","GTI":"Atlas Air","CJT":"Cargojet","FHY":"Freebird","HLF":"TUIfly","FDX":"FedEx","UPS":"UPS","CLX":"Cargolux",
+    "RYR":"Ryanair","UAE":"Emirates SkyCargo","QTR":"Qatar Cargo","GTI":"Atlas Air","CJT":"Cargojet","FDX":"FedEx","UPS":"UPS",
     "SKW":"SkyWest","RPA":"Republic","EDV":"Endeavor","ENY":"Envoy","JIA":"PSA","PDT":"Piedmont","ASH":"Mesa","QXE":"Horizon",
-    "UCA":"CommutAir","GJS":"GoJet","AWI":"Air Wisconsin","JZA":"Jazz","POE":"Porter","SIL":"Silver","KAP":"Cape Air","VTE":"Contour",
-    "AMF":"Ameriflight","BTK":"Boutique","WSN":"Advanced Air","FDY":"Southern Airways","RVF":"Ravn",
-    "CFE":"BA CityFlyer","KLC":"KLM Cityhopper","CLH":"Lufthansa CityLine","DLA":"Air Dolomiti","HOP":"Air France Hop","LOG":"Loganair","WIF":"Wideroe",
+    "UCA":"CommutAir","GJS":"GoJet","AWI":"Air Wisconsin","JZA":"Jazz","POE":"Porter","SIL":"Silver","KAP":"Cape Air",
 }
-CARGO = {"UAE","QTR","GTI","CJT","FDX","UPS","CLX"}
-REGIONAL = {"SKW","RPA","EDV","ENY","JIA","PDT","ASH","QXE","UCA","GJS","AWI","JZA","POE","SIL","KAP","VTE","AMF","BTK","WSN","FDY","RVF","CFE","KLC","CLH","DLA","HOP","LOG","WIF"}
+CARGO = {"UAE","QTR","GTI","CJT","FDX","UPS"}
+REGIONAL = {"SKW","RPA","EDV","ENY","JIA","PDT","ASH","QXE","UCA","GJS","AWI","JZA","POE","SIL","KAP"}
 
 def get(url):
     req = urllib.request.Request(url, headers={"User-Agent":"repo-locator/1.0"})
@@ -57,7 +56,7 @@ def scan():
                 }
             if found:
                 break
-        time.sleep(0.4)
+        time.sleep(0.3)
     return found
 
 def main():
