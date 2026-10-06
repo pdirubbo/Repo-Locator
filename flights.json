@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-06T21:27:24Z",
-  "source": "adsb",
+  "updated": "2026-10-06T21:28:17Z",
+  "source": "routes",
   "flights": [
     {
       "lat": 34.175629,
@@ -39,10 +39,14 @@
       "cargo": false,
       "regional": false,
       "callsign": "DAL8889",
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B"
+      "origin": "ATL Atlanta",
+      "dest": "MIA Miami",
+      "route": "ATL-MIA-IAD-ATL",
+      "routeNote": "adsb.lol route",
+      "olat": 33.6367,
+      "olon": -84.428101,
+      "dlat": 25.7932,
+      "dlon": -80.290604
     },
     {
       "callsign": "DAL8927",
@@ -150,10 +154,14 @@
       "cargo": false,
       "regional": false,
       "callsign": "DAL9970",
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B"
+      "origin": "BOS Boston",
+      "dest": "DTW Detroit",
+      "route": "BOS-DTW",
+      "routeNote": "adsbdb route",
+      "olat": 42.3643,
+      "olon": -71.005203,
+      "dlat": 42.212398529052734,
+      "dlon": -83.35340118408203
     },
     {
       "callsign": "ENY9870",
@@ -399,10 +407,14 @@
       "cargo": false,
       "regional": false,
       "callsign": "MXY9063",
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B"
+      "origin": "SYR SYR",
+      "dest": "CHS CHS",
+      "route": "SYR-CHS",
+      "routeNote": "adsbdb route",
+      "olat": 43.11119842529297,
+      "olon": -76.1063003540039,
+      "dlat": 32.898602,
+      "dlon": -80.040497
     },
     {
       "lat": 24.026871,
@@ -418,10 +430,14 @@
       "cargo": true,
       "regional": false,
       "callsign": "QTR8142",
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B"
+      "origin": "ORD Chicago",
+      "dest": "DOH DOH",
+      "route": "ORD-FRA-DOH",
+      "routeNote": "adsb.lol route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 25.273056,
+      "dlon": 51.608056
     },
     {
       "callsign": "QTR8167",
@@ -460,10 +476,14 @@
       "cargo": false,
       "regional": true,
       "callsign": "RPA9930",
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B"
+      "origin": "SDF Louisville",
+      "dest": "LGA LGA",
+      "route": "SDF-LGA",
+      "routeNote": "adsbdb route",
+      "olat": 38.1744,
+      "olon": -85.736,
+      "dlat": 40.777199,
+      "dlon": -73.872597
     },
     {
       "callsign": "SCX8244",
@@ -502,10 +522,14 @@
       "cargo": false,
       "regional": false,
       "callsign": "SCX8289",
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B"
+      "origin": "MSP Minneapolis",
+      "dest": "TYS TYS",
+      "route": "MSP-TYS",
+      "routeNote": "adsbdb route",
+      "olat": 44.882,
+      "olon": -93.221802,
+      "dlat": 35.811001,
+      "dlon": -83.994003
     },
     {
       "callsign": "SWA8505",
