@@ -14,8 +14,16 @@ HUBS = [
     (51.47, -0.45), (50.04, 8.56), (52.31, 4.76), (49.01, 2.55),
     (25.25, 55.36), (1.36, 103.99), (35.55, 139.78),
 ]
-OPS = {"DAL":"Delta","SWA":"Southwest","FFT":"Frontier","JBU":"JetBlue","SKW":"SkyWest","AAL":"American","UAL":"United","ASA":"Alaska","RYR":"Ryanair","UAE":"Emirates SkyCargo","QTR":"Qatar Cargo","GTI":"Atlas Air","CJT":"Cargojet","FHY":"Freebird","HLF":"TUIfly","FDX":"FedEx","UPS":"UPS","CLX":"Cargolux"}
+OPS = {
+    "DAL":"Delta","SWA":"Southwest","FFT":"Frontier","JBU":"JetBlue","AAL":"American","UAL":"United","ASA":"Alaska","NKS":"Spirit",
+    "RYR":"Ryanair","UAE":"Emirates SkyCargo","QTR":"Qatar Cargo","GTI":"Atlas Air","CJT":"Cargojet","FHY":"Freebird","HLF":"TUIfly","FDX":"FedEx","UPS":"UPS","CLX":"Cargolux",
+    "SKW":"SkyWest","RPA":"Republic","EDV":"Endeavor","ENY":"Envoy","JIA":"PSA","PDT":"Piedmont","ASH":"Mesa","QXE":"Horizon",
+    "UCA":"CommutAir","GJS":"GoJet","AWI":"Air Wisconsin","JZA":"Jazz","POE":"Porter","SIL":"Silver","KAP":"Cape Air","VTE":"Contour",
+    "AMF":"Ameriflight","BTK":"Boutique","WSN":"Advanced Air","FDY":"Southern Airways","RVF":"Ravn",
+    "CFE":"BA CityFlyer","KLC":"KLM Cityhopper","CLH":"Lufthansa CityLine","DLA":"Air Dolomiti","HOP":"Air France Hop","LOG":"Loganair","WIF":"Wideroe",
+}
 CARGO = {"UAE","QTR","GTI","CJT","FDX","UPS","CLX"}
+REGIONAL = {"SKW","RPA","EDV","ENY","JIA","PDT","ASH","QXE","UCA","GJS","AWI","JZA","POE","SIL","KAP","VTE","AMF","BTK","WSN","FDY","RVF","CFE","KLC","CLH","DLA","HOP","LOG","WIF"}
 
 def get(url):
     req = urllib.request.Request(url, headers={"User-Agent":"repo-locator/1.0"})
@@ -44,8 +52,8 @@ def scan():
                     "alt": int(alt) if flying else "ground", "gs": ac.get("gs") or 0,
                     "track": ac.get("track") or 0, "hex": ac.get("hex") or "",
                     "op": OPS.get(prefix, prefix or "Unknown"), "band": m.group(1)[0],
-                    "cargo": prefix in CARGO, "origin": "\u2014", "dest": "\u2014",
-                    "routeNote": "ADS-B refresh, route not looked up",
+                    "cargo": prefix in CARGO, "regional": prefix in REGIONAL,
+                    "origin": "\u2014", "dest": "\u2014", "routeNote": "ADS-B refresh, route not looked up",
                 }
             if found:
                 break
