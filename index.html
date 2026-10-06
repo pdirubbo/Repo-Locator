@@ -22,7 +22,7 @@
 </head>
 <body>
 <header><div><h1><span>REPO</span> LOCATOR</h1><div class="sub" id="sub">Loading flights.json</div></div><div class="chip">Airborne <b id="air">0</b></div></header>
-<main><div id="map"></div><section class="side"><div class="toolbar"><button id="refresh">Refresh</button><button class="filter on" data-f="all">All repos</button><button class="filter" data-f="9">9xxx</button><button class="filter" data-f="8">8xxx</button><button class="filter" data-f="reg">Regional</button><button class="filter" data-f="cargo">Cargo</button></div><div class="table-wrap"><table><thead><tr><th>Callsign</th><th>Operator</th><th>Origin</th><th>Destination</th><th>Alt</th><th>GS</th></tr></thead><tbody id="rows"></tbody></table></div><div class="note">Filed plans stay until the flight lands. Landed flights are removed. A plane is drawn only while ADS-B has an airborne position.</div></section></main>
+<main><div id="map"></div><section class="side"><div class="toolbar"><button id="refresh">Refresh</button><button class="filter on" data-f="all">All repos</button><button class="filter" data-f="9">9xxx</button><button class="filter" data-f="8">8xxx</button><button class="filter" data-f="reg">Regional</button><button class="filter" data-f="cargo">Cargo</button></div><div class="table-wrap"><table><thead><tr><th>Callsign</th><th>Operator</th><th>Origin</th><th>Destination</th><th>Route</th><th>Alt</th></tr></thead><tbody id="rows"></tbody></table></div><div class="note">A new ADS-B repo stays on the TFMS listen until its filed route arrives. Landed flights are removed.</div></section></main>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 let FLIGHTS = [];
@@ -50,9 +50,9 @@ function select(cs){ document.querySelectorAll("tr").forEach(tr=>tr.classList.to
 function render(){
   Object.values(markers).forEach(m=>map.removeLayer(m));
   for (const k in markers) delete markers[k];
-  FLIGHTS.forEach(f=>{ if(!flying(f)||!show(f)) return; const m=L.marker([f.lat,f.lon],{icon:planeIcon(f),zIndexOffset:500}).addTo(map); m.bindPopup(`<b>${f.callsign}</b> ${f.op}<br>${f.origin} \u2192 ${f.dest}`); m.on("click",()=>select(f.callsign)); markers[f.callsign]=m; });
+  FLIGHTS.forEach(f=>{ if(!flying(f)||!show(f)) return; const m=L.marker([f.lat,f.lon],{icon:planeIcon(f),zIndexOffset:500}).addTo(map); m.bindPopup(`<b>${f.callsign}</b> ${f.op}<br>${f.origin} \u2192 ${f.dest}<br>${f.route||""}`); m.on("click",()=>select(f.callsign)); markers[f.callsign]=m; });
   const shown=FLIGHTS.filter(show);
-  document.getElementById("rows").innerHTML=shown.map(f=>`<tr data-cs="${f.callsign}"><td><b>${f.callsign}</b></td><td>${f.op}${regional(f)?" \u00b7 regional":""}</td><td>${f.origin}</td><td>${f.dest}${f.via?" via "+f.via:""}</td><td>${altText(f.alt)}</td><td>${f.alt==="filed"?"\u2014":Math.round(f.gs||0)}</td></tr>`).join("");
+  document.getElementById("rows").innerHTML=shown.map(f=>`<tr data-cs="${f.callsign}"><td><b>${f.callsign}</b></td><td>${f.op}${regional(f)?" \u00b7 regional":""}</td><td>${f.origin}</td><td>${f.dest}</td><td>${f.route||"\u2014"}</td><td>${altText(f.alt)}</td></tr>`).join("");
   document.getElementById("air").textContent=shown.filter(flying).length;
   document.querySelectorAll("#rows tr").forEach(tr=>tr.addEventListener("click",()=>select(tr.dataset.cs)));
 }
