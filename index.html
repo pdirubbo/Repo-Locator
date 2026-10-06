@@ -22,7 +22,7 @@
 </head>
 <body>
 <header><div><h1><span>REPO</span> LOCATOR</h1><div class="sub" id="sub">Loading flights.json</div></div><div class="chip">Airborne <b id="air">0</b></div></header>
-<main><div id="map"></div><section class="side"><div class="toolbar"><button id="refresh">Refresh</button><button class="filter on" data-f="all">All repos</button><button class="filter" data-f="9">9xxx</button><button class="filter" data-f="8">8xxx</button><button class="filter" data-f="reg">Regional</button><button class="filter" data-f="cargo">Cargo</button></div><div class="table-wrap"><table><thead><tr><th>Callsign</th><th>Operator</th><th>Origin</th><th>Destination</th><th>Route</th><th>Alt</th></tr></thead><tbody id="rows"></tbody></table></div><div class="note">A new ADS-B repo stays on the TFMS listen until its filed route arrives. Landed flights are removed.</div></section></main>
+<main><div id="map"></div><section class="side"><div class="toolbar"><button id="refresh">Refresh</button><button class="filter on" data-f="all">All repos</button><button class="filter" data-f="9">9xxx</button><button class="filter" data-f="8">8xxx</button><button class="filter" data-f="reg">Regional</button><button class="filter" data-f="cargo">Cargo</button></div><div class="table-wrap"><table><thead><tr><th>Callsign</th><th>Operator</th><th>Origin</th><th>Destination</th><th>Route</th><th>Alt</th></tr></thead><tbody id="rows"></tbody></table></div><div class="note">Positions refresh about once a minute. Filed routes come from the separate TFMS job. Landed flights are removed.</div></section></main>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 let FLIGHTS = [];
@@ -73,7 +73,7 @@ async function refresh(){
 document.querySelectorAll("button.filter").forEach(b=>b.addEventListener("click",()=>{ document.querySelectorAll("button.filter").forEach(x=>x.classList.remove("on")); b.classList.add("on"); active=b.dataset.f; render(); }));
 document.getElementById("refresh").addEventListener("click", refresh);
 refresh();
-setInterval(refresh, 5*60*1000);
+setInterval(refresh, 60*1000);
 </script>
 </body>
 </html>
