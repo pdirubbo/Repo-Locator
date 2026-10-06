@@ -32,6 +32,7 @@
   tr { cursor: pointer; }
   tr:hover, tr.active { background: #1c2836; }
   .note { padding: 8px 10px; color: var(--muted); font-size: 11px; border-top: 1px solid var(--line); }
+  .plane { background: none; border: 0; }
   .leaflet-tooltip.apt { background: #101720; color: #e7eef6; border: 1px solid #263140; }
   @media (max-width: 900px) {
     main { grid-template-columns: 1fr; grid-template-rows: 46% 54%; height: auto; }
@@ -70,7 +71,7 @@
       </table>
     </div>
     <div class="note">
-      Planes on the map are airborne ADS-B positions only. Ground repos stay in the table. Click a verified row to draw the route.
+      Airborne ADS-B targets are plane icons pointed along their track. Ground repos stay in the table. Click a verified row to draw the route.
     </div>
   </section>
 </main>
@@ -96,16 +97,20 @@ const FLIGHTS = [
 const TYPE = {A20N:"A320neo",A21N:"A321neo",A320:"A320",A321:"A321",B738:"737-800",B38M:"737 MAX 8",B752:"757-200",B744:"747-400",B748:"747-8F",B77L:"777F",CRJ7:"CRJ-700"};
 const altText = a => (a === "ground" || a === 0 || a === "0") ? "GND" : (Number(a).toLocaleString() + " ft");
 const color = f => f.cargo ? "#b388ff" : f.band === "9" ? "#f0b429" : "#3ec6e0";
-
 const map = L.map("map", { worldCopyJump: true }).setView([36, -30], 3);
 L.tileLayer("https://basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png?key=cb1_4b02_1_f58b8a12fcfccf5a56049c12", {
   attribution: "&copy; OSM &copy; CARTO", maxZoom: 20
 }).addTo(map);
 const flying = f => f.alt !== "ground" && Number(f.alt) > 100;
+function planeIcon(f) {
+  const h = Number(f.track) || 0;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><g transform="rotate(${h} 14 14)"><path d="M14 2 L16.2 12 L24 15.2 L24 17.2 L16.2 15.6 L15.2 24 L17.4 25.4 L17.4 26.6 L14 25.4 L10.6 26.6 L10.6 25.4 L12.8 24 L11.8 15.6 L4 17.2 L4 15.2 L11.8 12 Z" fill="${color(f)}" stroke="#101720" stroke-width="1"/></g></svg>`;
+  return L.divIcon({ className: "plane", html: svg, iconSize: [28, 28], iconAnchor: [14, 14], popupAnchor: [0, -14] });
+}
 const markers = {};
 FLIGHTS.forEach(f => {
   if (!flying(f)) return;
-  const m = L.circleMarker([f.lat, f.lon], { radius: 7, color: color(f), weight: 2, fillColor: color(f), fillOpacity: 0.88 }).addTo(map);
+  const m = L.marker([f.lat, f.lon], { icon: planeIcon(f), zIndexOffset: 500 }).addTo(map);
   m.bindPopup(`<b>${f.callsign}</b> ${f.op}<br>${f.origin} \u2192 ${f.dest}${f.via ? " via "+f.via : ""}<br>${f.reg || "no reg"} \u00b7 ${TYPE[f.type] || f.type || "type unknown"}<br>${altText(f.alt)} \u00b7 ${Math.round(f.gs)} kt<br>ADS-B ${f.lat.toFixed(2)}, ${f.lon.toFixed(2)}`);
   m.on("click", () => select(f.callsign));
   markers[f.callsign] = m;
