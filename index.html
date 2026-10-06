@@ -21,15 +21,16 @@
 </style>
 </head>
 <body>
-<header><div><h1><span>REPO</span> LOCATOR</h1><div class="sub" id="sub">Loading</div></div><div class="chip">Airborne <b id="air">0</b></div></header>
-<main><div id="map"></div><section class="side"><div class="toolbar"><button id="refresh">Refresh</button><button class="filter on" data-f="all">All repos</button><button class="filter" data-f="9">9xxx</button><button class="filter" data-f="8">8xxx</button><button class="filter" data-f="reg">Regional</button><button class="filter" data-f="pax">Passenger</button></div><div class="table-wrap"><table><thead><tr><th>Callsign</th><th>Operator</th><th>Origin</th><th>Destination</th><th>Alt</th><th>GS</th></tr></thead><tbody id="rows"></tbody></table></div><div class="note">Refresh now asks ADS-B directly. The old button only reloaded a file that had not changed.</div></section></main>
+<header><div><h1><span>REPO</span> LOCATOR</h1><div class="sub" id="sub">Loading live ADS-B</div></div><div class="chip">Airborne <b id="air">0</b></div></header>
+<main><div id="map"></div><section class="side"><div class="toolbar"><button id="refresh">Refresh</button><button class="filter on" data-f="all">All repos</button><button class="filter" data-f="9">9xxx</button><button class="filter" data-f="8">8xxx</button><button class="filter" data-f="reg">Regional</button><button class="filter" data-f="cargo">Cargo</button></div><div class="table-wrap"><table><thead><tr><th>Callsign</th><th>Operator</th><th>Origin</th><th>Destination</th><th>Alt</th><th>GS</th></tr></thead><tbody id="rows"></tbody></table></div><div class="note">Commercial passenger and cargo only. N-numbers and light aircraft are dropped. The page asks ADS-B every 5 minutes.</div></section></main>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 let FLIGHTS = [];
-const REG = new Set("SKW RPA EDV ENY JIA PDT ASH QXE UCA GJS AWI JZA POE SIL KAP".split(" "));
-const OPS = {DAL:"Delta",SWA:"Southwest",FFT:"Frontier",JBU:"JetBlue",AAL:"American",UAL:"United",ASA:"Alaska",SKW:"SkyWest",RPA:"Republic",EDV:"Endeavor",ENY:"Envoy",JIA:"PSA",PDT:"Piedmont",GTI:"Atlas Air",UAE:"Emirates SkyCargo",QTR:"Qatar Cargo"};
-const CARGO = new Set("GTI UAE QTR FDX UPS CJT".split(" "));
-const HUBS = [[33.64,-84.43],[40.64,-73.78],[32.90,-97.04],[33.94,-118.41],[39.86,-104.67],[41.97,-87.91],[44.88,-93.22],[42.21,-83.35],[35.21,-80.94],[39.87,-75.24]];
+const REG = new Set("SKW RPA EDV ENY JIA PDT ASH QXE UCA GJS AWI JZA POE SIL".split(" "));
+const OPS = {DAL:"Delta",SWA:"Southwest",FFT:"Frontier",JBU:"JetBlue",AAL:"American",UAL:"United",ASA:"Alaska",NKS:"Spirit",SKW:"SkyWest",RPA:"Republic",EDV:"Endeavor",ENY:"Envoy",JIA:"PSA",PDT:"Piedmont",ASH:"Mesa",QXE:"Horizon",UAE:"Emirates SkyCargo",QTR:"Qatar Cargo",GTI:"Atlas Air",FDX:"FedEx",UPS:"UPS",KAL:"Korean Air Cargo",AJT:"Amerijet",CJT:"Cargojet",MTN:"Mountain Air Cargo",BVN:"Baron Aviation",IRO:"IFL Group"};
+const CARGO = new Set("GTI UAE QTR FDX UPS CJT KAL AJT CLX MTN BVN IRO".split(" "));
+const GA = new Set("C172 C152 C182 C206 C210 PA28 PA32 BE35 BE36 BE58 SR22 CH7A".split(" "));
+const HUBS = [[33.64,-84.43],[40.64,-73.78],[32.90,-97.04],[33.94,-118.41],[39.86,-104.67],[41.97,-87.91],[44.88,-93.22],[42.21,-83.35],[35.21,-80.94],[25.80,-80.29],[47.45,-122.31],[37.62,-122.38]];
 const regional = f => f.regional || REG.has((f.callsign||"").slice(0,3));
 const color = f => f.cargo ? "#b388ff" : regional(f) ? "#7ddea2" : f.band === "9" ? "#f0b429" : "#3ec6e0";
 const flying = f => f.alt !== "ground" && Number(f.alt) > 100;
@@ -38,12 +39,19 @@ const map = L.map("map", {worldCopyJump:true}).setView([36,-30], 3);
 L.tileLayer("https://basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png?key=cb1_4b02_1_f58b8a12fcfccf5a56049c12", {attribution:"&copy; OSM &copy; CARTO", maxZoom:20}).addTo(map);
 const markers = {};
 let active = "all", routeLine = null, routeEnds = [];
+function commercial(cs, ac){
+  if (!/^[A-Z]{3}[89]\d{3}$/.test(cs) || cs.startsWith("N")) return false;
+  const prefix = cs.slice(0,3), typ = (ac.t||"").toUpperCase(), cat = (ac.category||"").toUpperCase();
+  if (GA.has(typ) && !CARGO.has(prefix)) return false;
+  if ((cat==="A1"||cat==="A2") && !CARGO.has(prefix)) return false;
+  return true;
+}
 function planeIcon(f) {
   const h = Number(f.track)||0;
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><g transform="rotate(${h} 14 14)"><path d="M14 2 L16.2 12 L24 15.2 L24 17.2 L16.2 15.6 L15.2 24 L17.4 25.4 L17.4 26.6 L14 25.4 L10.6 26.6 L10.6 25.4 L12.8 24 L11.8 15.6 L4 17.2 L4 15.2 L11.8 12 Z" fill="${color(f)}" stroke="#101720" stroke-width="1"/></g></svg>`;
   return L.divIcon({className:"plane", html:svg, iconSize:[28,28], iconAnchor:[14,14]});
 }
-function show(f){ if(active==="9") return f.band==="9"; if(active==="8") return f.band==="8"; if(active==="reg") return regional(f); if(active==="pax") return !f.cargo; return true; }
+function show(f){ if(active==="9") return f.band==="9"; if(active==="8") return f.band==="8"; if(active==="reg") return regional(f); if(active==="cargo") return !!f.cargo; return true; }
 function gc(a,b,n=72){ const r=d=>d*Math.PI/180, lat1=r(a[0]), lon1=r(a[1]), lat2=r(b[0]), lon2=r(b[1]); const d=2*Math.asin(Math.sqrt(Math.sin((lat2-lat1)/2)**2+Math.cos(lat1)*Math.cos(lat2)*Math.sin((lon2-lon1)/2)**2)); if(!d) return [a,b]; const pts=[]; for(let i=0;i<=n;i++){ const f=i/n,A=Math.sin((1-f)*d)/Math.sin(d),B=Math.sin(f*d)/Math.sin(d); const x=A*Math.cos(lat1)*Math.cos(lon1)+B*Math.cos(lat2)*Math.cos(lon2); const y=A*Math.cos(lat1)*Math.sin(lon1)+B*Math.cos(lat2)*Math.sin(lon2); const z=A*Math.sin(lat1)+B*Math.sin(lat2); pts.push([Math.atan2(z,Math.sqrt(x*x+y*y))*180/Math.PI, Math.atan2(y,x)*180/Math.PI]); } return pts; }
 function drawRoute(f){ if(routeLine){ map.removeLayer(routeLine); routeLine=null; } routeEnds.forEach(m=>map.removeLayer(m)); routeEnds=[]; if(f.olat==null||f.dlat==null) return; const stops=[[f.olat,f.olon,f.origin]]; if(f.vlat!=null) stops.push([f.vlat,f.vlon,f.via]); stops.push([f.dlat,f.dlon,f.dest]); let line=[]; for(let i=0;i<stops.length-1;i++) line.push(...gc(stops[i], stops[i+1])); routeLine=L.polyline(line,{color:color(f),weight:3}).addTo(map); stops.forEach(([la,lo,name],i)=>{ const tag=i===0?"Origin":i===stops.length-1?"Destination":"Via"; routeEnds.push(L.circleMarker([la,lo],{radius:6,color:"#fff",weight:2,fillColor:color(f),fillOpacity:1}).bindTooltip(tag+": "+name,{permanent:true,direction:"top",className:"apt"}).addTo(map)); }); map.fitBounds(routeLine.getBounds().pad(0.3)); }
 function select(cs){ document.querySelectorAll("tr").forEach(tr=>tr.classList.toggle("active", tr.dataset.cs===cs)); const f=FLIGHTS.find(x=>x.callsign===cs); if(!f) return; if(flying(f)&&markers[cs]){ map.setView([f.lat,f.lon], Math.max(map.getZoom(),5)); markers[cs].openPopup(); } drawRoute(f); }
@@ -59,20 +67,19 @@ function render(){
 async function liveScan(){
   const found = {};
   for (const [lat,lon] of HUBS){
-    for (const base of [`https://api.adsb.lol/v2/point/${lat}/${lon}/200`,`https://api.airplanes.live/v2/point/${lat}/${lon}/200`]){
+    for (const base of [`https://api.adsb.lol/v2/lat/${lat}/lon/${lon}/dist/200`,`https://api.airplanes.live/v2/point/${lat}/${lon}/200`]){
       try {
         const data = await (await fetch(base)).json();
         for (const ac of data.ac||[]){
           const cs = (ac.flight||"").trim().toUpperCase();
-          const m = cs.match(/^[A-Z]{0,3}([89]\d{3})$/);
-          if (!m || ac.lat==null) continue;
-          const prefix = cs.length>4 ? cs.slice(0,3) : "";
+          if (!commercial(cs, ac) || ac.lat==null) continue;
+          const prefix = cs.slice(0,3);
           const alt = ac.alt_baro;
-          const flyingNow = String(alt).match(/^\d+$/) && Number(alt)>100;
+          const flyingNow = /^\d+$/.test(String(alt)) && Number(alt)>100;
           const prev = FLIGHTS.find(f=>f.callsign===cs) || {};
-          found[cs] = Object.assign({}, prev, {callsign:cs, reg:ac.r||prev.reg||"", type:ac.t||prev.type||"", lat:ac.lat, lon:ac.lon, alt: flyingNow?Number(alt):"ground", gs:ac.gs||0, track:ac.track||0, hex:ac.hex||"", op:OPS[prefix]||prefix||"Unknown", band:m[1][0], cargo:CARGO.has(prefix), regional:REG.has(prefix)});
+          found[cs] = Object.assign({}, prev, {callsign:cs, reg:ac.r||prev.reg||"", type:ac.t||prev.type||"", lat:ac.lat, lon:ac.lon, alt: flyingNow?Number(alt):"ground", gs:ac.gs||0, track:ac.track||0, hex:ac.hex||"", op:OPS[prefix]||prefix, band:cs[3], cargo:CARGO.has(prefix), regional:REG.has(prefix)});
         }
-        break;
+        if ((data.ac||[]).length) break;
       } catch(e) {}
     }
   }
@@ -84,15 +91,10 @@ async function refresh(){
   let live = [];
   try { live = await liveScan(); } catch(e) {}
   if (live.length){
-    const seen = new Set(live.map(f=>f.callsign));
-    FLIGHTS = live.concat(FLIGHTS.filter(f=>!seen.has(f.callsign) && f.olat!=null).map(f=>Object.assign({}, f, {alt:"ground", gs:0})));
-    document.getElementById("sub").textContent="Live ADS-B "+new Date().toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"})+" \u00b7 "+live.length+" repos";
+    FLIGHTS = live.filter(f=>/^[A-Z]{3}[89]\d{3}$/.test(f.callsign));
+    document.getElementById("sub").textContent="Live ADS-B "+new Date().toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"})+" \u00b7 "+live.length+" commercial repos";
   } else {
-    try {
-      const data = await (await fetch("flights.json?t="+Date.now(), {cache:"no-store"})).json();
-      FLIGHTS = data.flights||[];
-      document.getElementById("sub").textContent="File "+(data.updated||"")+" \u00b7 ADS-B blocked from the browser";
-    } catch(e) { document.getElementById("sub").textContent="Refresh failed"; }
+    document.getElementById("sub").textContent="ADS-B did not answer. Try Refresh again.";
   }
   render();
   btn.textContent="Refresh";
@@ -100,7 +102,7 @@ async function refresh(){
 document.querySelectorAll("button.filter").forEach(b=>b.addEventListener("click",()=>{ document.querySelectorAll("button.filter").forEach(x=>x.classList.remove("on")); b.classList.add("on"); active=b.dataset.f; render(); }));
 document.getElementById("refresh").addEventListener("click", refresh);
 refresh();
-setInterval(refresh, 15*60*1000);
+setInterval(refresh, 5*60*1000);
 setTimeout(()=>map.invalidateSize(), 200);
 </script>
 </body>
