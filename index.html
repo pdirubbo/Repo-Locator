@@ -102,8 +102,8 @@ const altText = a => (a === "ground" || a === 0 || a === "0") ? "GND" : (Number(
 const color = f => f.cargo ? "#b388ff" : f.band === "9" ? "#f0b429" : "#3ec6e0";
 
 const map = L.map("map", { worldCopyJump: true }).setView([36, -30], 3);
-L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
-  attribution: "&copy; OSM &copy; CARTO", subdomains: "abcd", maxZoom: 18
+L.tileLayer("https://basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png?key=cb1_4b02_1_f58b8a12fcfccf5a56049c12", {
+  attribution: "&copy; OSM &copy; CARTO", maxZoom: 20
 }).addTo(map);
 const markers = {};
 FLIGHTS.forEach(f => {
