@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fill missing origin, destination, and route after the position and TFMS jobs."""
+"""Fill missing routes from adsb.lol, adsbdb, then TFMS."""
 import json, os, re, time, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -38,17 +38,50 @@ def pack(origin, dest, route, note):
         row.update(dlat=d[0], dlon=d[1])
     return row
 
-def adsbdb(cs):
-    url = f"https://api.adsbdb.com/v0/callsign/{cs}"
+def get(url):
     req = urllib.request.Request(url, headers={"User-Agent":"repo-locator/1.0"})
     with urllib.request.urlopen(req, timeout=15) as resp:
-        data = json.loads(resp.read().decode())
+        return json.loads(resp.read().decode() or "{}")
+
+def adsb_lol(key):
+    data = get(f"https://api.adsb.lol/api/0/route/{key}")
+    airports = data.get("_airports") or []
+    if len(airports) < 2:
+        return {}
+    origin, nxt = airports[0], airports[1]
+    dest = nxt if airports[-1].get("iata") == origin.get("iata") else airports[-1]
+    oc, dc = origin.get("iata") or origin.get("icao"), dest.get("iata") or dest.get("icao")
+    if not oc or not dc:
+        return {}
+    codes = data.get("_airport_codes_iata") or data.get("airport_codes") or f"{oc}-{dc}"
+    row = pack(oc, dc, codes, "adsb.lol route")
+    row.update(olat=origin.get("lat"), olon=origin.get("lon"), dlat=dest.get("lat"), dlon=dest.get("lon"))
+    return row
+
+def adsbdb(cs):
+    data = get(f"https://api.adsbdb.com/v0/callsign/{cs}")
     fr = (data.get("response") or {}).get("flightroute") or {}
     o, d = fr.get("origin") or {}, fr.get("destination") or {}
     oc, dc = o.get("iata_code") or o.get("icao_code"), d.get("iata_code") or d.get("icao_code")
     if not oc or not dc:
         return {}
-    return pack(oc, dc, f"{oc}-{dc}", "adsbdb route")
+    row = pack(oc, dc, f"{oc}-{dc}", "adsbdb route")
+    if o.get("latitude") is not None:
+        row.update(olat=o.get("latitude"), olon=o.get("longitude"), dlat=d.get("latitude"), dlon=d.get("longitude"))
+    return row
+
+def lookup(row):
+    for fn, key in ((adsb_lol, row.get("callsign")), (adsbdb, row.get("callsign")), (adsb_lol, row.get("reg"))):
+        if not key:
+            continue
+        try:
+            found = fn(key)
+        except Exception:
+            found = {}
+        if found:
+            return found
+        time.sleep(0.1)
+    return {}
 
 def tfms(needed):
     password = os.environ.get("SWIM_PASSWORD") or ""
@@ -56,10 +89,8 @@ def tfms(needed):
         return {}
     from solace.messaging.messaging_service import MessagingService
     from solace.messaging.config.solace_properties import (
-        transport_layer_properties as tp,
-        transport_layer_security_properties as tls,
-        service_properties as sp,
-        authentication_properties as ap,
+        transport_layer_properties as tp, transport_layer_security_properties as tls,
+        service_properties as sp, authentication_properties as ap,
     )
     from solace.messaging.resources.queue import Queue
     props = {
@@ -100,14 +131,10 @@ def main():
     print(f"{len(gaps)} flights missing a route")
     filled = 0
     for row in gaps:
-        try:
-            found = adsbdb(row["callsign"])
-        except Exception:
-            found = {}
+        found = lookup(row)
         if found:
             row.update(found)
             filled += 1
-        time.sleep(0.15)
     still = {f["callsign"] for f in rows if missing(f)}
     try:
         for cs, plan in tfms(still).items():
