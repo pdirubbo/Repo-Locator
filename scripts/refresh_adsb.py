@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Update airborne positions only. Filed routes from TFMS are left in place."""
-import json, re, time, urllib.request
+"""Update airborne positions only. A short scan must not wipe the board."""
+import json, time, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
+import re
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "flights.json"
@@ -42,11 +43,12 @@ def commercial(cs, ac):
     return prefix in OPS or prefix in CARGO or prefix in REGIONAL or cat in {"A3","A4","A5"}
 
 def scan():
-    airborne, landed = {}, set()
+    airborne, landed, errors = {}, set(), 0
     for lat, lon in HUBS:
         try:
             data = get(f"https://api.adsb.lol/v2/lat/{lat}/lon/{lon}/dist/200")
         except Exception:
+            errors += 1
             continue
         for ac in data.get("ac") or []:
             cs = (ac.get("flight") or "").strip().upper()
@@ -66,12 +68,13 @@ def scan():
                 "cargo": prefix in CARGO, "regional": prefix in REGIONAL,
             }
         time.sleep(0.12)
-    return airborne, landed
+    return airborne, landed, errors
 
 def main():
     prev = json.loads(OUT.read_text()) if OUT.exists() else {"flights": []}
     old = {f["callsign"]: f for f in prev.get("flights", []) if CALL.match(f.get("callsign",""))}
-    live, landed = scan()
+    live, landed, errors = scan()
+    thin = errors > 5 or len(live) < max(3, len(old) // 2)
     merged = []
     for cs, pos in live.items():
         row = dict(old.get(cs, {}))
@@ -85,11 +88,11 @@ def main():
     for cs, kept in old.items():
         if cs in live or cs in landed:
             continue
-        if kept.get("alt") == "filed" or kept.get("routeNote") == "TFMS filed plan" and kept.get("lat") in (None, ""):
+        if thin or kept.get("alt") == "filed" or kept.get("lat") not in (None, ""):
             merged.append(kept)
     merged.sort(key=lambda f: f["callsign"])
     OUT.write_text(json.dumps({"updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "source": "adsb", "flights": merged}, indent=2) + "\n")
-    print(f"positions {len(live)}, landed dropped {len(landed)}, table {len(merged)}")
+    print(f"positions {len(live)}, errors {errors}, thin {thin}, table {len(merged)}")
 
 if __name__ == "__main__":
     main()
