@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-06T23:22:13Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-06T23:22:54Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9793",
@@ -60,10 +60,10 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GSO Greensboro",
+      "dest": "GSO Greensboro",
+      "route": "GSO-GSO",
+      "routeNote": "FlightAware"
     },
     {
       "callsign": "DAL8841",
@@ -102,10 +102,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MSY MSY",
+      "dest": "CLE CLE",
+      "route": "MSY-CLE",
+      "routeNote": "adsb.lol route",
+      "olat": 29.993401,
+      "olon": -90.258003,
+      "dlat": 41.411701,
+      "dlon": -81.8498
     },
     {
       "callsign": "DAL8844",
@@ -144,10 +148,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BHM BHM",
+      "dest": "MCO Orlando",
+      "route": "BHM-MCO",
+      "routeNote": "adsbdb route",
+      "dlat": 28.429399490356445,
+      "dlon": -81.30899810791016,
+      "olat": 33.562901,
+      "olon": -86.753502
     },
     {
       "callsign": "GTI8997",
@@ -186,10 +194,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GPT GPT",
+      "dest": "DAY DAY",
+      "route": "GPT-DAY",
+      "routeNote": "adsbdb route",
+      "olat": 30.407301,
+      "olon": -89.070099,
+      "dlat": 39.902401,
+      "dlon": -84.219398
     },
     {
       "callsign": "SCX8655",
