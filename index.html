@@ -17,7 +17,7 @@
   button.filter.on, #refresh { border-color:var(--amber); color:var(--amber); }
   .table-wrap { overflow:auto; flex:1; } table { width:100%; border-collapse:collapse; font-size:12.5px; } th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); white-space:nowrap; } th { position:sticky; top:0; background:#182230; color:var(--muted); } tr { cursor:pointer; } tr:hover,tr.active { background:#1c2836; }
   .note { padding:8px 10px; border-top:1px solid var(--line); } .plane { background:none; border:0; } .leaflet-tooltip.apt { background:#101720; color:#e7eef6; border:1px solid #263140; }
-  @media (max-width:900px) { main { grid-template-columns:1fr; grid-template-rows:46% 54%; height:auto; } #map { min-height:320px; } .side { border-left:0; border-top:1px solid var(--line); } }
+  @media (max-width:900px) { header { padding:8px 10px; } h1 { font-size:16px; } main { grid-template-columns:1fr; grid-template-rows:auto 1fr; height:calc(100% - 52px); } #map { height:168px; min-height:168px; max-height:168px; } .side { border-left:0; border-top:1px solid var(--line); min-height:0; } .toolbar { padding:6px; } }
 </style>
 </head>
 <body>
