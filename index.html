@@ -22,7 +22,7 @@
 </head>
 <body>
 <header><div><h1><span>REPO</span> LOCATOR</h1><div class="sub" id="sub">Loading flights.json</div></div><div class="chip">Airborne <b id="air">0</b></div></header>
-<main><div id="map"></div><section class="side"><div class="toolbar"><button id="refresh">Refresh</button><button class="filter on" data-f="all">All repos</button><button class="filter" data-f="9">9xxx</button><button class="filter" data-f="8">8xxx</button><button class="filter" data-f="reg">Regional</button><button class="filter" data-f="pax">Passenger</button></div><div class="table-wrap"><table><thead><tr><th>Callsign</th><th>Operator</th><th>Origin</th><th>Destination</th><th>Alt</th><th>GS</th></tr></thead><tbody id="rows"></tbody></table></div><div class="note" id="note">Refresh reloads the latest flights.json. GitHub also writes that file every 15 minutes.</div></section></main>
+<main><div id="map"></div><section class="side"><div class="toolbar"><button id="refresh">Refresh</button><button class="filter on" data-f="all">All repos</button><button class="filter" data-f="9">9xxx</button><button class="filter" data-f="8">8xxx</button><button class="filter" data-f="reg">Regional</button><button class="filter" data-f="pax">Passenger</button></div><div class="table-wrap"><table><thead><tr><th>Callsign</th><th>Operator</th><th>Origin</th><th>Destination</th><th>Alt</th><th>GS</th></tr></thead><tbody id="rows"></tbody></table></div><div class="note">Refresh reloads flights.json every 15 minutes. A canceled flight is added only when the tail's next flight number is not a normal schedule on that city pair.</div></section></main>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 let FLIGHTS = [];
