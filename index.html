@@ -6,52 +6,37 @@
 <title>Repo Locator</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <style>
-  :root {
-    --bg: #0b1016; --panel: #141b24; --line: #263140; --text: #e7eef6; --muted: #8ea0b5;
-    --amber: #f0b429; --cyan: #3ec6e0; --violet: #b388ff;
-  }
+  :root { --bg:#0b1016; --line:#263140; --text:#e7eef6; --muted:#8ea0b5; --amber:#f0b429; --cyan:#3ec6e0; --violet:#b388ff; }
   * { box-sizing: border-box; }
-  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text); font: 14px/1.4 "Segoe UI", system-ui, sans-serif; }
-  header { display: flex; gap: 16px; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid var(--line); background: #101720; }
-  h1 { font-size: 18px; margin: 0; letter-spacing: 0.08em; font-weight: 650; }
-  h1 span { color: var(--amber); }
-  .sub { color: var(--muted); font-size: 12px; margin-top: 2px; }
-  .chips { display: flex; gap: 8px; flex-wrap: wrap; }
-  .chip { border: 1px solid var(--line); background: #1a2330; border-radius: 999px; padding: 4px 10px; font-size: 12px; color: var(--muted); }
-  .chip b { color: var(--text); font-weight: 650; }
-  main { display: grid; grid-template-columns: 1.15fr 0.85fr; height: calc(100% - 62px); }
-  #map { height: 100%; background: #0d141c; }
-  .side { display: flex; flex-direction: column; border-left: 1px solid var(--line); min-width: 0; }
-  .toolbar { display: flex; gap: 8px; padding: 10px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
-  button.filter { background: #1a2330; color: var(--text); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; cursor: pointer; }
-  button.filter.on { border-color: var(--amber); color: var(--amber); }
-  .table-wrap { overflow: auto; flex: 1; }
-  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
-  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
-  th { position: sticky; top: 0; background: #182230; color: var(--muted); font-weight: 600; }
-  tr { cursor: pointer; }
-  tr:hover, tr.active { background: #1c2836; }
-  .note { padding: 8px 10px; color: var(--muted); font-size: 11px; border-top: 1px solid var(--line); }
-  .plane { background: none; border: 0; }
-  .leaflet-tooltip.apt { background: #101720; color: #e7eef6; border: 1px solid #263140; }
-  @media (max-width: 900px) {
-    main { grid-template-columns: 1fr; grid-template-rows: 46% 54%; height: auto; }
-    #map { min-height: 320px; }
-    .side { border-left: 0; border-top: 1px solid var(--line); }
-  }
+  html, body { margin:0; height:100%; background:var(--bg); color:var(--text); font:14px/1.4 "Segoe UI", system-ui, sans-serif; }
+  header { display:flex; gap:16px; align-items:center; justify-content:space-between; padding:12px 16px; border-bottom:1px solid var(--line); background:#101720; }
+  h1 { font-size:18px; margin:0; letter-spacing:.08em; }
+  h1 span { color:var(--amber); }
+  .sub, .note { color:var(--muted); font-size:12px; }
+  .chips { display:flex; gap:8px; flex-wrap:wrap; }
+  .chip { border:1px solid var(--line); background:#1a2330; border-radius:999px; padding:4px 10px; font-size:12px; color:var(--muted); }
+  .chip b { color:var(--text); }
+  main { display:grid; grid-template-columns:1.15fr .85fr; height:calc(100% - 62px); }
+  #map { height:100%; background:#0d141c; }
+  .side { display:flex; flex-direction:column; border-left:1px solid var(--line); min-width:0; }
+  .toolbar { display:flex; gap:8px; padding:10px; border-bottom:1px solid var(--line); flex-wrap:wrap; }
+  button.filter { background:#1a2330; color:var(--text); border:1px solid var(--line); border-radius:8px; padding:6px 10px; cursor:pointer; }
+  button.filter.on { border-color:var(--amber); color:var(--amber); }
+  .table-wrap { overflow:auto; flex:1; }
+  table { width:100%; border-collapse:collapse; font-size:12.5px; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  th { position:sticky; top:0; background:#182230; color:var(--muted); }
+  tr { cursor:pointer; } tr:hover, tr.active { background:#1c2836; }
+  .note { padding:8px 10px; border-top:1px solid var(--line); }
+  .plane { background:none; border:0; }
+  .leaflet-tooltip.apt { background:#101720; color:#e7eef6; border:1px solid #263140; }
+  @media (max-width:900px) { main { grid-template-columns:1fr; grid-template-rows:46% 54%; height:auto; } #map { min-height:320px; } .side { border-left:0; border-top:1px solid var(--line); } }
 </style>
 </head>
 <body>
 <header>
-  <div>
-    <h1><span>REPO</span> LOCATOR</h1>
-    <div class="sub">Repositioning and ferry flights · 4-digit 8xxx/9xxx callsigns · snapshot 5 Oct 2026, 21:20 MST</div>
-  </div>
-  <div class="chips">
-    <div class="chip">Shown <b id="n">0</b></div>
-    <div class="chip">Airborne <b id="air">0</b></div>
-    <div class="chip">Rule <b>8xxx / 9xxx</b></div>
-  </div>
+  <div><h1><span>REPO</span> LOCATOR</h1><div class="sub">Repositioning and ferry flights · 8xxx/9xxx · 5 Oct 2026</div></div>
+  <div class="chips"><div class="chip">Shown <b id="n">0</b></div><div class="chip">Airborne <b id="air">0</b></div></div>
 </header>
 <main>
   <div id="map"></div>
@@ -62,46 +47,35 @@
       <button class="filter" data-f="8">8xxx</button>
       <button class="filter" data-f="pax">Passenger</button>
     </div>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>Callsign</th><th>Operator</th><th>Origin</th><th>Destination</th><th>Type</th><th>Alt</th><th>GS</th></tr>
-        </thead>
-        <tbody id="rows"></tbody>
-      </table>
-    </div>
-    <div class="note">
-      Airborne ADS-B targets are plane icons pointed along their track. Ground repos stay in the table. Click a verified row to draw the route.
-    </div>
+    <div class="table-wrap"><table><thead><tr><th>Callsign</th><th>Operator</th><th>Origin</th><th>Destination</th><th>Type</th><th>Alt</th><th>GS</th></tr></thead><tbody id="rows"></tbody></table></div>
+    <div class="note">Click a flight to draw origin and destination. Plane icons are airborne ADS-B only.</div>
   </section>
 </main>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 const FLIGHTS = [
-  {"callsign":"JBU9999","reg":"N4062J","type":"A21N","lat":42.3657,"lon":-71.0268,"alt":"ground","gs":0,"track":0,"hex":"a4c592","region":"BOS","op":"JetBlue","band":"9","cargo":false,"origin":"BOS Boston","dest":"\u2014","via":"","routeNote":"on ground at BOS, no filed route"},
-  {"callsign":"FFT9135","reg":"N335FR","type":"A20N","lat":28.575,"lon":-80.332,"alt":20400,"gs":388.2,"track":333,"hex":"a3a8ef","region":"MCO","op":"Frontier","band":"9","cargo":false,"origin":"\u2014","dest":"\u2014","via":"","routeNote":"no route filed"},
-  {"callsign":"RYR9534","reg":"EI-EKN","type":"B738","lat":44.6068,"lon":11.5712,"alt":37025,"gs":454.9,"track":164,"hex":"4ca80e","region":"FRA","op":"Ryanair","band":"9","cargo":false,"origin":"FMM Memmingen","dest":"MLA Luqa","via":"","routeNote":"FlightAware FMM-MLA","olat":47.9888,"olon":10.2395,"dlat":35.8575,"dlon":14.4775},
-  {"callsign":"SKW9912","reg":"N613SK","type":"CRJ7","lat":38.5651,"lon":-104.6258,"alt":11275,"gs":285.4,"track":6,"hex":"a7fb7d","region":"DEN","op":"SkyWest","band":"9","cargo":false,"origin":"\u2014","dest":"\u2014","via":"","routeNote":"no route filed"},
-  {"callsign":"UAE9710","reg":"A6-EWN","type":"B77L","lat":24.837,"lon":55.353,"alt":7575,"gs":281.4,"track":106,"hex":"8966f0","region":"DXB","op":"Emirates SkyCargo","band":"9","cargo":true,"origin":"DWC Dubai","dest":"BLR Bengaluru","via":"","routeNote":"DWC-BLR, matches Dubai climb","olat":24.8964,"olon":55.1614,"dlat":13.1989,"dlon":77.7066},
-  {"callsign":"CJT9002","reg":"C-GCJS","type":"B752","lat":33.4262,"lon":-112.3651,"alt":"ground","gs":0,"track":0,"hex":"c04aed","region":"PHX","op":"Cargojet","band":"9","cargo":true,"origin":"CVG Cincinnati","dest":"YHM Hamilton","via":"","routeNote":"KCVG-CYHM"},
-  {"callsign":"GBB9230","reg":"","type":"","lat":52.308,"lon":4.764,"alt":"ground","gs":19.5,"track":0,"hex":"484213","region":"AMS","op":"Unknown","band":"9","cargo":false,"origin":"AMS Amsterdam","dest":"\u2014","via":"","routeNote":"on ground at AMS, no filed route"},
-  {"callsign":"DAL8803","reg":"N397DN","type":"A321","lat":41.902,"lon":-108.028,"alt":39000,"gs":464.1,"track":80,"hex":"a49d22","region":"DEN","op":"Delta","band":"8","cargo":false,"origin":"SLC Salt Lake City","dest":"MSP Minneapolis","via":"","routeNote":"AirNav 5 Oct SLC-MSP, tail N397DN","olat":40.7899,"olon":-111.9791,"dlat":44.882,"dlon":-93.2218},
-  {"callsign":"SWA8507","reg":"N8893L","type":"B38M","lat":39.486,"lon":-122.624,"alt":31475,"gs":468.2,"track":340,"hex":"ac4210","region":"SFO","op":"Southwest","band":"8","cargo":false,"origin":"\u2014","dest":"\u2014","via":"","routeNote":"no route filed"},
-  {"callsign":"SWA8508","reg":"N8583Z","type":"B738","lat":30.612,"lon":-81.772,"alt":41000,"gs":402.7,"track":20,"hex":"abc7e9","region":"MCO","op":"Southwest","band":"8","cargo":false,"origin":"\u2014","dest":"\u2014","via":"","routeNote":"no route filed"},
-  {"callsign":"FHY8013","reg":"TC-FBV","type":"A320","lat":50.901,"lon":4.498,"alt":"ground","gs":134.4,"track":40,"hex":"4b9856","region":"AMS","op":"Freebird","band":"8","cargo":false,"origin":"BRU Brussels","dest":"AYT Antalya","via":"","routeNote":"EBBR-LTAI"},
-  {"callsign":"HLF8816","reg":"","type":"","lat":51.413,"lon":12.236,"alt":"ground","gs":0,"track":0,"hex":"7824fa","region":"FRA","op":"TUIfly","band":"8","cargo":false,"origin":"LEJ Leipzig","dest":"SZX Shenzhen","via":"ICN","routeNote":"EDDP-RKSI-ZGSZ"},
-  {"callsign":"QTR8166","reg":"A7-BFD","type":"B77L","lat":50.636,"lon":5.429,"alt":"ground","gs":9.8,"track":0,"hex":"06a0dd","region":"LGG","op":"Qatar Cargo","band":"8","cargo":true,"origin":"LGG Liege","dest":"ORD Chicago","via":"","routeNote":"FlightAware LGG-ORD","olat":50.6374,"olon":5.4432,"dlat":41.9742,"dlon":-87.9073},
-  {"callsign":"GTI8173","reg":"N485MC","type":"B744","lat":33.934,"lon":-118.385,"alt":"ground","gs":0,"track":0,"hex":"a5fc42","region":"LAX","op":"Atlas Air","band":"8","cargo":true,"origin":"LAX Los Angeles","dest":"PVG Shanghai","via":"","routeNote":"FlightAware LAX-PVG","olat":33.9416,"olon":-118.4085,"dlat":31.1434,"dlon":121.8052},
-  {"callsign":"GTI8975","reg":"N860GT","type":"B748","lat":32.896,"lon":-97.042,"alt":"ground","gs":0,"track":0,"hex":"abcf7f","region":"DFW","op":"Atlas Air","band":"8","cargo":true,"origin":"DFW Dallas","dest":"\u2014","via":"","routeNote":"on ground at DFW, no filed route"}
+  {"callsign":"JBU9999","reg":"N4062J","type":"A21N","lat":42.3657,"lon":-71.0268,"alt":"ground","gs":0,"track":0,"hex":"a4c592","op":"JetBlue","band":"9","cargo":false,"origin":"BOS Boston","dest":"\u2014"},
+  {"callsign":"FFT9135","reg":"N335FR","type":"A20N","lat":28.575,"lon":-80.332,"alt":20400,"gs":388.2,"track":333,"hex":"a3a8ef","op":"Frontier","band":"9","cargo":false,"origin":"BQN Aguadilla","dest":"MCO Orlando","olat":18.4949,"olon":-67.1294,"dlat":28.4312,"dlon":-81.3081},
+  {"callsign":"RYR9534","reg":"EI-EKN","type":"B738","lat":44.6068,"lon":11.5712,"alt":37025,"gs":454.9,"track":164,"hex":"4ca80e","op":"Ryanair","band":"9","cargo":false,"origin":"FMM Memmingen","dest":"MLA Luqa","olat":47.9888,"olon":10.2395,"dlat":35.8575,"dlon":14.4775},
+  {"callsign":"SKW9912","reg":"N613SK","type":"CRJ7","lat":38.5651,"lon":-104.6258,"alt":11275,"gs":285.4,"track":6,"hex":"a7fb7d","op":"SkyWest","band":"9","cargo":false,"origin":"PHX Phoenix","dest":"COS Colorado Springs","olat":33.4373,"olon":-112.0078,"dlat":38.8058,"dlon":-104.7008},
+  {"callsign":"UAE9710","reg":"A6-EWN","type":"B77L","lat":24.837,"lon":55.353,"alt":7575,"gs":281.4,"track":106,"hex":"8966f0","op":"Emirates SkyCargo","band":"9","cargo":true,"origin":"DWC Dubai","dest":"BLR Bengaluru","olat":24.8964,"olon":55.1614,"dlat":13.1989,"dlon":77.7066},
+  {"callsign":"CJT9002","reg":"C-GCJS","type":"B752","lat":33.4262,"lon":-112.3651,"alt":"ground","gs":0,"track":0,"hex":"c04aed","op":"Cargojet","band":"9","cargo":true,"origin":"CVG Cincinnati","dest":"YHM Hamilton","olat":39.0488,"olon":-84.6678,"dlat":43.1736,"dlon":-79.935},
+  {"callsign":"GBB9230","reg":"","type":"","lat":52.308,"lon":4.764,"alt":"ground","gs":19.5,"track":0,"hex":"484213","op":"Unknown","band":"9","cargo":false,"origin":"AMS Amsterdam","dest":"\u2014"},
+  {"callsign":"DAL8803","reg":"N397DN","type":"A321","lat":41.902,"lon":-108.028,"alt":39000,"gs":464.1,"track":80,"hex":"a49d22","op":"Delta","band":"8","cargo":false,"origin":"SLC Salt Lake City","dest":"MSP Minneapolis","olat":40.7899,"olon":-111.9791,"dlat":44.882,"dlon":-93.2218},
+  {"callsign":"SWA8507","reg":"N8893L","type":"B38M","lat":37.602,"lon":-122.03,"alt":3175,"gs":180,"track":264,"hex":"ac4210","op":"Southwest","band":"8","cargo":false,"origin":"PAE Everett","dest":"OAK Oakland","olat":47.9063,"olon":-122.281,"dlat":37.7213,"dlon":-122.2208},
+  {"callsign":"SWA8508","reg":"N8583Z","type":"B738","lat":32.592,"lon":-83.197,"alt":41000,"gs":402.7,"track":320,"hex":"abc7e9","op":"Southwest","band":"8","cargo":false,"origin":"FLL Fort Lauderdale","dest":"ATL Atlanta","olat":26.0726,"olon":-80.1527,"dlat":33.6407,"dlon":-84.4277},
+  {"callsign":"FHY8013","reg":"TC-FBV","type":"A320","lat":50.901,"lon":4.498,"alt":"ground","gs":134.4,"track":40,"hex":"4b9856","op":"Freebird","band":"8","cargo":false,"origin":"BRU Brussels","dest":"AYT Antalya","olat":50.9014,"olon":4.4844,"dlat":36.8987,"dlon":30.8005},
+  {"callsign":"HLF8816","reg":"","type":"","lat":51.413,"lon":12.236,"alt":"ground","gs":0,"track":0,"hex":"7824fa","op":"TUIfly","band":"8","cargo":false,"origin":"LEJ Leipzig","dest":"SZX Shenzhen","via":"ICN","olat":51.4324,"olon":12.2416,"vlat":37.4602,"vlon":126.4407,"dlat":22.6393,"dlon":113.8108},
+  {"callsign":"QTR8166","reg":"A7-BFD","type":"B77L","lat":50.636,"lon":5.429,"alt":"ground","gs":9.8,"track":0,"hex":"06a0dd","op":"Qatar Cargo","band":"8","cargo":true,"origin":"LGG Liege","dest":"ORD Chicago","olat":50.6374,"olon":5.4432,"dlat":41.9742,"dlon":-87.9073},
+  {"callsign":"GTI8173","reg":"N485MC","type":"B744","lat":33.934,"lon":-118.385,"alt":"ground","gs":0,"track":0,"hex":"a5fc42","op":"Atlas Air","band":"8","cargo":true,"origin":"LAX Los Angeles","dest":"PVG Shanghai","olat":33.9416,"olon":-118.4085,"dlat":31.1434,"dlon":121.8052},
+  {"callsign":"GTI8975","reg":"N860GT","type":"B748","lat":32.896,"lon":-97.042,"alt":"ground","gs":0,"track":0,"hex":"abcf7f","op":"Atlas Air","band":"8","cargo":true,"origin":"DFW Dallas","dest":"\u2014"}
 ];
 const TYPE = {A20N:"A320neo",A21N:"A321neo",A320:"A320",A321:"A321",B738:"737-800",B38M:"737 MAX 8",B752:"757-200",B744:"747-400",B748:"747-8F",B77L:"777F",CRJ7:"CRJ-700"};
-const altText = a => (a === "ground" || a === 0 || a === "0") ? "GND" : (Number(a).toLocaleString() + " ft");
+const altText = a => (a === "ground" || a === 0) ? "GND" : (Number(a).toLocaleString() + " ft");
 const color = f => f.cargo ? "#b388ff" : f.band === "9" ? "#f0b429" : "#3ec6e0";
-const map = L.map("map", { worldCopyJump: true }).setView([36, -30], 3);
-L.tileLayer("https://basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png?key=cb1_4b02_1_f58b8a12fcfccf5a56049c12", {
-  attribution: "&copy; OSM &copy; CARTO", maxZoom: 20
-}).addTo(map);
 const flying = f => f.alt !== "ground" && Number(f.alt) > 100;
+const map = L.map("map", { worldCopyJump: true }).setView([36, -30], 3);
+L.tileLayer("https://basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png?key=cb1_4b02_1_f58b8a12fcfccf5a56049c12", { attribution: "&copy; OSM &copy; CARTO", maxZoom: 20 }).addTo(map);
 function planeIcon(f) {
   const h = Number(f.track) || 0;
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><g transform="rotate(${h} 14 14)"><path d="M14 2 L16.2 12 L24 15.2 L24 17.2 L16.2 15.6 L15.2 24 L17.4 25.4 L17.4 26.6 L14 25.4 L10.6 26.6 L10.6 25.4 L12.8 24 L11.8 15.6 L4 17.2 L4 15.2 L11.8 12 Z" fill="${color(f)}" stroke="#101720" stroke-width="1"/></g></svg>`;
@@ -111,36 +85,23 @@ const markers = {};
 FLIGHTS.forEach(f => {
   if (!flying(f)) return;
   const m = L.marker([f.lat, f.lon], { icon: planeIcon(f), zIndexOffset: 500 }).addTo(map);
-  m.bindPopup(`<b>${f.callsign}</b> ${f.op}<br>${f.origin} \u2192 ${f.dest}${f.via ? " via "+f.via : ""}<br>${f.reg || "no reg"} \u00b7 ${TYPE[f.type] || f.type || "type unknown"}<br>${altText(f.alt)} \u00b7 ${Math.round(f.gs)} kt<br>ADS-B ${f.lat.toFixed(2)}, ${f.lon.toFixed(2)}`);
+  m.bindPopup(`<b>${f.callsign}</b> ${f.op}<br>${f.origin} \u2192 ${f.dest}${f.via ? " via "+f.via : ""}<br>${f.reg || "no reg"}`);
   m.on("click", () => select(f.callsign));
   markers[f.callsign] = m;
 });
 let active = "all";
-function show(f) {
-  if (active === "9") return f.band === "9";
-  if (active === "8") return f.band === "8";
-  if (active === "pax") return !f.cargo;
-  return true;
-}
+function show(f) { if (active === "9") return f.band === "9"; if (active === "8") return f.band === "8"; if (active === "pax") return !f.cargo; return true; }
 function render() {
   const rows = document.getElementById("rows");
   const shown = FLIGHTS.filter(show);
-  rows.innerHTML = shown.map(f => `<tr data-cs="${f.callsign}">
-    <td><b>${f.callsign}</b></td><td>${f.op}</td>
-    <td>${f.origin}</td><td>${f.dest}${f.via ? " via "+f.via : ""}</td>
-    <td>${TYPE[f.type] || f.type || "\u2014"}</td>
-    <td>${altText(f.alt)}</td><td>${Math.round(f.gs)}</td></tr>`).join("");
+  rows.innerHTML = shown.map(f => `<tr data-cs="${f.callsign}"><td><b>${f.callsign}</b></td><td>${f.op}</td><td>${f.origin}</td><td>${f.dest}${f.via ? " via "+f.via : ""}</td><td>${TYPE[f.type] || f.type || "\u2014"}</td><td>${altText(f.alt)}</td><td>${Math.round(f.gs)}</td></tr>`).join("");
   document.getElementById("n").textContent = shown.length;
   document.getElementById("air").textContent = shown.filter(flying).length;
   rows.querySelectorAll("tr").forEach(tr => tr.addEventListener("click", () => select(tr.dataset.cs)));
-  Object.entries(markers).forEach(([cs, m]) => {
-    const f = FLIGHTS.find(x => x.callsign === cs);
-    show(f) && flying(f) ? m.addTo(map) : map.removeLayer(m);
-  });
+  Object.entries(markers).forEach(([cs, m]) => { const f = FLIGHTS.find(x => x.callsign === cs); show(f) && flying(f) ? m.addTo(map) : map.removeLayer(m); });
 }
 function gc(a, b, n=72) {
-  const r = d => d * Math.PI / 180;
-  const lat1 = r(a[0]), lon1 = r(a[1]), lat2 = r(b[0]), lon2 = r(b[1]);
+  const r = d => d * Math.PI / 180, lat1 = r(a[0]), lon1 = r(a[1]), lat2 = r(b[0]), lon2 = r(b[1]);
   const d = 2 * Math.asin(Math.sqrt(Math.sin((lat2-lat1)/2)**2 + Math.cos(lat1)*Math.cos(lat2)*Math.sin((lon2-lon1)/2)**2));
   if (!d) return [a, b];
   const pts = [];
@@ -156,34 +117,30 @@ function gc(a, b, n=72) {
 let routeLine = null, routeEnds = [];
 function drawRoute(f) {
   if (routeLine) { map.removeLayer(routeLine); routeLine = null; }
-  routeEnds.forEach(m => map.removeLayer(m));
-  routeEnds = [];
+  routeEnds.forEach(m => map.removeLayer(m)); routeEnds = [];
   if (f.olat == null || f.dlat == null) return;
-  routeLine = L.polyline(gc([f.olat, f.olon], [f.dlat, f.dlon]), {
-    color: color(f), weight: 2.5, opacity: 0.9, dashArray: "7 6"
-  }).addTo(map);
-  [[f.olat, f.olon, f.origin], [f.dlat, f.dlon, f.dest]].forEach(([la, lo, name]) => {
-    routeEnds.push(L.circleMarker([la, lo], {
-      radius: 5, color: "#fff", weight: 2, fillColor: color(f), fillOpacity: 1
-    }).bindTooltip(name, {permanent: true, direction: "top", className: "apt"}).addTo(map));
+  const stops = [[f.olat, f.olon, f.origin]];
+  if (f.vlat != null) stops.push([f.vlat, f.vlon, f.via]);
+  stops.push([f.dlat, f.dlon, f.dest]);
+  const line = [];
+  for (let i = 0; i < stops.length - 1; i++) line.push(...gc(stops[i], stops[i + 1]));
+  routeLine = L.polyline(line, { color: color(f), weight: 3, opacity: 0.95 }).addTo(map);
+  stops.forEach(([la, lo, name], i) => {
+    const tag = i === 0 ? "Origin" : i === stops.length - 1 ? "Destination" : "Via";
+    routeEnds.push(L.circleMarker([la, lo], { radius: 6, color: "#fff", weight: 2, fillColor: color(f), fillOpacity: 1 }).bindTooltip(`${tag}: ${name}`, {permanent: true, direction: "top", className: "apt"}).addTo(map));
   });
-  map.fitBounds(routeLine.getBounds().pad(0.25));
+  map.fitBounds(routeLine.getBounds().pad(0.3));
 }
 function select(cs) {
   document.querySelectorAll("tr").forEach(tr => tr.classList.toggle("active", tr.dataset.cs === cs));
   const f = FLIGHTS.find(x => x.callsign === cs);
   if (!f) return;
-  if (flying(f)) {
-    map.setView([f.lat, f.lon], Math.max(map.getZoom(), 5));
-    markers[cs].openPopup();
-  }
+  if (flying(f) && markers[cs]) { map.setView([f.lat, f.lon], Math.max(map.getZoom(), 5)); markers[cs].openPopup(); }
   drawRoute(f);
 }
 document.querySelectorAll("button.filter").forEach(b => b.addEventListener("click", () => {
   document.querySelectorAll("button.filter").forEach(x => x.classList.remove("on"));
-  b.classList.add("on");
-  active = b.dataset.f;
-  render();
+  b.classList.add("on"); active = b.dataset.f; render();
 }));
 render();
 setTimeout(() => map.invalidateSize(), 200);
