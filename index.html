@@ -22,7 +22,7 @@
 </head>
 <body>
 <header><div><h1><span>REPO</span> LOCATOR</h1><div class="sub" id="sub">Loading flights.json</div></div><div class="chip">Airborne <b id="air">0</b></div></header>
-<main><div id="map"></div><section class="side"><div class="toolbar"><button id="refresh">Refresh</button><button class="filter on" data-f="all">All repos</button><button class="filter" data-f="9">9xxx</button><button class="filter" data-f="8">8xxx</button><button class="filter" data-f="reg">Regional</button><button class="filter" data-f="cargo">Cargo</button></div><div class="table-wrap"><table><thead><tr><th>Callsign</th><th>Operator</th><th>Origin</th><th>Destination</th><th>Alt</th><th>GS</th></tr></thead><tbody id="rows"></tbody></table></div><div class="note">GitHub writes flights.json. The browser cannot call ADS-B directly. N-numbers and light aircraft are hidden.</div></section></main>
+<main><div id="map"></div><section class="side"><div class="toolbar"><button id="refresh">Refresh</button><button class="filter on" data-f="all">All repos</button><button class="filter" data-f="9">9xxx</button><button class="filter" data-f="8">8xxx</button><button class="filter" data-f="reg">Regional</button><button class="filter" data-f="cargo">Cargo</button></div><div class="table-wrap"><table><thead><tr><th>Callsign</th><th>Operator</th><th>Origin</th><th>Destination</th><th>Alt</th><th>GS</th></tr></thead><tbody id="rows"></tbody></table></div><div class="note">Filed 8xxx/9xxx plans stay in the table. A plane is drawn only when ADS-B has a position.</div></section></main>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 let FLIGHTS = [];
@@ -31,9 +31,9 @@ const CARGO = new Set("GTI UAE QTR FDX UPS CJT KAL AJT CLX MTN BVN IRO".split(" 
 const GA = new Set("C172 C152 C182 C206 C210 PA28 PA32 BE35 BE36 BE58 SR22 CH7A".split(" "));
 const regional = f => f.regional || REG.has((f.callsign||"").slice(0,3));
 const color = f => f.cargo ? "#b388ff" : regional(f) ? "#7ddea2" : f.band === "9" ? "#f0b429" : "#3ec6e0";
-const flying = f => f.alt !== "ground" && Number(f.alt) > 100;
+const flying = f => f.lat != null && f.alt !== "ground" && f.alt !== "filed" && Number(f.alt) > 100;
 const keep = f => /^[A-Z]{3}[89]\d{3}$/.test(f.callsign||"") && !GA.has((f.type||"").toUpperCase());
-const altText = a => (a === "ground" || a === 0) ? "GND" : Number(a).toLocaleString()+" ft";
+const altText = a => a === "filed" ? "FILED" : (a === "ground" || a === 0) ? "GND" : Number(a).toLocaleString()+" ft";
 const map = L.map("map", {worldCopyJump:true}).setView([36,-30], 3);
 L.tileLayer("https://basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png?key=cb1_4b02_1_f58b8a12fcfccf5a56049c12", {attribution:"&copy; OSM &copy; CARTO", maxZoom:20}).addTo(map);
 const markers = {};
@@ -52,7 +52,7 @@ function render(){
   for (const k in markers) delete markers[k];
   FLIGHTS.forEach(f=>{ if(!flying(f)||!show(f)) return; const m=L.marker([f.lat,f.lon],{icon:planeIcon(f),zIndexOffset:500}).addTo(map); m.bindPopup(`<b>${f.callsign}</b> ${f.op}<br>${f.origin} \u2192 ${f.dest}`); m.on("click",()=>select(f.callsign)); markers[f.callsign]=m; });
   const shown=FLIGHTS.filter(show);
-  document.getElementById("rows").innerHTML=shown.map(f=>`<tr data-cs="${f.callsign}"><td><b>${f.callsign}</b></td><td>${f.op}${regional(f)?" \u00b7 regional":""}</td><td>${f.origin}</td><td>${f.dest}${f.via?" via "+f.via:""}</td><td>${altText(f.alt)}</td><td>${Math.round(f.gs||0)}</td></tr>`).join("");
+  document.getElementById("rows").innerHTML=shown.map(f=>`<tr data-cs="${f.callsign}"><td><b>${f.callsign}</b></td><td>${f.op}${regional(f)?" \u00b7 regional":""}</td><td>${f.origin}</td><td>${f.dest}${f.via?" via "+f.via:""}</td><td>${altText(f.alt)}</td><td>${f.alt==="filed"?"\u2014":Math.round(f.gs||0)}</td></tr>`).join("");
   document.getElementById("air").textContent=shown.filter(flying).length;
   document.querySelectorAll("#rows tr").forEach(tr=>tr.addEventListener("click",()=>select(tr.dataset.cs)));
 }
