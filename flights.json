@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-08T20:05:10Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-08T20:07:40Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "ASA9400",
@@ -16,10 +16,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "HNL HNL",
+      "dest": "SEA Seattle",
+      "route": "HNL-SEA",
+      "routeNote": "adsbdb route",
+      "dlat": 47.449001,
+      "dlon": -122.308998,
+      "olat": 21.32062,
+      "olon": -157.924228
     },
     {
       "callsign": "ASA9402",
@@ -35,10 +39,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SEA Seattle",
+      "dest": "SEA Seattle",
+      "route": "SEA-SEA",
+      "routeNote": "FlightAware",
+      "olat": 47.4502,
+      "olon": -122.3088,
+      "dlat": 47.4502,
+      "dlon": -122.3088
     },
     {
       "callsign": "BBQ9825",
@@ -54,10 +62,10 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "IWA Phoenix",
+      "dest": "ELP El Paso",
+      "route": "IWA-ELP",
+      "routeNote": "FlightAware"
     },
     {
       "callsign": "DAL8846",
@@ -163,10 +171,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "TYS TYS",
+      "route": "ORD-TYS",
+      "routeNote": "adsbdb route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 35.811001,
+      "dlon": -83.994003
     },
     {
       "callsign": "FDX9004",
@@ -182,10 +194,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MEM Memphis",
+      "dest": "CDG CDG",
+      "route": "MEM-CDG",
+      "routeNote": "adsb.lol route",
+      "olat": 35.0424,
+      "olon": -89.9767,
+      "dlat": 49.012798,
+      "dlon": 2.55
     },
     {
       "callsign": "GEC8224",
@@ -201,10 +217,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "FRA FRA",
+      "dest": "NLU NLU",
+      "route": "FRA-NLU",
+      "routeNote": "adsb.lol route",
+      "olat": 50.026402,
+      "olon": 8.54313,
+      "dlat": 19.755301,
+      "dlon": -99.016403
     },
     {
       "callsign": "GTI8227",
@@ -243,10 +263,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ONT ONT",
+      "dest": "FOC FOC",
+      "route": "ONT-FOC",
+      "routeNote": "adsb.lol route",
+      "olat": 34.056,
+      "olon": -117.600998,
+      "dlat": 25.935101,
+      "dlon": 119.663002
     },
     {
       "callsign": "KII9146",
@@ -262,10 +286,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BDA BDA",
+      "dest": "EWR Newark",
+      "route": "BDA-EWR",
+      "routeNote": "adsb.lol route",
+      "dlat": 40.692501,
+      "dlon": -74.168701,
+      "olat": 32.363998,
+      "olon": -64.678703
     },
     {
       "callsign": "QTR8165",
@@ -281,10 +309,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "DOH DOH",
+      "route": "ORD-DOH",
+      "routeNote": "adsb.lol route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 25.273056,
+      "dlon": 51.608056
     },
     {
       "callsign": "SCX8014",
@@ -300,10 +332,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "IFP IFP",
+      "dest": "CWA CWA",
+      "route": "IFP-CWA",
+      "routeNote": "adsbdb route",
+      "olat": 35.157398,
+      "olon": -114.559998,
+      "dlat": 44.7775993347,
+      "dlon": -89.6668014526
     },
     {
       "callsign": "SCX8128",
@@ -319,10 +355,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GPT GPT",
+      "dest": "PIE PIE",
+      "route": "GPT-PIE",
+      "routeNote": "adsbdb route",
+      "olat": 30.407301,
+      "olon": -89.070099,
+      "dlat": 27.91020012,
+      "dlon": -82.68740082
     },
     {
       "callsign": "SCX8716",
@@ -338,10 +378,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DAL DAL",
+      "dest": "HPN HPN",
+      "route": "DAL-HPN",
+      "routeNote": "adsbdb route",
+      "olat": 32.847099,
+      "olon": -96.851799,
+      "dlat": 41.06700134277344,
+      "dlon": -73.70760345458984
     },
     {
       "callsign": "SCX8729",
@@ -357,10 +401,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SAN San Diego",
+      "dest": "SEA Seattle",
+      "route": "SAN-SEA",
+      "routeNote": "adsbdb route",
+      "olat": 32.7336006165,
+      "olon": -117.190002441,
+      "dlat": 47.449001,
+      "dlon": -122.308998
     },
     {
       "callsign": "SWA9000",
