@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-08T01:01:51Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-08T01:02:54Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAE8333",
@@ -16,10 +16,10 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LUX Luxembourg",
+      "dest": "HSV Huntsville",
+      "route": "LUX-HSV",
+      "routeNote": "FlightAware"
     },
     {
       "callsign": "CAO8411",
@@ -192,10 +192,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "UAM UAM",
+      "dest": "HNL HNL",
+      "route": "UAM-HNL",
+      "routeNote": "adsbdb route",
+      "olat": 13.584,
+      "olon": 144.929998,
+      "dlat": 21.32062,
+      "dlon": -157.924228
     },
     {
       "callsign": "GTI8903",
@@ -320,10 +324,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PDX PDX",
+      "dest": "SEA Seattle",
+      "route": "PDX-SEA",
+      "routeNote": "adsb.lol route",
+      "dlat": 47.449001,
+      "dlon": -122.308998,
+      "olat": 45.588699,
+      "olon": -122.598
     },
     {
       "callsign": "SCX8124",
@@ -339,10 +347,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GPT GPT",
+      "dest": "LAN LAN",
+      "route": "GPT-LAN",
+      "routeNote": "adsbdb route",
+      "olat": 30.407301,
+      "olon": -89.070099,
+      "dlat": 42.77870178222656,
+      "dlon": -84.58740234375
     },
     {
       "callsign": "TAM8181",
@@ -358,10 +370,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "JFK New York",
+      "dest": "GRU GRU",
+      "route": "JFK-GRU",
+      "routeNote": "adsb.lol route",
+      "olat": 40.639801,
+      "olon": -73.7789,
+      "dlat": -23.435556,
+      "dlon": -46.473057
     },
     {
       "callsign": "UAE9963",
@@ -400,10 +416,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YYZ YYZ",
+      "dest": "ATL Atlanta",
+      "route": "YYZ-ATL",
+      "routeNote": "adsbdb route",
+      "dlat": 33.6367,
+      "dlon": -84.428101,
+      "olat": 43.6772003174,
+      "olon": -79.63059997559999
     },
     {
       "callsign": "UAL8121",
@@ -509,10 +529,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ONT ONT",
+      "dest": "PDX PDX",
+      "route": "ONT-PDX",
+      "routeNote": "adsbdb route",
+      "olat": 34.055999755859375,
+      "olon": -117.60099792480467,
+      "dlat": 45.58869934,
+      "dlon": -122.5979996
     },
     {
       "callsign": "UPS9860",
@@ -549,10 +573,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PDX PDX",
+      "dest": "ONT ONT",
+      "route": "PDX-ONT",
+      "routeNote": "adsb.lol route",
+      "olat": 45.588699,
+      "olon": -122.598,
+      "dlat": 34.056,
+      "dlon": -117.600998
     }
   ]
 }
