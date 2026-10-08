@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-08T07:06:31Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-08T07:07:23Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAY9201",
@@ -16,10 +16,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PIT Pittsburgh",
+      "dest": "CVG Cincinnati",
+      "route": "PIT-CVG",
+      "routeNote": "adsbdb route",
+      "olat": 40.49150085,
+      "olon": -80.23290253,
+      "dlat": 39.048801,
+      "dlon": -84.667801
     },
     {
       "callsign": "AJI9006",
@@ -35,10 +39,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "IAG IAG",
+      "dest": "KHYI KHYI",
+      "route": "IAG-KHYI",
+      "routeNote": "adsbdb route",
+      "olat": 43.1073,
+      "olon": -78.946198,
+      "dlat": 29.8927,
+      "dlon": -97.862999
     },
     {
       "callsign": "AJI9007",
@@ -54,10 +62,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GYY GYY",
+      "dest": "DRT DRT",
+      "route": "GYY-DRT",
+      "routeNote": "adsbdb route",
+      "olat": 41.61629867553711,
+      "olon": -87.41280364990234,
+      "dlat": 29.3742008209,
+      "dlon": -100.927001953
     },
     {
       "callsign": "DAL8891",
@@ -140,10 +152,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "DOH DOH",
+      "route": "ORD-AMS-DOH",
+      "routeNote": "adsb.lol route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 25.273056,
+      "dlon": 51.608056
     },
     {
       "callsign": "QTR8147",
@@ -180,10 +196,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "RNO RNO",
+      "dest": "SEA Seattle",
+      "route": "RNO-SEA",
+      "routeNote": "adsbdb route",
+      "dlat": 47.449001,
+      "dlon": -122.308998,
+      "olat": 39.49909973144531,
+      "olon": -119.76799774169922
     }
   ]
 }
