@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-08T14:32:47Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-08T14:33:56Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9793",
@@ -16,10 +16,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "JFK New York",
+      "dest": "DFW Dallas",
+      "route": "JFK-DFW",
+      "routeNote": "adsbdb route",
+      "olat": 40.639801,
+      "olon": -73.7789,
+      "dlat": 32.896801,
+      "dlon": -97.038002
     },
     {
       "callsign": "AAL9811",
@@ -58,10 +62,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "NRT NRT",
+      "route": "ORD-NRT",
+      "routeNote": "adsb.lol route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 35.764702,
+      "dlon": 140.386002
     },
     {
       "callsign": "ASA9802",
@@ -100,10 +108,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BOS Boston",
+      "dest": "MLB MLB",
+      "route": "BOS-MLB",
+      "routeNote": "adsbdb route",
+      "olat": 42.3643,
+      "olon": -71.005203,
+      "dlat": 28.1028,
+      "dlon": -80.645302
     },
     {
       "callsign": "JBU8625",
@@ -119,10 +131,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "JFK New York",
+      "dest": "QRO QRO",
+      "route": "JFK-QRO",
+      "routeNote": "adsbdb route",
+      "olat": 40.639801,
+      "olon": -73.7789,
+      "dlat": 20.6173,
+      "dlon": -100.185997
     },
     {
       "callsign": "RPA9987",
@@ -138,10 +154,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "FLL FLL",
+      "dest": "IND IND",
+      "route": "FLL-IND",
+      "routeNote": "adsbdb route",
+      "olat": 26.072599,
+      "olon": -80.152702,
+      "dlat": 39.7173,
+      "dlon": -86.294403
     },
     {
       "callsign": "SWA8086",
@@ -178,10 +198,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BWI Baltimore",
+      "dest": "BOS Boston",
+      "route": "BWI-BOS",
+      "routeNote": "adsb.lol route",
+      "olat": 39.1754,
+      "olon": -76.668297,
+      "dlat": 42.3643,
+      "dlon": -71.005203
     },
     {
       "callsign": "SWA8503",
