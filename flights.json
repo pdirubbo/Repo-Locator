@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-09T22:55:10Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-09T22:56:05Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "ASA9431",
@@ -104,10 +104,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BDL BDL",
+      "dest": "BNA BNA",
+      "route": "BDL-BNA",
+      "routeNote": "adsb.lol route",
+      "olat": 41.9389,
+      "olon": -72.683197,
+      "dlat": 36.1245,
+      "dlon": -86.6782
     },
     {
       "callsign": "DAL9962",
@@ -169,10 +173,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SJC SJC",
+      "dest": "LAX Los Angeles",
+      "route": "SJC-LAX",
+      "routeNote": "adsbdb route",
+      "dlat": 33.942501,
+      "dlon": -118.407997,
+      "olat": 37.362598,
+      "olon": -121.929001
     },
     {
       "callsign": "KII9146",
@@ -253,10 +261,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MSP Minneapolis",
+      "dest": "FLL FLL",
+      "route": "MSP-FLL",
+      "routeNote": "adsbdb route",
+      "olat": 44.882,
+      "olon": -93.221802,
+      "dlat": 26.072599,
+      "dlon": -80.152702
     },
     {
       "callsign": "SCX8993",
@@ -272,10 +284,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "KNIP KNIP",
+      "dest": "MSP Minneapolis",
+      "route": "KNIP-MSP",
+      "routeNote": "adsb.lol route",
+      "dlat": 44.882,
+      "dlon": -93.221802,
+      "olat": 30.2358,
+      "olon": -81.680603
     },
     {
       "callsign": "UAL8130",
@@ -406,10 +422,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GEG GEG",
+      "dest": "STL STL",
+      "route": "GEG-STL",
+      "routeNote": "adsb.lol route",
+      "olat": 47.6199,
+      "olon": -117.533997,
+      "dlat": 38.748699,
+      "dlon": -90.370003
     },
     {
       "callsign": "UPS9871",
