@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-09T06:08:33Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-09T06:09:15Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9602",
@@ -60,10 +60,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BOS Boston",
+      "dest": "SFO San Francisco",
+      "route": "BOS-SFO",
+      "routeNote": "adsbdb route",
+      "olat": 42.3643,
+      "olon": -71.005203,
+      "dlat": 37.61899948120117,
+      "dlon": -122.375
     },
     {
       "callsign": "DAL8839",
@@ -123,10 +127,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "JFK New York",
+      "dest": "FRA FRA",
+      "route": "JFK-FRA",
+      "routeNote": "adsb.lol route",
+      "olat": 40.639801,
+      "olon": -73.7789,
+      "dlat": 50.026402,
+      "dlon": 8.54313
     },
     {
       "callsign": "GTI8255",
@@ -209,10 +217,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SDF Louisville",
+      "dest": "PHL Philadelphia",
+      "route": "SDF-PHL",
+      "routeNote": "adsbdb route",
+      "olat": 38.1744,
+      "olon": -85.736,
+      "dlat": 39.87189865112305,
+      "dlon": -75.24109649658203
     }
   ]
 }
