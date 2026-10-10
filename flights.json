@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-10T18:13:53Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-10T18:14:41Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9789",
@@ -39,10 +39,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CVG Cincinnati",
+      "dest": "ABE ABE",
+      "route": "CVG-ABE",
+      "routeNote": "adsbdb route",
+      "olat": 39.048801,
+      "olon": -84.667801,
+      "dlat": 40.651773,
+      "dlon": -75.442797
     },
     {
       "callsign": "AAY9337",
@@ -58,10 +62,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "VPS VPS",
+      "dest": "SFB SFB",
+      "route": "VPS-SFB",
+      "routeNote": "adsbdb route",
+      "olat": 30.4832,
+      "olon": -86.525398,
+      "dlat": 28.777599334716797,
+      "dlon": -81.23750305175781
     },
     {
       "callsign": "DAL8911",
@@ -119,10 +127,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CDG CDG",
+      "dest": "STN STN",
+      "route": "CDG-STN",
+      "routeNote": "adsb.lol route",
+      "olat": 49.012798,
+      "olon": 2.55,
+      "dlat": 51.884998,
+      "dlon": 0.235
     },
     {
       "callsign": "JIA9855",
@@ -247,10 +259,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YUL YUL",
+      "dest": "LGA LGA",
+      "route": "YUL-LGA",
+      "routeNote": "adsbdb route",
+      "olat": 45.4706001282,
+      "olon": -73.7407989502,
+      "dlat": 40.777199,
+      "dlon": -73.872597
     },
     {
       "callsign": "UAL8190",
@@ -266,10 +282,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YYZ YYZ",
+      "dest": "PHL Philadelphia",
+      "route": "YYZ-PHL",
+      "routeNote": "adsb.lol route",
+      "dlat": 39.871899,
+      "dlon": -75.241096,
+      "olat": 43.6772,
+      "olon": -79.6306
     }
   ]
 }
