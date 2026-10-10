@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-10T21:42:21Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-10T21:43:00Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9600",
@@ -37,10 +37,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "TYS TYS",
+      "dest": "PIE PIE",
+      "route": "TYS-PIE",
+      "routeNote": "adsbdb route",
+      "olat": 35.811001,
+      "olon": -83.994003,
+      "dlat": 27.91020012,
+      "dlon": -82.68740082
     },
     {
       "callsign": "AAY9304",
@@ -56,10 +60,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BNA BNA",
+      "dest": "CVG Cincinnati",
+      "route": "BNA-CVG",
+      "routeNote": "adsbdb route",
+      "dlat": 39.048801,
+      "dlon": -84.667801,
+      "olat": 36.1245002746582,
+      "olon": -86.6781997680664
     },
     {
       "callsign": "DAL8861",
@@ -190,10 +198,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CMH CMH",
+      "dest": "DFW Dallas",
+      "route": "CMH-DFW",
+      "routeNote": "adsbdb route",
+      "dlat": 32.896801,
+      "dlon": -97.038002,
+      "olat": 39.998001,
+      "olon": -82.891899
     },
     {
       "callsign": "GTI8052",
@@ -274,10 +286,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YQT YQT",
+      "dest": "YYZ YYZ",
+      "route": "YQT-YYZ",
+      "routeNote": "adsbdb route",
+      "olat": 48.37189865112305,
+      "olon": -89.32389831542969,
+      "dlat": 43.6772003174,
+      "dlon": -79.63059997559999
     },
     {
       "callsign": "UAL8223",
