@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-10T07:55:20Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-10T07:55:45Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AJI9949",
@@ -125,10 +125,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ICN ICN",
+      "dest": "SZX SZX",
+      "route": "ICN-SZX",
+      "routeNote": "adsb.lol route",
+      "olat": 37.469101,
+      "olon": 126.450996,
+      "dlat": 22.639299,
+      "dlon": 113.810997
     },
     {
       "callsign": "KYE9724",
@@ -211,10 +215,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YYZ YYZ",
+      "dest": "ORD Chicago",
+      "route": "YYZ-ORD",
+      "routeNote": "adsbdb route",
+      "dlat": 41.9786,
+      "dlon": -87.9048,
+      "olat": 43.6772003174,
+      "olon": -79.63059997559999
     }
   ]
 }
