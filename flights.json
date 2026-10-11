@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-11T12:40:26Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-11T12:41:01Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9780",
@@ -16,10 +16,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PVD PVD",
+      "dest": "CLT Charlotte",
+      "route": "PVD-CLT",
+      "routeNote": "adsbdb route",
+      "dlat": 35.2140007019043,
+      "dlon": -80.94309997558594,
+      "olat": 41.725038,
+      "olon": -71.425668
     },
     {
       "callsign": "AZU8705",
@@ -35,10 +39,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "FLL FLL",
+      "dest": "VCP VCP",
+      "route": "FLL-VCP",
+      "routeNote": "adsb.lol route",
+      "olat": 26.072599,
+      "olon": -80.152702,
+      "dlat": -23.007401,
+      "dlon": -47.134499
     },
     {
       "callsign": "CAO8415",
@@ -75,10 +83,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "EWR Newark",
+      "dest": "IAD Dulles",
+      "route": "EWR-IAD",
+      "routeNote": "adsb.lol route",
+      "olat": 40.692501,
+      "olon": -74.168701,
+      "dlat": 38.9445,
+      "dlon": -77.455803
     },
     {
       "callsign": "DAL8859",
@@ -115,10 +127,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "IAD Dulles",
+      "dest": "TPA TPA",
+      "route": "IAD-TPA",
+      "routeNote": "adsbdb route",
+      "olat": 38.9445,
+      "olon": -77.455803,
+      "dlat": 27.975500106811523,
+      "dlon": -82.533203125
     }
   ]
 }
