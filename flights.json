@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-11T21:04:33Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-11T21:05:37Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9780",
@@ -83,10 +83,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "TYS TYS",
+      "dest": "PIE PIE",
+      "route": "TYS-PIE",
+      "routeNote": "adsbdb route",
+      "olat": 35.811001,
+      "olon": -83.994003,
+      "dlat": 27.91020012,
+      "dlon": -82.68740082
     },
     {
       "callsign": "AZU8706",
@@ -102,10 +106,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "VCP VCP",
+      "dest": "MCO Orlando",
+      "route": "VCP-MCO",
+      "routeNote": "adsb.lol route",
+      "dlat": 28.429399,
+      "dlon": -81.308998,
+      "olat": -23.007401,
+      "olon": -47.134499
     },
     {
       "callsign": "CSB9251",
@@ -121,10 +129,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BQK BQK",
+      "dest": "CVG Cincinnati",
+      "route": "BQK-CVG",
+      "routeNote": "adsbdb route",
+      "dlat": 39.048801,
+      "dlon": -84.667801,
+      "olat": 31.258800506591797,
+      "olon": -81.46649932861328
     },
     {
       "callsign": "DAL8802",
@@ -140,10 +152,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ATL Atlanta",
+      "dest": "ATW ATW",
+      "route": "ATL-ATW-ATL",
+      "routeNote": "adsb.lol route",
+      "olat": 33.6367,
+      "olon": -84.428101,
+      "dlat": 44.258099,
+      "dlon": -88.519096
     },
     {
       "callsign": "DAL8810",
@@ -289,10 +305,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PNS PNS",
+      "dest": "MCO Orlando",
+      "route": "PNS-MCO",
+      "routeNote": "adsbdb route",
+      "dlat": 28.429399490356445,
+      "dlon": -81.30899810791016,
+      "olat": 30.4734,
+      "olon": -87.1866
     },
     {
       "callsign": "SCX8208",
@@ -308,10 +328,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LBE LBE",
+      "dest": "ACY ACY",
+      "route": "LBE-ACY",
+      "routeNote": "adsbdb route",
+      "olat": 40.27590179,
+      "olon": -79.40480042,
+      "dlat": 39.45759963989258,
+      "dlon": -74.57720184326172
     },
     {
       "callsign": "SCX8729",
@@ -373,10 +397,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YYC YYC",
+      "dest": "YYJ YYJ",
+      "route": "YYC-YYJ",
+      "routeNote": "adsbdb route",
+      "olat": 51.113899231,
+      "olon": -114.019996643,
+      "dlat": 48.6469,
+      "dlon": -123.426003
     },
     {
       "callsign": "UAL8137",
@@ -438,10 +466,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YYZ YYZ",
+      "dest": "MCI MCI",
+      "route": "YYZ-MCI",
+      "routeNote": "adsbdb route",
+      "olat": 43.6772003174,
+      "olon": -79.63059997559999,
+      "dlat": 39.2976,
+      "dlon": -94.713898
     },
     {
       "callsign": "UAL8227",
