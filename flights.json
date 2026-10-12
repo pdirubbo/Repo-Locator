@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-12T00:26:43Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-12T00:27:33Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AZG9790",
@@ -217,10 +217,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "ICN ICN",
+      "route": "ORD-ICN",
+      "routeNote": "adsb.lol route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 37.469101,
+      "dlon": 126.450996
     },
     {
       "callsign": "SCX8232",
@@ -236,10 +240,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DTW Detroit",
+      "dest": "IFP IFP",
+      "route": "DTW-IFP",
+      "routeNote": "adsbdb route",
+      "olat": 42.212398529052734,
+      "olon": -83.35340118408203,
+      "dlat": 35.157398,
+      "dlon": -114.559998
     },
     {
       "callsign": "SCX9123",
@@ -255,10 +263,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MSP Minneapolis",
+      "dest": "SFB SFB",
+      "route": "MSP-SFB",
+      "routeNote": "adsbdb route",
+      "olat": 44.882,
+      "olon": -93.221802,
+      "dlat": 28.777599334716797,
+      "dlon": -81.23750305175781
     },
     {
       "callsign": "SKW9915",
@@ -297,10 +309,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LGA LGA",
+      "dest": "MDW MDW",
+      "route": "LGA-MDW",
+      "routeNote": "adsbdb route",
+      "olat": 40.777199,
+      "olon": -73.872597,
+      "dlat": 41.785999,
+      "dlon": -87.752403
     },
     {
       "callsign": "SWA9007",
@@ -337,10 +353,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "GRU GRU",
+      "route": "MIA-GRU",
+      "routeNote": "adsb.lol route",
+      "olat": 25.7932,
+      "olon": -80.290604,
+      "dlat": -23.435556,
+      "dlon": -46.473057
     },
     {
       "callsign": "UAL8104",
