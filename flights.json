@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-12T06:14:05Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-12T06:14:56Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AJI9013",
@@ -16,10 +16,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "KJVY KJVY",
+      "dest": "YIP YIP",
+      "route": "KJVY-YIP",
+      "routeNote": "adsbdb route",
+      "olat": 38.36539840698242,
+      "olon": -85.73819732666016,
+      "dlat": 42.23789978,
+      "dlon": -83.53040314
     },
     {
       "callsign": "DAL8961",
@@ -35,10 +39,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SEA Seattle",
+      "dest": "JFK New York",
+      "route": "SEA-JFK",
+      "routeNote": "adsb.lol route",
+      "olat": 47.449001,
+      "olon": -122.308998,
+      "dlat": 40.639801,
+      "dlon": -73.7789
     },
     {
       "callsign": "GTI8173",
@@ -54,10 +62,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "PVG PVG",
+      "route": "LAX-PVG",
+      "routeNote": "adsb.lol route",
+      "olat": 33.942501,
+      "olon": -118.407997,
+      "dlat": 31.1434,
+      "dlon": 121.805
     },
     {
       "callsign": "GTI8819",
@@ -159,10 +171,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PAE PAE",
+      "dest": "PHX Phoenix",
+      "route": "PAE-PHX",
+      "routeNote": "adsb.lol route",
+      "dlat": 33.434299,
+      "dlon": -112.012001,
+      "olat": 47.9063,
+      "olon": -122.281998
     },
     {
       "callsign": "SWA9015",
@@ -178,10 +194,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DAL DAL",
+      "dest": "LAS Las Vegas",
+      "route": "DAL-LAS",
+      "routeNote": "adsbdb route",
+      "dlat": 36.08010101,
+      "dlon": -115.1520004,
+      "olat": 32.847099,
+      "olon": -96.851799
     },
     {
       "callsign": "UAL8178",
@@ -197,10 +217,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "JAC JAC",
+      "route": "ORD-JAC",
+      "routeNote": "adsbdb route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 43.6072998046875,
+      "dlon": -110.73799896240234
     }
   ]
 }
