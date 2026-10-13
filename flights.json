@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-13T10:26:22Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-13T10:26:59Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9791",
@@ -16,10 +16,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BOS Boston",
+      "dest": "CLT Charlotte",
+      "route": "BOS-CLT",
+      "routeNote": "adsbdb route",
+      "olat": 42.3643,
+      "olon": -71.0052,
+      "dlat": 35.214,
+      "dlon": -80.9431
     },
     {
       "callsign": "DAL8842",
@@ -35,10 +39,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MSY MSY",
+      "dest": "CLE CLE",
+      "route": "MSY-CLE",
+      "routeNote": "adsb.lol route",
+      "olat": 29.993401,
+      "olon": -90.258003,
+      "dlat": 41.411701,
+      "dlon": -81.8498
     },
     {
       "callsign": "GTI8255",
@@ -77,10 +85,12 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "PAP Port-Au-Prince",
+      "route": "MIA-PAP",
+      "routeNote": "FlightAware",
+      "olat": 25.7959,
+      "olon": -80.287
     },
     {
       "callsign": "KAL8245",
@@ -247,10 +257,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DEN Denver",
+      "dest": "PHX Phoenix",
+      "route": "DEN-PHX",
+      "routeNote": "adsb.lol route",
+      "olat": 39.861698,
+      "olon": -104.672997,
+      "dlat": 33.434299,
+      "dlon": -112.012001
     },
     {
       "callsign": "UPS9866",
