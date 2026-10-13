@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-13T03:07:49Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-13T03:08:28Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "BWA8041",
@@ -60,10 +60,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAS Las Vegas",
+      "dest": "ORD Chicago",
+      "route": "LAS-ORD",
+      "routeNote": "adsbdb route",
+      "olat": 36.0801,
+      "olon": -115.152,
+      "dlat": 41.9786,
+      "dlon": -87.9048
     },
     {
       "callsign": "GTI8009",
@@ -123,10 +127,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ABE ABE",
+      "dest": "BMI BMI",
+      "route": "ABE-BMI",
+      "routeNote": "adsbdb route",
+      "olat": 40.65177,
+      "olon": -75.4428,
+      "dlat": 40.4771,
+      "dlon": -88.9159
     },
     {
       "callsign": "SWA8637",
@@ -186,10 +194,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YYZ YYZ",
+      "dest": "DTW Detroit",
+      "route": "YYZ-DTW",
+      "routeNote": "adsb.lol route",
+      "dlat": 42.212399,
+      "dlon": -83.353401,
+      "olat": 43.6772,
+      "olon": -79.6306
     },
     {
       "callsign": "UAL8193",
@@ -205,10 +217,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PHL Philadelphia",
+      "dest": "YYZ YYZ",
+      "route": "PHL-YYZ",
+      "routeNote": "adsb.lol route",
+      "olat": 39.871899,
+      "olon": -75.241096,
+      "dlat": 43.6772,
+      "dlon": -79.6306
     },
     {
       "callsign": "UAL8200",
