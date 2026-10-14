@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-14T19:23:02Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-14T19:23:49Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9781",
@@ -39,10 +39,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "IND IND",
+      "dest": "CVG Cincinnati",
+      "route": "IND-CVG",
+      "routeNote": "adsbdb route",
+      "dlat": 39.0488,
+      "dlon": -84.6678,
+      "olat": 39.7173,
+      "olon": -86.2944
     },
     {
       "callsign": "ASA9418",
@@ -142,10 +146,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "VRB VRB",
+      "dest": "TPA TPA",
+      "route": "VRB-TPA",
+      "routeNote": "adsbdb route",
+      "olat": 27.6556,
+      "olon": -80.4179,
+      "dlat": 27.9755,
+      "dlon": -82.5332
     },
     {
       "callsign": "SWA8503",
@@ -203,10 +211,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "SFO San Francisco",
+      "route": "ORD-SFO",
+      "routeNote": "adsb.lol route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 37.618999,
+      "dlon": -122.375
     },
     {
       "callsign": "UAL8152",
@@ -245,10 +257,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "SAN San Diego",
+      "route": "ORD-SAN",
+      "routeNote": "adsbdb route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 32.7336,
+      "dlon": -117.19
     },
     {
       "callsign": "UAL8250",
@@ -264,10 +280,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SEA Seattle",
+      "dest": "YVR YVR",
+      "route": "SEA-YVR",
+      "routeNote": "adsbdb route",
+      "olat": 47.449,
+      "olon": -122.309,
+      "dlat": 49.1939,
+      "dlon": -123.184
     }
   ]
 }
