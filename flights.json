@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-14T05:26:07Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-14T05:26:46Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "DAL8890",
@@ -16,10 +16,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ATL Atlanta",
+      "dest": "PHL Philadelphia",
+      "route": "ATL-PHL",
+      "routeNote": "adsb.lol route",
+      "olat": 33.6367,
+      "olon": -84.428101,
+      "dlat": 39.871899,
+      "dlon": -75.241096
     },
     {
       "callsign": "DAL8923",
@@ -35,10 +39,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "EWR Newark",
+      "dest": "SBN SBN",
+      "route": "EWR-SBN",
+      "routeNote": "adsb.lol route",
+      "olat": 40.692501,
+      "olon": -74.168701,
+      "dlat": 41.708698,
+      "dlon": -86.317299
     },
     {
       "callsign": "DAL8952",
@@ -123,10 +131,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SDF Louisville",
+      "dest": "RSW RSW",
+      "route": "SDF-RSW",
+      "routeNote": "adsbdb route",
+      "olat": 38.1744,
+      "olon": -85.736,
+      "dlat": 26.5362,
+      "dlon": -81.7552
     },
     {
       "callsign": "UAL8115",
@@ -165,10 +177,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YIP YIP",
+      "dest": "MCO Orlando",
+      "route": "YIP-MCO",
+      "routeNote": "adsbdb route",
+      "dlat": 28.4294,
+      "dlon": -81.309,
+      "olat": 42.2379,
+      "olon": -83.5304
     }
   ]
 }
