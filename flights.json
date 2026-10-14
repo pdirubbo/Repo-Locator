@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-14T10:23:00Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-14T10:23:18Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "GTI8028",
@@ -39,10 +39,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "HHN HHN",
+      "dest": "PSM PSM",
+      "route": "HHN-PSM",
+      "routeNote": "adsbdb route",
+      "olat": 49.9487,
+      "olon": 7.26389,
+      "dlat": 43.0779,
+      "dlon": -70.8233
     },
     {
       "callsign": "UAL8178",
