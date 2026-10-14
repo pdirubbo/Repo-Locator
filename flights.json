@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-14T22:23:43Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-14T22:24:37Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9602",
@@ -37,10 +37,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PVD PVD",
+      "dest": "CLT Charlotte",
+      "route": "PVD-CLT",
+      "routeNote": "adsbdb route",
+      "dlat": 35.214,
+      "dlon": -80.9431,
+      "olat": 41.72504,
+      "olon": -71.42567
     },
     {
       "callsign": "AAY8022",
@@ -56,10 +60,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PWM PWM",
+      "dest": "BIF BIF",
+      "route": "PWM-BIF",
+      "routeNote": "adsbdb route",
+      "olat": 43.6462,
+      "olon": -70.3093,
+      "dlat": 31.8495,
+      "dlon": -106.38
     },
     {
       "callsign": "AAY9300",
@@ -75,10 +83,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "EWR Newark",
+      "dest": "CVG Cincinnati",
+      "route": "EWR-CVG",
+      "routeNote": "adsbdb route",
+      "olat": 40.6925,
+      "olon": -74.1687,
+      "dlat": 39.0488,
+      "dlon": -84.6678
     },
     {
       "callsign": "GTI8030",
@@ -184,10 +196,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CKB CKB",
+      "dest": "PHL Philadelphia",
+      "route": "CKB-PHL",
+      "routeNote": "adsbdb route",
+      "dlat": 39.8719,
+      "dlon": -75.2411,
+      "olat": 39.2966,
+      "olon": -80.2281
     },
     {
       "callsign": "KII9146",
@@ -224,10 +240,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "FRA FRA",
+      "dest": "JFK New York",
+      "route": "FRA-JFK",
+      "routeNote": "adsbdb route",
+      "dlat": 40.6398,
+      "dlon": -73.7789,
+      "olat": 50.03333,
+      "olon": 8.57056
     },
     {
       "callsign": "SCX8016",
@@ -243,10 +263,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "IFP IFP",
+      "dest": "RST RST",
+      "route": "IFP-RST",
+      "routeNote": "adsbdb route",
+      "olat": 35.1574,
+      "olon": -114.56,
+      "dlat": 43.9083,
+      "dlon": -92.5
     },
     {
       "callsign": "SCX9042",
