@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-15T05:06:37Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-15T05:07:33Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "ASA9580",
@@ -62,10 +62,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MSY MSY",
+      "dest": "EWR Newark",
+      "route": "MSY-EWR",
+      "routeNote": "adsbdb route",
+      "dlat": 40.6925,
+      "dlon": -74.1687,
+      "olat": 29.9934,
+      "olon": -90.258
     },
     {
       "callsign": "DAL9929",
@@ -127,10 +131,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LUX LUX",
+      "dest": "HSV HSV",
+      "route": "LUX-IND-HSV",
+      "routeNote": "adsb.lol route",
+      "olat": 49.626598,
+      "olon": 6.21152,
+      "dlat": 34.637199,
+      "dlon": -86.775101
     },
     {
       "callsign": "GTI9174",
@@ -167,10 +175,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PHL Philadelphia",
+      "dest": "ATL Atlanta",
+      "route": "PHL-ATL",
+      "routeNote": "adsbdb route",
+      "olat": 39.8719,
+      "olon": -75.2411,
+      "dlat": 33.6367,
+      "dlon": -84.4281
     },
     {
       "callsign": "SCX8670",
@@ -209,10 +221,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MKC MKC",
+      "dest": "BED BED",
+      "route": "MKC-BED",
+      "routeNote": "adsbdb route",
+      "olat": 39.1232,
+      "olon": -94.5928,
+      "dlat": 42.47,
+      "dlon": -71.289
     },
     {
       "callsign": "SCX8717",
@@ -274,10 +290,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BWI Baltimore",
+      "dest": "BUF BUF",
+      "route": "BWI-BUF",
+      "routeNote": "adsbdb route",
+      "olat": 39.1754,
+      "olon": -76.6683,
+      "dlat": 42.9405,
+      "dlon": -78.7322
     },
     {
       "callsign": "SWA8506",
@@ -314,10 +334,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LCK LCK",
+      "dest": "SUU SUU",
+      "route": "LCK-SUU",
+      "routeNote": "adsbdb route",
+      "olat": 39.8138,
+      "olon": -82.9278,
+      "dlat": 38.2627,
+      "dlon": -121.927
     }
   ]
 }
