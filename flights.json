@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-15T18:29:17Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-15T18:30:53Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAY8023",
@@ -37,10 +37,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CVG Cincinnati",
+      "dest": "ABE ABE",
+      "route": "CVG-ABE",
+      "routeNote": "adsbdb route",
+      "olat": 39.0488,
+      "olon": -84.6678,
+      "dlat": 40.65177,
+      "dlon": -75.4428
     },
     {
       "callsign": "AAY9300",
@@ -56,10 +60,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "EWR Newark",
+      "dest": "CVG Cincinnati",
+      "route": "EWR-CVG",
+      "routeNote": "adsbdb route",
+      "olat": 40.6925,
+      "olon": -74.1687,
+      "dlat": 39.0488,
+      "dlon": -84.6678
     },
     {
       "callsign": "ASA9421",
@@ -75,10 +83,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SEA Seattle",
+      "dest": "SAT SAT",
+      "route": "SEA-SAT",
+      "routeNote": "adsb.lol route",
+      "olat": 47.449001,
+      "olon": -122.308998,
+      "dlat": 29.533701,
+      "dlon": -98.469803
     },
     {
       "callsign": "ATN9703",
@@ -203,10 +215,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "TYS TYS",
+      "route": "ORD-TYS",
+      "routeNote": "adsbdb route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 35.811,
+      "dlon": -83.994
     },
     {
       "callsign": "GEC8224",
@@ -222,10 +238,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "FRA FRA",
+      "dest": "NLU NLU",
+      "route": "FRA-NLU",
+      "routeNote": "adsb.lol route",
+      "olat": 50.026402,
+      "olon": 8.54313,
+      "dlat": 19.755301,
+      "dlon": -99.016403
     },
     {
       "callsign": "GTI8091",
@@ -262,10 +282,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "PVG PVG",
+      "route": "LAX-PVG",
+      "routeNote": "adsb.lol route",
+      "olat": 33.942501,
+      "olon": -118.407997,
+      "dlat": 31.1434,
+      "dlon": 121.805
     },
     {
       "callsign": "GTI8528",
@@ -327,10 +351,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LSE LSE",
+      "dest": "MSN MSN",
+      "route": "LSE-MSN",
+      "routeNote": "adsbdb route",
+      "olat": 43.879,
+      "olon": -91.2567,
+      "dlat": 43.1399,
+      "dlon": -89.3375
     },
     {
       "callsign": "SCX8716",
@@ -392,10 +420,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "SAN San Diego",
+      "route": "ORD-SAN",
+      "routeNote": "adsbdb route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 32.7336,
+      "dlon": -117.19
     },
     {
       "callsign": "UAL8200",
@@ -411,10 +443,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SFO San Francisco",
+      "dest": "IAH Houston",
+      "route": "SFO-IAH",
+      "routeNote": "adsbdb route",
+      "olat": 37.619,
+      "olon": -122.375,
+      "dlat": 29.9844,
+      "dlon": -95.3414
     }
   ]
 }
