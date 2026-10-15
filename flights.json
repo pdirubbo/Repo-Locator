@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-15T14:29:03Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-15T14:29:54Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9782",
@@ -81,10 +81,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "DAL DAL",
+      "route": "LAX-DAL",
+      "routeNote": "adsbdb route",
+      "olat": 33.9425,
+      "olon": -118.408,
+      "dlat": 32.8471,
+      "dlon": -96.8518
     },
     {
       "callsign": "DAL9980",
@@ -100,10 +104,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ATL Atlanta",
+      "dest": "ATL Atlanta",
+      "route": "ATL-ATL",
+      "routeNote": "adsbdb route",
+      "olat": 33.6367,
+      "olon": -84.4281,
+      "dlat": 33.6367,
+      "dlon": -84.4281
     },
     {
       "callsign": "HLF9869",
@@ -119,10 +127,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "EHU EHU",
+      "dest": "ONT ONT",
+      "route": "EHU-ANC-ONT",
+      "routeNote": "adsb.lol route",
+      "olat": 30.342778,
+      "olon": 115.029722,
+      "dlat": 34.056,
+      "dlon": -117.600998
     },
     {
       "callsign": "KAL8262",
@@ -205,10 +217,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GRU GRU",
+      "dest": "LAX Los Angeles",
+      "route": "GRU-LAX",
+      "routeNote": "adsb.lol route",
+      "dlat": 33.942501,
+      "dlon": -118.407997,
+      "olat": -23.435556,
+      "olon": -46.473057
     },
     {
       "callsign": "XAA9122",
