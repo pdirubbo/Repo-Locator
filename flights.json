@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-15T21:34:28Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-15T21:35:05Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9786",
@@ -171,10 +171,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "DOH DOH",
+      "route": "ORD-DOH",
+      "routeNote": "adsb.lol route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 25.273056,
+      "dlon": 51.608056
     },
     {
       "callsign": "SCX8018",
@@ -190,10 +194,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "FNT FNT",
+      "dest": "MSP Minneapolis",
+      "route": "FNT-MSP",
+      "routeNote": "adsbdb route",
+      "dlat": 44.882,
+      "dlon": -93.2218,
+      "olat": 42.9654,
+      "olon": -83.7436
     },
     {
       "callsign": "SCX8239",
@@ -230,10 +238,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SJC SJC",
+      "dest": "LAS Las Vegas",
+      "route": "SJC-LAS",
+      "routeNote": "adsbdb route",
+      "dlat": 36.0801,
+      "dlon": -115.152,
+      "olat": 37.3626,
+      "olon": -121.929
     },
     {
       "callsign": "SWA9003",
@@ -272,10 +284,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "GRU GRU",
+      "route": "LAX-GRU",
+      "routeNote": "adsb.lol route",
+      "olat": 33.942501,
+      "olon": -118.407997,
+      "dlat": -23.435556,
+      "dlon": -46.473057
     },
     {
       "callsign": "TAM8194",
