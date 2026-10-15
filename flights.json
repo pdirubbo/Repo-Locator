@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-15T23:47:42Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-15T23:48:19Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "FDX9038",
@@ -39,10 +39,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "HKG HKG",
+      "route": "ORD-ICN-HKG",
+      "routeNote": "adsb.lol route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 22.308901,
+      "dlon": 113.915001
     },
     {
       "callsign": "GTI9861",
@@ -148,10 +152,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAS Las Vegas",
+      "dest": "OAK OAK",
+      "route": "LAS-OAK",
+      "routeNote": "adsbdb route",
+      "olat": 36.0801,
+      "olon": -115.152,
+      "dlat": 37.7213,
+      "dlon": -122.221
     },
     {
       "callsign": "SWA9004",
@@ -190,10 +198,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PHX Phoenix",
+      "dest": "SFO San Francisco",
+      "route": "PHX-SFO",
+      "routeNote": "adsbdb route",
+      "olat": 33.4353,
+      "olon": -112.00591,
+      "dlat": 37.619,
+      "dlon": -122.375
     },
     {
       "callsign": "TAM8127",
@@ -209,10 +221,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MCO Orlando",
+      "dest": "GRU GRU",
+      "route": "MCO-GRU",
+      "routeNote": "adsb.lol route",
+      "olat": 28.429399,
+      "olon": -81.308998,
+      "dlat": -23.435556,
+      "dlon": -46.473057
     },
     {
       "callsign": "UAL8180",
