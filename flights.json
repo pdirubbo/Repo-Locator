@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-16T06:21:08Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-16T06:21:44Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "BWA8038",
@@ -16,10 +16,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "KIN KIN",
+      "route": "MIA-KIN",
+      "routeNote": "adsb.lol route",
+      "olat": 25.7932,
+      "olon": -80.290604,
+      "dlat": 17.935699,
+      "dlon": -76.787498
     },
     {
       "callsign": "FFT9533",
@@ -58,10 +62,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "NLU NLU",
+      "dest": "FRA FRA",
+      "route": "NLU-GDL-FRA",
+      "routeNote": "adsb.lol route",
+      "olat": 19.755301,
+      "olon": -99.016403,
+      "dlat": 50.026402,
+      "dlon": 8.54313
     },
     {
       "callsign": "GTI8571",
@@ -77,10 +85,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "AKL AKL",
+      "dest": "SYD SYD",
+      "route": "AKL-SYD",
+      "routeNote": "adsbdb route",
+      "olat": -37.0081,
+      "olon": 174.79201,
+      "dlat": -33.9461,
+      "dlon": 151.177
     },
     {
       "callsign": "KAL8255",
@@ -142,10 +154,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BAF BAF",
+      "dest": "CID CID",
+      "route": "BAF-CID",
+      "routeNote": "adsbdb route",
+      "olat": 42.1578,
+      "olon": -72.7156,
+      "dlat": 41.8847,
+      "dlon": -91.7108
     },
     {
       "callsign": "UPS9311",
