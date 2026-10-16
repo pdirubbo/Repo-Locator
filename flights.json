@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-16T21:48:15Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-16T21:49:50Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAY9300",
@@ -16,10 +16,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "EWR Newark",
+      "dest": "CVG Cincinnati",
+      "route": "EWR-CVG",
+      "routeNote": "adsbdb route",
+      "olat": 40.6925,
+      "olon": -74.1687,
+      "dlat": 39.0488,
+      "dlon": -84.6678
     },
     {
       "callsign": "AJT8544",
@@ -56,10 +60,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SLC Salt Lake City",
+      "dest": "LAS Las Vegas",
+      "route": "SLC-LAS",
+      "routeNote": "adsbdb route",
+      "olat": 40.78575,
+      "olon": -111.97975,
+      "dlat": 36.0801,
+      "dlon": -115.152
     },
     {
       "callsign": "ASA9677",
@@ -75,10 +83,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "MZT MZT",
+      "route": "LAX-MZT",
+      "routeNote": "adsbdb route",
+      "olat": 33.9425,
+      "olon": -118.408,
+      "dlat": 23.1614,
+      "dlon": -106.266
     },
     {
       "callsign": "BBQ9088",
@@ -94,10 +106,10 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ELP El Paso",
+      "dest": "SVN Savannah",
+      "route": "ELP-SVN",
+      "routeNote": "FlightAware"
     },
     {
       "callsign": "DAL8800",
@@ -199,10 +211,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "FRA FRA",
+      "dest": "NLU NLU",
+      "route": "FRA-NLU",
+      "routeNote": "adsb.lol route",
+      "olat": 50.026402,
+      "olon": 8.54313,
+      "dlat": 19.755301,
+      "dlon": -99.016403
     },
     {
       "callsign": "GTI8572",
@@ -260,10 +276,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "HAN HAN",
+      "route": "LAX-ICN-HAN",
+      "routeNote": "adsb.lol route",
+      "olat": 33.942501,
+      "olon": -118.407997,
+      "dlat": 21.221201,
+      "dlon": 105.806999
     },
     {
       "callsign": "SCX8124",
@@ -300,10 +320,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CVG Cincinnati",
+      "dest": "LBE LBE",
+      "route": "CVG-LBE",
+      "routeNote": "adsbdb route",
+      "olat": 39.0488,
+      "olon": -84.6678,
+      "dlat": 40.2759,
+      "dlon": -79.4048
     },
     {
       "callsign": "SCX8622",
@@ -319,10 +343,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SBN SBN",
+      "dest": "BWI Baltimore",
+      "route": "SBN-BWI",
+      "routeNote": "adsbdb route",
+      "dlat": 39.1754,
+      "dlon": -76.6683,
+      "olat": 41.7087,
+      "olon": -86.3173
     },
     {
       "callsign": "SCX8703",
@@ -338,10 +366,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "PHL Philadelphia",
+      "route": "ORD-PHL",
+      "routeNote": "adsbdb route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 39.8719,
+      "dlon": -75.2411
     },
     {
       "callsign": "SCX8714",
@@ -539,10 +571,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LCK LCK",
+      "dest": "SUU SUU",
+      "route": "LCK-SUU",
+      "routeNote": "adsbdb route",
+      "olat": 39.8138,
+      "olon": -82.9278,
+      "dlat": 38.2627,
+      "dlon": -121.927
     }
   ]
 }
