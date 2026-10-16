@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-16T15:31:08Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-16T15:32:00Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9827",
@@ -60,10 +60,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "TIJ TIJ",
+      "dest": "SZX SZX",
+      "route": "TIJ-SZX",
+      "routeNote": "adsbdb route",
+      "olat": 32.5411,
+      "olon": -116.97,
+      "dlat": 22.6393,
+      "dlon": 113.811
     },
     {
       "callsign": "DAL8801",
@@ -79,10 +83,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "JFK New York",
+      "dest": "ATL Atlanta",
+      "route": "JFK-ATL",
+      "routeNote": "adsbdb route",
+      "olat": 40.6398,
+      "olon": -73.7789,
+      "dlat": 33.6367,
+      "dlon": -84.4281
     },
     {
       "callsign": "DAL8839",
@@ -98,10 +106,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BWI Baltimore",
+      "dest": "DTW Detroit",
+      "route": "BWI-DTW",
+      "routeNote": "adsb.lol route",
+      "olat": 39.1754,
+      "olon": -76.668297,
+      "dlat": 42.212399,
+      "dlon": -83.353401
     },
     {
       "callsign": "DAL8898",
@@ -249,10 +261,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "JFK New York",
+      "dest": "SAV SAV",
+      "route": "JFK-SAV",
+      "routeNote": "adsbdb route",
+      "olat": 40.6398,
+      "olon": -73.7789,
+      "dlat": 32.1276,
+      "dlon": -81.2021
     },
     {
       "callsign": "LEX8365",
