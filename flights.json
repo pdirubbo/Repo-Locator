@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-16T11:36:42Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-16T11:37:15Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9787",
@@ -60,10 +60,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CVG Cincinnati",
+      "dest": "JFK New York",
+      "route": "CVG-JFK",
+      "routeNote": "adsbdb route",
+      "olat": 39.0488,
+      "olon": -84.6678,
+      "dlat": 40.6398,
+      "dlon": -73.7789
     },
     {
       "callsign": "GTI8209",
@@ -79,10 +83,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "ICN ICN",
+      "route": "MIA-AMS-ICN",
+      "routeNote": "adsb.lol route",
+      "olat": 25.7932,
+      "olon": -80.290604,
+      "dlat": 37.469101,
+      "dlon": 126.450996
     },
     {
       "callsign": "GTI8387",
@@ -165,10 +173,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DTW Detroit",
+      "dest": "DFW Dallas",
+      "route": "DTW-DFW",
+      "routeNote": "adsb.lol route",
+      "olat": 42.212399,
+      "olon": -83.353401,
+      "dlat": 32.896801,
+      "dlon": -97.038002
     },
     {
       "callsign": "VXP9533",
