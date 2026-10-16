@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-16T18:54:46Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-16T18:55:41Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAY9305",
@@ -83,10 +83,12 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "GSO Greensboro",
+      "route": "MIA-GSO",
+      "routeNote": "FlightAware",
+      "olat": 25.7959,
+      "olon": -80.287
     },
     {
       "callsign": "DAL8902",
@@ -167,10 +169,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SEA Seattle",
+      "dest": "PDX PDX",
+      "route": "SEA-PDX",
+      "routeNote": "adsb.lol route",
+      "olat": 47.449001,
+      "olon": -122.308998,
+      "dlat": 45.588699,
+      "dlon": -122.598
     },
     {
       "callsign": "SCX8277",
@@ -186,10 +192,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SJC SJC",
+      "dest": "SMF SMF",
+      "route": "SJC-SMF",
+      "routeNote": "adsbdb route",
+      "olat": 37.3626,
+      "olon": -121.929,
+      "dlat": 38.6954,
+      "dlon": -121.591
     },
     {
       "callsign": "SCX8761",
@@ -249,10 +259,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "OAK OAK",
+      "dest": "PHX Phoenix",
+      "route": "OAK-PHX",
+      "routeNote": "adsbdb route",
+      "dlat": 33.4353,
+      "dlon": -112.00591,
+      "olat": 37.7213,
+      "olon": -122.221
     },
     {
       "callsign": "UAL8228",
@@ -268,10 +282,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YYZ YYZ",
+      "dest": "LGA LGA",
+      "route": "YYZ-LGA",
+      "routeNote": "adsb.lol route",
+      "olat": 43.6772,
+      "olon": -79.6306,
+      "dlat": 40.777199,
+      "dlon": -73.872597
     }
   ]
 }
