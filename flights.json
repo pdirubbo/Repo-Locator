@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-17T06:13:13Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-17T06:13:33Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9802",
@@ -129,10 +129,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "NLU NLU",
+      "dest": "FRA FRA",
+      "route": "NLU-MTY-FRA",
+      "routeNote": "adsb.lol route",
+      "olat": 19.755301,
+      "olon": -99.016403,
+      "dlat": 50.026402,
+      "dlon": 8.54313
     },
     {
       "callsign": "QTR8168",
