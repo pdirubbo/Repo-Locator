@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-17T23:04:59Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-17T23:06:56Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9780",
@@ -16,10 +16,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PVD PVD",
+      "dest": "CLT Charlotte",
+      "route": "PVD-CLT",
+      "routeNote": "adsbdb route",
+      "dlat": 35.214,
+      "dlon": -80.9431,
+      "olat": 41.72504,
+      "olon": -71.42567
     },
     {
       "callsign": "AAL9829",
@@ -188,10 +192,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BAF BAF",
+      "dest": "BUF BUF",
+      "route": "BAF-BUF",
+      "routeNote": "adsbdb route",
+      "olat": 42.1578,
+      "olon": -72.7156,
+      "dlat": 42.9405,
+      "dlon": -78.7322
     },
     {
       "callsign": "SCX8651",
@@ -230,10 +238,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DAL DAL",
+      "dest": "HOU HOU",
+      "route": "DAL-HOU",
+      "routeNote": "adsbdb route",
+      "olat": 32.8471,
+      "olon": -96.8518,
+      "dlat": 29.6454,
+      "dlon": -95.2789
     },
     {
       "callsign": "UAL8126",
