@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-18T13:16:30Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-18T13:17:40Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "ATN8331",
@@ -58,10 +58,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BOS Boston",
+      "dest": "JFK New York",
+      "route": "BOS-JFK",
+      "routeNote": "adsbdb route",
+      "olat": 42.3643,
+      "olon": -71.0052,
+      "dlat": 40.6398,
+      "dlon": -73.7789
     },
     {
       "callsign": "DAL9995",
@@ -100,10 +104,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "NLU NLU",
+      "dest": "FRA FRA",
+      "route": "NLU-GDL-FRA",
+      "routeNote": "adsb.lol route",
+      "olat": 19.755301,
+      "olon": -99.016403,
+      "dlat": 50.026402,
+      "dlon": 8.54313
     },
     {
       "callsign": "GTI8860",
@@ -119,10 +127,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "FOE FOE",
+      "dest": "HHN HHN",
+      "route": "FOE-HHN",
+      "routeNote": "adsbdb route",
+      "olat": 38.9509,
+      "olon": -95.6636,
+      "dlat": 49.9487,
+      "dlon": 7.26389
     },
     {
       "callsign": "GTI9873",
@@ -161,10 +173,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "FLL FLL",
+      "dest": "HAV HAV",
+      "route": "FLL-HAV",
+      "routeNote": "adsb.lol route",
+      "olat": 26.072599,
+      "olon": -80.152702,
+      "dlat": 22.989201,
+      "dlon": -82.409103
     },
     {
       "callsign": "JBU8776",
@@ -180,10 +196,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SYR SYR",
+      "dest": "BOS Boston",
+      "route": "SYR-BOS",
+      "routeNote": "adsbdb route",
+      "dlat": 42.3643,
+      "dlon": -71.0052,
+      "olat": 43.1112,
+      "olon": -76.1063
     },
     {
       "callsign": "JIA9954",
@@ -199,10 +219,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PHL Philadelphia",
+      "dest": "CKB CKB",
+      "route": "PHL-CKB",
+      "routeNote": "adsbdb route",
+      "olat": 39.8719,
+      "olon": -75.2411,
+      "dlat": 39.2966,
+      "dlon": -80.2281
     },
     {
       "callsign": "MXY9717",
@@ -218,10 +242,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "TPA TPA",
+      "dest": "MSY MSY",
+      "route": "TPA-MSY",
+      "routeNote": "adsbdb route",
+      "olat": 27.9755,
+      "olon": -82.5332,
+      "dlat": 29.9934,
+      "dlon": -90.258
     },
     {
       "callsign": "SCX8015",
@@ -237,10 +265,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MSP Minneapolis",
+      "dest": "CWA CWA",
+      "route": "MSP-CWA",
+      "routeNote": "adsbdb route",
+      "olat": 44.882,
+      "olon": -93.2218,
+      "dlat": 44.7776,
+      "dlon": -89.6668
     },
     {
       "callsign": "SCX8132",
@@ -256,10 +288,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "FWA FWA",
+      "dest": "DTW Detroit",
+      "route": "FWA-DTW",
+      "routeNote": "adsbdb route",
+      "dlat": 42.2124,
+      "dlon": -83.3534,
+      "olat": 40.9785,
+      "olon": -85.1951
     },
     {
       "callsign": "UAL8169",
