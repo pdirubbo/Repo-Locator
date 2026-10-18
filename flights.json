@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-18T00:30:49Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-18T00:31:14Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9752",
@@ -16,10 +16,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DFW Dallas",
+      "dest": "LAX Los Angeles",
+      "route": "DFW-LAX",
+      "routeNote": "adsbdb route",
+      "olat": 32.8968,
+      "olon": -97.038,
+      "dlat": 33.9425,
+      "dlon": -118.408
     },
     {
       "callsign": "AAL9785",
@@ -56,10 +60,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MCO Orlando",
+      "dest": "VCP VCP",
+      "route": "MCO-VCP",
+      "routeNote": "adsbdb route",
+      "olat": 28.4294,
+      "olon": -81.309,
+      "dlat": -23.0074,
+      "dlon": -47.1345
     },
     {
       "callsign": "BBQ9089",
@@ -75,10 +83,10 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "RIV Riverside",
+      "dest": "ELP El Paso",
+      "route": "RIV-ELP",
+      "routeNote": "FlightAware"
     },
     {
       "callsign": "CSN8031",
@@ -94,10 +102,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SZX SZX",
+      "dest": "MEX MEX",
+      "route": "SZX-MEX",
+      "routeNote": "adsbdb route",
+      "olat": 22.6393,
+      "olon": 113.811,
+      "dlat": 19.4363,
+      "dlon": -99.0721
     },
     {
       "callsign": "DAL8830",
@@ -157,10 +169,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "JFK New York",
+      "dest": "HNL HNL",
+      "route": "JFK-HNL",
+      "routeNote": "adsbdb route",
+      "olat": 40.6398,
+      "olon": -73.7789,
+      "dlat": 21.32062,
+      "dlon": -157.92423
     },
     {
       "callsign": "GEC8224",
@@ -176,10 +192,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "FRA FRA",
+      "dest": "MEX MEX",
+      "route": "FRA-MEX",
+      "routeNote": "adsbdb route",
+      "olat": 50.03333,
+      "olon": 8.57056,
+      "dlat": 19.4363,
+      "dlon": -99.0721
     },
     {
       "callsign": "GTI8052",
@@ -218,10 +238,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "ICN ICN",
+      "route": "ORD-ICN",
+      "routeNote": "adsbdb route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 37.4691,
+      "dlon": 126.451
     },
     {
       "callsign": "SCX8014",
@@ -260,10 +284,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SBN SBN",
+      "dest": "BWI Baltimore",
+      "route": "SBN-BWI",
+      "routeNote": "adsbdb route",
+      "dlat": 39.1754,
+      "dlon": -76.6683,
+      "olat": 41.7087,
+      "olon": -86.3173
     },
     {
       "callsign": "SCX8671",
@@ -348,10 +376,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DAL DAL",
+      "dest": "HOU HOU",
+      "route": "DAL-HOU",
+      "routeNote": "adsbdb route",
+      "olat": 32.8471,
+      "olon": -96.8518,
+      "dlat": 29.6454,
+      "dlon": -95.2789
     },
     {
       "callsign": "UAL8101",
@@ -367,10 +399,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SFO San Francisco",
+      "dest": "RNO RNO",
+      "route": "SFO-RNO",
+      "routeNote": "adsbdb route",
+      "olat": 37.619,
+      "olon": -122.375,
+      "dlat": 39.4991,
+      "dlon": -119.768
     },
     {
       "callsign": "UAL8178",
