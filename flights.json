@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-18T04:59:21Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-18T05:00:23Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9603",
@@ -39,10 +39,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "HNL HNL",
+      "dest": "PAE PAE",
+      "route": "HNL-PAE",
+      "routeNote": "adsbdb route",
+      "olat": 21.32062,
+      "olon": -157.92423,
+      "dlat": 47.9063,
+      "dlon": -122.282
     },
     {
       "callsign": "GTI9873",
@@ -81,10 +85,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SAT SAT",
+      "dest": "PHL Philadelphia",
+      "route": "SAT-PHL",
+      "routeNote": "adsbdb route",
+      "dlat": 39.8719,
+      "dlon": -75.2411,
+      "olat": 29.5337,
+      "olon": -98.4698
     },
     {
       "callsign": "SCX8419",
@@ -232,10 +240,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SDF Louisville",
+      "dest": "BTV BTV",
+      "route": "SDF-BTV",
+      "routeNote": "adsbdb route",
+      "olat": 38.1744,
+      "olon": -85.736,
+      "dlat": 44.4719,
+      "dlon": -73.1533
     },
     {
       "callsign": "VXP9583",
@@ -251,10 +263,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ILG ILG",
+      "dest": "HVN HVN",
+      "route": "ILG-HVN",
+      "routeNote": "adsbdb route",
+      "olat": 39.6787,
+      "olon": -75.6065,
+      "dlat": 41.2637,
+      "dlon": -72.8868
     },
     {
       "callsign": "VXP9591",
@@ -270,10 +286,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ATL Atlanta",
+      "dest": "LAL LAL",
+      "route": "ATL-LAL",
+      "routeNote": "adsbdb route",
+      "olat": 33.6367,
+      "olon": -84.4281,
+      "dlat": 27.9889,
+      "dlon": -82.0186
     }
   ]
 }
