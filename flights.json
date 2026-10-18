@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-18T23:00:52Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-18T23:02:14Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9738",
@@ -39,10 +39,10 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GSO Greensboro",
+      "dest": "GSO Greensboro",
+      "route": "GSO-GSO",
+      "routeNote": "FlightAware"
     },
     {
       "callsign": "ASA9462",
@@ -58,10 +58,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MLB MLB",
+      "dest": "SEA Seattle",
+      "route": "MLB-SEA",
+      "routeNote": "adsb.lol route",
+      "dlat": 47.449001,
+      "dlon": -122.308998,
+      "olat": 28.1028,
+      "olon": -80.645302
     },
     {
       "callsign": "AZG8587",
@@ -100,10 +104,10 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "RIV Riverside",
+      "dest": "GSO Greensboro",
+      "route": "RIV-GSO",
+      "routeNote": "FlightAware"
     },
     {
       "callsign": "CAO8413",
@@ -142,10 +146,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "PVG PVG",
+      "route": "LAX-PVG",
+      "routeNote": "adsb.lol route",
+      "olat": 33.942501,
+      "olon": -118.407997,
+      "dlat": 31.1434,
+      "dlon": 121.805
     },
     {
       "callsign": "DAL8841",
@@ -161,10 +169,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "EWR Newark",
+      "dest": "IAD Dulles",
+      "route": "EWR-IAD",
+      "routeNote": "adsb.lol route",
+      "olat": 40.692501,
+      "olon": -74.168701,
+      "dlat": 38.9445,
+      "dlon": -77.455803
     },
     {
       "callsign": "DAL8867",
@@ -289,10 +301,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CVG Cincinnati",
+      "dest": "LBE LBE",
+      "route": "CVG-LBE",
+      "routeNote": "adsbdb route",
+      "olat": 39.0488,
+      "olon": -84.6678,
+      "dlat": 40.2759,
+      "dlon": -79.4048
     },
     {
       "callsign": "SWA9005",
@@ -331,10 +347,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "TPA TPA",
+      "dest": "MDW MDW",
+      "route": "TPA-DAL-MDW",
+      "routeNote": "adsb.lol route",
+      "olat": 27.9755,
+      "olon": -82.533203,
+      "dlat": 41.785999,
+      "dlon": -87.752403
     },
     {
       "callsign": "TAM8186",
@@ -350,10 +370,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GRU GRU",
+      "dest": "MCO Orlando",
+      "route": "GRU-MCO",
+      "routeNote": "adsb.lol route",
+      "dlat": 28.429399,
+      "dlon": -81.308998,
+      "olat": -23.435556,
+      "olon": -46.473057
     },
     {
       "callsign": "UAL8101",
