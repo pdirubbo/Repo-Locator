@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-18T09:20:00Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-18T09:20:59Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAE8665",
@@ -16,10 +16,10 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "HSV Huntsville",
+      "dest": "LUX Luxembourg",
+      "route": "HSV-LUX",
+      "routeNote": "FlightAware"
     },
     {
       "callsign": "ASA9674",
@@ -140,10 +140,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YUL YUL",
+      "dest": "FLL FLL",
+      "route": "YUL-FLL",
+      "routeNote": "adsbdb route",
+      "olat": 45.4706,
+      "olon": -73.7408,
+      "dlat": 26.0726,
+      "dlon": -80.1527
     },
     {
       "callsign": "SCX8704",
@@ -205,10 +209,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GSO GSO",
+      "dest": "PHL Philadelphia",
+      "route": "GSO-PHL",
+      "routeNote": "adsbdb route",
+      "dlat": 39.8719,
+      "dlon": -75.2411,
+      "olat": 36.0978,
+      "olon": -79.9373
     }
   ]
 }
