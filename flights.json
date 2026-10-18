@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-18T21:05:39Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-18T21:07:03Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "ANA8401",
@@ -16,10 +16,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "NRT NRT",
+      "route": "ORD-NRT",
+      "routeNote": "adsb.lol route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 35.764702,
+      "dlon": 140.386002
     },
     {
       "callsign": "AZU8706",
@@ -56,10 +60,10 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ONT Ontario",
+      "dest": "GSO Greensboro",
+      "route": "ONT-GSO",
+      "routeNote": "FlightAware"
     },
     {
       "callsign": "CAO8412",
@@ -75,10 +79,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "PVG PVG",
+      "route": "ORD-PVG",
+      "routeNote": "adsb.lol route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 31.1434,
+      "dlon": 121.805
     },
     {
       "callsign": "CAO8420",
@@ -94,10 +102,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "PVG PVG",
+      "route": "LAX-PVG",
+      "routeNote": "adsb.lol route",
+      "olat": 33.942501,
+      "olon": -118.407997,
+      "dlat": 31.1434,
+      "dlon": 121.805
     },
     {
       "callsign": "DAL8948",
@@ -157,10 +169,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "HKG HKG",
+      "dest": "NLU NLU",
+      "route": "HKG-ANC-NLU",
+      "routeNote": "adsb.lol route",
+      "olat": 22.308901,
+      "olon": 113.915001,
+      "dlat": 19.755301,
+      "dlon": -99.016403
     },
     {
       "callsign": "KAL8208",
@@ -176,10 +192,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "ICN ICN",
+      "route": "LAX-ICN",
+      "routeNote": "adsb.lol route",
+      "olat": 33.942501,
+      "olon": -118.407997,
+      "dlat": 37.469101,
+      "dlon": 126.450996
     },
     {
       "callsign": "KAL9231",
@@ -218,10 +238,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "IFP IFP",
+      "dest": "RST RST",
+      "route": "IFP-RST",
+      "routeNote": "adsbdb route",
+      "olat": 35.1574,
+      "olon": -114.56,
+      "dlat": 43.9083,
+      "dlon": -92.5
     },
     {
       "callsign": "SCX8215",
@@ -237,10 +261,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CVG Cincinnati",
+      "dest": "LBE LBE",
+      "route": "CVG-LBE",
+      "routeNote": "adsbdb route",
+      "olat": 39.0488,
+      "olon": -84.6678,
+      "dlat": 40.2759,
+      "dlon": -79.4048
     },
     {
       "callsign": "SCX8284",
@@ -256,10 +284,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ABE ABE",
+      "dest": "BMI BMI",
+      "route": "ABE-BMI",
+      "routeNote": "adsbdb route",
+      "olat": 40.65177,
+      "olon": -75.4428,
+      "dlat": 40.4771,
+      "dlon": -88.9159
     },
     {
       "callsign": "SCX8461",
@@ -430,10 +462,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "KEF KEF",
+      "dest": "YUL YUL",
+      "route": "KEF-YUL",
+      "routeNote": "adsbdb route",
+      "olat": 63.985,
+      "olon": -22.6056,
+      "dlat": 45.4706,
+      "dlon": -73.7408
     },
     {
       "callsign": "VXP8718",
@@ -449,10 +485,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "APN APN",
+      "dest": "KNKT KNKT",
+      "route": "APN-KNKT",
+      "routeNote": "adsbdb route",
+      "olat": 45.0781,
+      "olon": -83.5603,
+      "dlat": 34.9009,
+      "dlon": -76.8807
     }
   ]
 }
