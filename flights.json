@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-19T10:58:22Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-19T10:59:07Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9780",
@@ -62,10 +62,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SJU SJU",
+      "dest": "SAP SAP",
+      "route": "SJU-SAP",
+      "routeNote": "adsbdb route",
+      "olat": 18.4394,
+      "olon": -66.0018,
+      "dlat": 15.4526,
+      "dlon": -87.9236
     },
     {
       "callsign": "CKS9710",
@@ -81,10 +85,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "WRI WRI",
+      "dest": "ANC ANC",
+      "route": "WRI-ANC",
+      "routeNote": "adsbdb route",
+      "olat": 40.0156,
+      "olon": -74.5917,
+      "dlat": 61.1744,
+      "dlon": -149.996
     },
     {
       "callsign": "GEC8221",
@@ -100,10 +108,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MEX MEX",
+      "dest": "FRA FRA",
+      "route": "MEX-DFW-FRA",
+      "routeNote": "adsb.lol route",
+      "olat": 19.4363,
+      "olon": -99.072098,
+      "dlat": 50.026402,
+      "dlon": 8.54313
     },
     {
       "callsign": "GTI8174",
@@ -119,10 +131,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PVG PVG",
+      "dest": "LAX Los Angeles",
+      "route": "PVG-ANC-NLU-LAX",
+      "routeNote": "adsb.lol route",
+      "dlat": 33.942501,
+      "dlon": -118.407997,
+      "olat": 31.1434,
+      "olon": 121.805
     },
     {
       "callsign": "SWA8502",
@@ -138,10 +154,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "OAK OAK",
+      "dest": "PHX Phoenix",
+      "route": "OAK-PHX",
+      "routeNote": "adsbdb route",
+      "dlat": 33.4353,
+      "dlon": -112.00591,
+      "olat": 37.7213,
+      "olon": -122.221
     }
   ]
 }
