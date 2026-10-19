@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-19T17:18:33Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-19T17:19:13Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9787",
@@ -16,10 +16,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MSN MSN",
+      "dest": "DFW Dallas",
+      "route": "MSN-DFW",
+      "routeNote": "adsbdb route",
+      "dlat": 32.8968,
+      "dlon": -97.038,
+      "olat": 43.1399,
+      "olon": -89.3375
     },
     {
       "callsign": "ASA9801",
@@ -79,10 +83,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DEN Denver",
+      "dest": "SMF SMF",
+      "route": "DEN-SMF",
+      "routeNote": "adsbdb route",
+      "olat": 39.8617,
+      "olon": -104.673,
+      "dlat": 38.6954,
+      "dlon": -121.591
     },
     {
       "callsign": "GTI9864",
@@ -142,10 +150,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LGA LGA",
+      "dest": "CMH CMH",
+      "route": "LGA-CMH",
+      "routeNote": "adsbdb route",
+      "olat": 40.7772,
+      "olon": -73.8726,
+      "dlat": 39.998,
+      "dlon": -82.8919
     },
     {
       "callsign": "SCX8246",
@@ -161,10 +173,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SMX SMX",
+      "dest": "IFP IFP",
+      "route": "SMX-IFP",
+      "routeNote": "adsbdb route",
+      "olat": 34.8989,
+      "olon": -120.457,
+      "dlat": 35.1574,
+      "dlon": -114.56
     },
     {
       "callsign": "SCX8410",
@@ -203,10 +219,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LGA LGA",
+      "dest": "YYZ YYZ",
+      "route": "LGA-YYZ",
+      "routeNote": "adsb.lol route",
+      "olat": 40.777199,
+      "olon": -73.872597,
+      "dlat": 43.6772,
+      "dlon": -79.6306
     }
   ]
 }
