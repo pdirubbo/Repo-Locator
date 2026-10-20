@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-20T14:39:54Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-20T14:40:41Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9789",
@@ -39,10 +39,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DSM DSM",
+      "dest": "CVG Cincinnati",
+      "route": "DSM-CVG",
+      "routeNote": "adsbdb route",
+      "dlat": 39.0488,
+      "dlon": -84.6678,
+      "olat": 41.534,
+      "olon": -93.6631
     },
     {
       "callsign": "DAL8947",
@@ -104,10 +108,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "JFK New York",
+      "dest": "BOS Boston",
+      "route": "JFK-BOS",
+      "routeNote": "adsbdb route",
+      "olat": 40.6398,
+      "olon": -73.7789,
+      "dlat": 42.3643,
+      "dlon": -71.0052
     },
     {
       "callsign": "JBU8621",
@@ -123,10 +131,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "JFK New York",
+      "dest": "SAL SAL",
+      "route": "JFK-SAL",
+      "routeNote": "adsbdb route",
+      "olat": 40.6398,
+      "olon": -73.7789,
+      "dlat": 13.4409,
+      "dlon": -89.0557
     },
     {
       "callsign": "SCX8255",
@@ -142,10 +154,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MSN MSN",
+      "dest": "GRI GRI",
+      "route": "MSN-GRI",
+      "routeNote": "adsbdb route",
+      "olat": 43.1399,
+      "olon": -89.3375,
+      "dlat": 40.9675,
+      "dlon": -98.3096
     },
     {
       "callsign": "SCX9054",
@@ -161,10 +177,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "OPF OPF",
+      "dest": "MSP Minneapolis",
+      "route": "OPF-MSP",
+      "routeNote": "adsbdb route",
+      "dlat": 44.882,
+      "dlon": -93.2218,
+      "olat": 25.907,
+      "olon": -80.2784
     },
     {
       "callsign": "UAE9917",
