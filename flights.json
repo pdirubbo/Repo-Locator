@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-20T09:59:50Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-20T10:00:34Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAE8111",
@@ -16,10 +16,10 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "HSV Huntsville",
+      "dest": "LUX Luxembourg",
+      "route": "HSV-LUX",
+      "routeNote": "FlightAware"
     },
     {
       "callsign": "AJT8242",
@@ -123,10 +123,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PVG PVG",
+      "dest": "FRA FRA",
+      "route": "PVG-FRA",
+      "routeNote": "adsb.lol route",
+      "olat": 31.1434,
+      "olon": 121.805,
+      "dlat": 50.026402,
+      "dlon": 8.54313
     },
     {
       "callsign": "GTI8112",
@@ -165,10 +169,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BOS Boston",
+      "dest": "EWR Newark",
+      "route": "BOS-EWR",
+      "routeNote": "adsbdb route",
+      "olat": 42.3643,
+      "olon": -71.0052,
+      "dlat": 40.6925,
+      "dlon": -74.1687
     },
     {
       "callsign": "TAM8190",
@@ -251,10 +259,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "RDU RDU",
+      "dest": "MEM Memphis",
+      "route": "RDU-MEM",
+      "routeNote": "adsb.lol route",
+      "dlat": 35.0424,
+      "dlon": -89.9767,
+      "olat": 35.877602,
+      "olon": -78.787498
     }
   ]
 }
