@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-20T00:34:45Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-20T00:35:44Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9788",
@@ -37,10 +37,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "GYD GYD",
+      "route": "ORD-GYD",
+      "routeNote": "adsb.lol route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 40.467499,
+      "dlon": 50.0467
     },
     {
       "callsign": "AZU8707",
@@ -56,10 +60,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MCO Orlando",
+      "dest": "VCP VCP",
+      "route": "MCO-VCP",
+      "routeNote": "adsb.lol route",
+      "olat": 28.429399,
+      "olon": -81.308998,
+      "dlat": -23.007401,
+      "dlon": -47.134499
     },
     {
       "callsign": "DAL9963",
@@ -98,10 +106,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ANC ANC",
+      "dest": "ORD Chicago",
+      "route": "ANC-ORD",
+      "routeNote": "adsbdb route",
+      "dlat": 41.9786,
+      "dlon": -87.9048,
+      "olat": 61.1744,
+      "olon": -149.996
     },
     {
       "callsign": "GTI9429",
@@ -117,10 +129,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "ANC ANC",
+      "route": "MIA-ANC",
+      "routeNote": "adsbdb route",
+      "olat": 25.7932,
+      "olon": -80.2906,
+      "dlat": 61.1744,
+      "dlon": -149.996
     },
     {
       "callsign": "JBU8428",
@@ -201,10 +217,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BNA BNA",
+      "dest": "DAY DAY",
+      "route": "BNA-DAY",
+      "routeNote": "adsbdb route",
+      "olat": 36.1245,
+      "olon": -86.6782,
+      "dlat": 39.9024,
+      "dlon": -84.2194
     },
     {
       "callsign": "SWA8513",
@@ -308,10 +328,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "RDU RDU",
+      "dest": "MEM Memphis",
+      "route": "RDU-MEM",
+      "routeNote": "adsb.lol route",
+      "dlat": 35.0424,
+      "dlon": -89.9767,
+      "olat": 35.877602,
+      "olon": -78.787498
     },
     {
       "callsign": "UPS9820",
@@ -350,10 +374,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAN LAN",
+      "dest": "SDF Louisville",
+      "route": "LAN-SDF",
+      "routeNote": "adsb.lol route",
+      "dlat": 38.1744,
+      "dlon": -85.736,
+      "olat": 42.778702,
+      "olon": -84.587402
     },
     {
       "callsign": "UPS9885",
