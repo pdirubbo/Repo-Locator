@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-20T05:11:37Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-20T05:12:18Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "DAL8783",
@@ -62,10 +62,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "PVG PVG",
+      "route": "LAX-PVG",
+      "routeNote": "adsb.lol route",
+      "olat": 33.942501,
+      "olon": -118.407997,
+      "dlat": 31.1434,
+      "dlon": 121.805
     },
     {
       "callsign": "GTI8550",
@@ -81,10 +85,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ANC ANC",
+      "dest": "ORD Chicago",
+      "route": "ANC-ORD",
+      "routeNote": "adsbdb route",
+      "dlat": 41.9786,
+      "dlon": -87.9048,
+      "olat": 61.1744,
+      "olon": -149.996
     },
     {
       "callsign": "UPS9324",
@@ -100,10 +108,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DFW Dallas",
+      "dest": "SDF Louisville",
+      "route": "DFW-SDF",
+      "routeNote": "adsb.lol route",
+      "olat": 32.896801,
+      "olon": -97.038002,
+      "dlat": 38.1744,
+      "dlon": -85.736
     },
     {
       "callsign": "VOI9115",
@@ -119,10 +131,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BFM BFM",
+      "dest": "MEX MEX",
+      "route": "BFM-MEX",
+      "routeNote": "adsbdb route",
+      "olat": 30.6268,
+      "olon": -88.0681,
+      "dlat": 19.4363,
+      "dlon": -99.0721
     }
   ]
 }
