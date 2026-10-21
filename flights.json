@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-21T04:38:55Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-21T04:39:15Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "CAO8416",
@@ -16,10 +16,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "PVG PVG",
+      "route": "LAX-PVG",
+      "routeNote": "adsb.lol route",
+      "olat": 33.942501,
+      "olon": -118.407997,
+      "dlat": 31.1434,
+      "dlon": 121.805
     },
     {
       "callsign": "GTI8414",
