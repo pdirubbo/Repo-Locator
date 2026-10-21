@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-21T09:35:35Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-21T09:35:56Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AZU8704",
@@ -125,10 +125,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "RDU RDU",
+      "dest": "MEM Memphis",
+      "route": "RDU-MEM",
+      "routeNote": "adsb.lol route",
+      "dlat": 35.0424,
+      "dlon": -89.9767,
+      "olat": 35.877602,
+      "olon": -78.787498
     }
   ]
 }
