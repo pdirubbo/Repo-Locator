@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-21T18:52:23Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-21T18:53:29Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAY8022",
@@ -16,10 +16,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PWM PWM",
+      "dest": "BIF BIF",
+      "route": "PWM-BIF",
+      "routeNote": "adsbdb route",
+      "olat": 43.6462,
+      "olon": -70.3093,
+      "dlat": 31.8495,
+      "dlon": -106.38
     },
     {
       "callsign": "ASA9443",
@@ -56,10 +60,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ONT ONT",
+      "dest": "ILN ILN",
+      "route": "ONT-ILN",
+      "routeNote": "adsbdb route",
+      "olat": 34.056,
+      "olon": -117.601,
+      "dlat": 39.4279,
+      "dlon": -83.7921
     },
     {
       "callsign": "DAL8908",
@@ -165,10 +173,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "RNO RNO",
+      "dest": "MSY MSY",
+      "route": "RNO-MSY",
+      "routeNote": "adsbdb route",
+      "olat": 39.4991,
+      "olon": -119.768,
+      "dlat": 29.9934,
+      "dlon": -90.258
     },
     {
       "callsign": "SWA8107",
@@ -207,10 +219,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SJC SJC",
+      "dest": "HNL HNL",
+      "route": "SJC-HNL",
+      "routeNote": "adsb.lol route",
+      "olat": 37.362598,
+      "olon": -121.929001,
+      "dlat": 21.318701,
+      "dlon": -157.921997
     },
     {
       "callsign": "SWA9001",
@@ -247,10 +263,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "TPA TPA",
+      "dest": "SDF Louisville",
+      "route": "TPA-SDF",
+      "routeNote": "adsb.lol route",
+      "dlat": 38.1744,
+      "dlon": -85.736,
+      "olat": 27.9755,
+      "olon": -82.533203
     },
     {
       "callsign": "VOI9421",
@@ -285,10 +305,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CUN CUN",
+      "dest": "YQB YQB",
+      "route": "CUN-YQB",
+      "routeNote": "adsbdb route",
+      "olat": 21.0365,
+      "olon": -86.8771,
+      "dlat": 46.7911,
+      "dlon": -71.3933
     }
   ]
 }
