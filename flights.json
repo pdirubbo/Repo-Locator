@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-21T22:00:43Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-21T22:01:31Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "DAL9896",
@@ -37,10 +37,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "JFK New York",
+      "dest": "MCO Orlando",
+      "route": "JFK-MCO",
+      "routeNote": "adsbdb route",
+      "olat": 40.6398,
+      "olon": -73.7789,
+      "dlat": 28.4294,
+      "dlon": -81.309
     },
     {
       "callsign": "GTI8162",
@@ -188,10 +192,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SID SID",
+      "dest": "BRU BRU",
+      "route": "SID-BRU",
+      "routeNote": "adsbdb route",
+      "olat": 16.7414,
+      "olon": -22.9494,
+      "dlat": 50.9014,
+      "dlon": 4.48444
     },
     {
       "callsign": "QTR8073",
@@ -228,10 +236,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "IFP IFP",
+      "dest": "STC STC",
+      "route": "IFP-STC",
+      "routeNote": "adsbdb route",
+      "olat": 35.1574,
+      "olon": -114.56,
+      "dlat": 45.5466,
+      "dlon": -94.0599
     },
     {
       "callsign": "SCX8164",
@@ -247,10 +259,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ACY ACY",
+      "dest": "MSP Minneapolis",
+      "route": "ACY-MSP",
+      "routeNote": "adsbdb route",
+      "dlat": 44.882,
+      "dlon": -93.2218,
+      "olat": 39.4576,
+      "olon": -74.5772
     },
     {
       "callsign": "SWA8700",
@@ -333,10 +349,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "USA USA",
+      "route": "MIA-USA",
+      "routeNote": "adsbdb route",
+      "olat": 25.7932,
+      "olon": -80.2906,
+      "dlat": 35.3878,
+      "dlon": -80.7091
     }
   ]
 }
