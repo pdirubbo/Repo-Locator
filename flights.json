@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-22T22:15:49Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-22T22:16:32Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9784",
@@ -39,10 +39,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BFI BFI",
+      "dest": "SMF SMF",
+      "route": "BFI-SMF",
+      "routeNote": "adsbdb route",
+      "olat": 47.53,
+      "olon": -122.302,
+      "dlat": 38.6954,
+      "dlon": -121.591
     },
     {
       "callsign": "DAL8848",
@@ -238,10 +242,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SLC Salt Lake City",
+      "dest": "BOS Boston",
+      "route": "SLC-BOS",
+      "routeNote": "adsbdb route",
+      "olat": 40.78575,
+      "olon": -111.97975,
+      "dlat": 42.3643,
+      "dlon": -71.0052
     },
     {
       "callsign": "JBU8621",
@@ -278,10 +286,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DAY DAY",
+      "dest": "RNO RNO",
+      "route": "DAY-RNO",
+      "routeNote": "adsbdb route",
+      "olat": 39.9024,
+      "olon": -84.2194,
+      "dlat": 39.4991,
+      "dlon": -119.768
     },
     {
       "callsign": "SCX8992",
@@ -297,10 +309,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BIF BIF",
+      "dest": "TCM TCM",
+      "route": "BIF-TCM",
+      "routeNote": "adsbdb route",
+      "olat": 31.8495,
+      "olon": -106.38,
+      "dlat": 47.1377,
+      "dlon": -122.476
     },
     {
       "callsign": "SWA9005",
