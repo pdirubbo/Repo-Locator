@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-22T15:03:17Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-22T15:10:36Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9604",
@@ -16,10 +16,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "HKG HKG",
+      "dest": "NRT NRT",
+      "route": "HKG-NRT",
+      "routeNote": "adsb.lol route",
+      "olat": 22.308901,
+      "olon": 113.915001,
+      "dlat": 35.764702,
+      "dlon": 140.386002
     },
     {
       "callsign": "ASA9685",
@@ -58,10 +62,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "HNL HNL",
+      "dest": "ONT ONT",
+      "route": "HNL-ONT",
+      "routeNote": "adsb.lol route",
+      "olat": 21.318701,
+      "olon": -157.921997,
+      "dlat": 34.056,
+      "dlon": -117.600998
     },
     {
       "callsign": "DAL8846",
@@ -77,10 +85,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BKL BKL",
+      "dest": "BED BED",
+      "route": "BKL-BED",
+      "routeNote": "adsbdb route",
+      "olat": 41.5175,
+      "olon": -81.6833,
+      "dlat": 42.47,
+      "dlon": -71.289
     },
     {
       "callsign": "FFT9513",
@@ -96,10 +108,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CLE CLE",
+      "dest": "ORD Chicago",
+      "route": "CLE-ORD",
+      "routeNote": "adsbdb route",
+      "dlat": 41.9786,
+      "dlon": -87.9048,
+      "olat": 41.4117,
+      "olon": -81.8498
     },
     {
       "callsign": "GTI8977",
@@ -138,10 +154,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "LAX Los Angeles",
+      "route": "MIA-LAX",
+      "routeNote": "adsbdb route",
+      "olat": 25.7932,
+      "olon": -80.2906,
+      "dlat": 33.9425,
+      "dlon": -118.408
     },
     {
       "callsign": "HLF9869",
@@ -157,10 +177,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "EHU EHU",
+      "dest": "ONT ONT",
+      "route": "EHU-ANC-ONT",
+      "routeNote": "adsb.lol route",
+      "olat": 30.342778,
+      "olon": 115.029722,
+      "dlat": 34.056,
+      "dlon": -117.600998
     },
     {
       "callsign": "JBU8438",
@@ -222,10 +246,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MAO MAO",
+      "dest": "MIA Miami",
+      "route": "MAO-UIO-MIA",
+      "routeNote": "adsb.lol route",
+      "dlat": 25.7932,
+      "dlon": -80.290604,
+      "olat": -3.03861,
+      "olon": -60.049702
     },
     {
       "callsign": "LTG8441",
@@ -262,10 +290,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MSN MSN",
+      "dest": "IFP IFP",
+      "route": "MSN-IFP",
+      "routeNote": "adsbdb route",
+      "olat": 43.1399,
+      "olon": -89.3375,
+      "dlat": 35.1574,
+      "dlon": -114.56
     },
     {
       "callsign": "SWA9001",
@@ -304,10 +336,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BOS Boston",
+      "dest": "GRU GRU",
+      "route": "BOS-GRU",
+      "routeNote": "adsb.lol route",
+      "olat": 42.3643,
+      "olon": -71.005203,
+      "dlat": -23.435556,
+      "dlon": -46.473057
     }
   ]
 }
