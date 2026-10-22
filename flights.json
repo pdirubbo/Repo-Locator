@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-22T10:04:15Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-22T10:04:51Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAE8444",
@@ -16,10 +16,10 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "HSV Huntsville",
+      "dest": "LUX Luxembourg",
+      "route": "HSV-LUX",
+      "routeNote": "FlightAware"
     },
     {
       "callsign": "BBQ9076",
@@ -35,10 +35,10 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GSO Greensboro",
+      "dest": "OAJ Jacksonville",
+      "route": "GSO-OAJ",
+      "routeNote": "FlightAware"
     },
     {
       "callsign": "CAO8417",
@@ -98,10 +98,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "EWR Newark",
+      "dest": "IAD Dulles",
+      "route": "EWR-IAD",
+      "routeNote": "adsb.lol route",
+      "olat": 40.692501,
+      "olon": -74.168701,
+      "dlat": 38.9445,
+      "dlon": -77.455803
     },
     {
       "callsign": "GTI9750",
