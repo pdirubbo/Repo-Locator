@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-23T10:12:13Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-23T10:12:57Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "DAL8772",
@@ -39,10 +39,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ELP ELP",
+      "dest": "CCS CCS",
+      "route": "ELP-CCS",
+      "routeNote": "adsbdb route",
+      "olat": 31.8072,
+      "olon": -106.378,
+      "dlat": 10.60119,
+      "dlon": -66.99122
     },
     {
       "callsign": "GTI8209",
@@ -58,10 +62,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "ICN ICN",
+      "route": "MIA-AMS-ICN",
+      "routeNote": "adsb.lol route",
+      "olat": 25.7932,
+      "olon": -80.290604,
+      "dlat": 37.469101,
+      "dlon": 126.450996
     },
     {
       "callsign": "KAL8255",
@@ -123,10 +131,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ATL Atlanta",
+      "dest": "DOH DOH",
+      "route": "ATL-DOH",
+      "routeNote": "adsb.lol route",
+      "olat": 33.6367,
+      "olon": -84.428101,
+      "dlat": 25.273056,
+      "dlon": 51.608056
     },
     {
       "callsign": "SWA8504",
@@ -142,10 +154,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BWI Baltimore",
+      "dest": "BUF BUF",
+      "route": "BWI-BUF",
+      "routeNote": "adsbdb route",
+      "olat": 39.1754,
+      "olon": -76.6683,
+      "dlat": 42.9405,
+      "dlon": -78.7322
     },
     {
       "callsign": "UAL8107",
@@ -230,10 +246,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "IAH Houston",
+      "dest": "SAT SAT",
+      "route": "IAH-SAT",
+      "routeNote": "adsb.lol route",
+      "olat": 29.9844,
+      "olon": -95.3414,
+      "dlat": 29.533701,
+      "dlon": -98.469803
     },
     {
       "callsign": "UPS9774",
