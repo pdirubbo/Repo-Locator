@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-23T18:55:37Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-23T18:57:10Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9795",
@@ -39,10 +39,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "TYS TYS",
+      "dest": "PIE PIE",
+      "route": "TYS-PIE",
+      "routeNote": "adsbdb route",
+      "olat": 35.811,
+      "olon": -83.994,
+      "dlat": 27.9102,
+      "dlon": -82.6874
     },
     {
       "callsign": "ASA9678",
@@ -102,10 +106,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LGA LGA",
+      "dest": "DEN Denver",
+      "route": "LGA-DEN",
+      "routeNote": "adsb.lol route",
+      "dlat": 39.861698,
+      "dlon": -104.672997,
+      "olat": 40.777199,
+      "olon": -73.872597
     },
     {
       "callsign": "GTI8016",
@@ -121,10 +129,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "NGU NGU",
+      "dest": "HAM HAM",
+      "route": "NGU-BDL-HAM",
+      "routeNote": "adsb.lol route",
+      "olat": 36.937599,
+      "olon": -76.289299,
+      "dlat": 53.630402,
+      "dlon": 9.98823
     },
     {
       "callsign": "GTI8089",
@@ -226,10 +238,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "IFP IFP",
+      "dest": "RST RST",
+      "route": "IFP-RST",
+      "routeNote": "adsbdb route",
+      "olat": 35.1574,
+      "olon": -114.56,
+      "dlat": 43.9083,
+      "dlon": -92.5
     },
     {
       "callsign": "SCX8112",
@@ -266,10 +282,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CMH CMH",
+      "dest": "ACY ACY",
+      "route": "CMH-ACY",
+      "routeNote": "adsbdb route",
+      "olat": 39.998,
+      "olon": -82.8919,
+      "dlat": 39.4576,
+      "dlon": -74.5772
     },
     {
       "callsign": "SCX8414",
@@ -306,10 +326,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BED BED",
+      "dest": "MSP Minneapolis",
+      "route": "BED-MSP",
+      "routeNote": "adsbdb route",
+      "dlat": 44.882,
+      "dlon": -93.2218,
+      "olat": 42.47,
+      "olon": -71.289
     },
     {
       "callsign": "SCX8666",
@@ -392,10 +416,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SJC SJC",
+      "dest": "HNL HNL",
+      "route": "SJC-HNL",
+      "routeNote": "adsb.lol route",
+      "olat": 37.362598,
+      "olon": -121.929001,
+      "dlat": 21.318701,
+      "dlon": -157.921997
     },
     {
       "callsign": "UAL8118",
@@ -411,10 +439,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BDL BDL",
+      "dest": "IAD Dulles",
+      "route": "BDL-IAD",
+      "routeNote": "adsbdb route",
+      "dlat": 38.9445,
+      "dlon": -77.4558,
+      "olat": 41.93851,
+      "olon": -72.68807
     },
     {
       "callsign": "UAL8127",
@@ -476,10 +508,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "IAD Dulles",
+      "route": "LAX-IAD",
+      "routeNote": "adsb.lol route",
+      "olat": 33.942501,
+      "olon": -118.407997,
+      "dlat": 38.9445,
+      "dlon": -77.455803
     },
     {
       "callsign": "VXP8407",
@@ -495,10 +531,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DAL DAL",
+      "dest": "SYR SYR",
+      "route": "DAL-SYR",
+      "routeNote": "adsbdb route",
+      "olat": 32.8471,
+      "olon": -96.8518,
+      "dlat": 43.1112,
+      "dlon": -76.1063
     },
     {
       "callsign": "VXP9510",
@@ -514,10 +554,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "RSW RSW",
+      "dest": "GCM GCM",
+      "route": "RSW-GCM",
+      "routeNote": "adsbdb route",
+      "olat": 26.5362,
+      "olon": -81.7552,
+      "dlat": 19.2928,
+      "dlon": -81.3577
     },
     {
       "callsign": "WJA9463",
@@ -533,10 +577,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CUN CUN",
+      "dest": "YQB YQB",
+      "route": "CUN-YQB",
+      "routeNote": "adsbdb route",
+      "olat": 21.0365,
+      "olon": -86.8771,
+      "dlat": 46.7911,
+      "dlon": -71.3933
     }
   ]
 }
