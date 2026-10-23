@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-23T21:44:58Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-23T21:45:44Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9822",
@@ -125,10 +125,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SAN San Diego",
+      "dest": "TOL TOL",
+      "route": "SAN-TOL",
+      "routeNote": "adsbdb route",
+      "olat": 32.7336,
+      "olon": -117.19,
+      "dlat": 41.5868,
+      "dlon": -83.8078
     },
     {
       "callsign": "SCX8630",
@@ -144,10 +148,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GEG GEG",
+      "dest": "MSP Minneapolis",
+      "route": "GEG-MSP",
+      "routeNote": "adsbdb route",
+      "dlat": 44.882,
+      "dlon": -93.2218,
+      "olat": 47.6199,
+      "olon": -117.534
     },
     {
       "callsign": "SCX8703",
@@ -232,10 +240,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "GRU GRU",
+      "route": "LAX-GRU",
+      "routeNote": "adsb.lol route",
+      "olat": 33.942501,
+      "olon": -118.407997,
+      "dlat": -23.435556,
+      "dlon": -46.473057
     },
     {
       "callsign": "UAL8101",
@@ -320,10 +332,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SYR SYR",
+      "dest": "MBS MBS",
+      "route": "SYR-MBS",
+      "routeNote": "adsbdb route",
+      "olat": 43.1112,
+      "olon": -76.1063,
+      "dlat": 43.5329,
+      "dlon": -84.0796
     }
   ]
 }
