@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-23T00:41:04Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-23T00:42:13Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "ASA9582",
@@ -39,10 +39,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "HRL HRL",
+      "dest": "ELP ELP",
+      "route": "HRL-ELP",
+      "routeNote": "adsbdb route",
+      "olat": 26.2285,
+      "olon": -97.6544,
+      "dlat": 31.8072,
+      "dlon": -106.378
     },
     {
       "callsign": "GTI8254",
@@ -81,10 +85,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "NUE NUE",
+      "dest": "TBS TBS",
+      "route": "NUE-TBS",
+      "routeNote": "adsb.lol route",
+      "olat": 49.498699,
+      "olon": 11.0669,
+      "dlat": 41.669201,
+      "dlon": 44.9547
     },
     {
       "callsign": "JBU8455",
@@ -100,10 +108,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SLC Salt Lake City",
+      "dest": "BOS Boston",
+      "route": "SLC-BOS",
+      "routeNote": "adsbdb route",
+      "olat": 40.78575,
+      "olon": -111.97975,
+      "dlat": 42.3643,
+      "dlon": -71.0052
     },
     {
       "callsign": "JIA9958",
@@ -140,10 +152,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CLE CLE",
+      "dest": "MSP Minneapolis",
+      "route": "CLE-MSP",
+      "routeNote": "adsb.lol route",
+      "dlat": 44.882,
+      "dlon": -93.221802,
+      "olat": 41.411701,
+      "olon": -81.8498
     },
     {
       "callsign": "SCX9344",
@@ -182,10 +198,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BHM BHM",
+      "dest": "DAL DAL",
+      "route": "BHM-DAL",
+      "routeNote": "adsbdb route",
+      "olat": 33.5629,
+      "olon": -86.7535,
+      "dlat": 32.8471,
+      "dlon": -96.8518
     },
     {
       "callsign": "TAM8127",
@@ -201,10 +221,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MCO Orlando",
+      "dest": "GRU GRU",
+      "route": "MCO-GRU",
+      "routeNote": "adsb.lol route",
+      "olat": 28.429399,
+      "olon": -81.308998,
+      "dlat": -23.435556,
+      "dlon": -46.473057
     },
     {
       "callsign": "UAL8117",
@@ -289,10 +313,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "SFO San Francisco",
+      "route": "ORD-SFO",
+      "routeNote": "adsbdb route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 37.619,
+      "dlon": -122.375
     },
     {
       "callsign": "UAL8213",
@@ -352,10 +380,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "ABY ABY",
+      "route": "MIA-ABY",
+      "routeNote": "adsb.lol route",
+      "olat": 25.7932,
+      "olon": -80.290604,
+      "dlat": 31.5355,
+      "dlon": -84.194504
     },
     {
       "callsign": "UPS9860",
@@ -392,10 +424,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PDX PDX",
+      "dest": "ONT ONT",
+      "route": "PDX-ONT",
+      "routeNote": "adsb.lol route",
+      "olat": 45.588699,
+      "olon": -122.598,
+      "dlat": 34.056,
+      "dlon": -117.600998
     }
   ]
 }
