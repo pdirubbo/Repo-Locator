@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-23T05:20:10Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-23T05:20:56Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AJI9033",
@@ -16,10 +16,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LCK LCK",
+      "dest": "LRD LRD",
+      "route": "LCK-LRD",
+      "routeNote": "adsbdb route",
+      "olat": 39.8138,
+      "olon": -82.9278,
+      "dlat": 27.5438,
+      "dlon": -99.4616
     },
     {
       "callsign": "FDX9732",
@@ -58,10 +62,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MGM MGM",
+      "dest": "MHT MHT",
+      "route": "MGM-MHT",
+      "routeNote": "adsbdb route",
+      "olat": 32.3006,
+      "olon": -86.394,
+      "dlat": 42.9326,
+      "dlon": -71.4357
     },
     {
       "callsign": "LAN9677",
@@ -77,10 +85,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CDG CDG",
+      "dest": "SCL SCL",
+      "route": "CDG-SCL",
+      "routeNote": "adsbdb route",
+      "olat": 49.0128,
+      "olon": 2.55,
+      "dlat": -33.393,
+      "dlon": -70.7858
     },
     {
       "callsign": "SWA9002",
@@ -96,10 +108,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAS Las Vegas",
+      "dest": "CMH CMH",
+      "route": "LAS-CMH",
+      "routeNote": "adsb.lol route",
+      "olat": 36.080101,
+      "olon": -115.152,
+      "dlat": 39.998001,
+      "dlon": -82.891899
     },
     {
       "callsign": "UPS9847",
@@ -115,10 +131,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAN LAN",
+      "dest": "SDF Louisville",
+      "route": "LAN-SDF",
+      "routeNote": "adsb.lol route",
+      "dlat": 38.1744,
+      "dlon": -85.736,
+      "olat": 42.778702,
+      "olon": -84.587402
     }
   ]
 }
