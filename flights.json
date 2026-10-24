@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-24T18:51:36Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-24T18:52:12Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "DAL8787",
@@ -39,10 +39,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MSP Minneapolis",
+      "dest": "SEA Seattle",
+      "route": "MSP-SEA",
+      "routeNote": "adsbdb route",
+      "olat": 44.882,
+      "olon": -93.2218,
+      "dlat": 47.449,
+      "dlon": -122.309
     },
     {
       "callsign": "DAL8868",
@@ -81,10 +85,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LGA LGA",
+      "dest": "DEN Denver",
+      "route": "LGA-DEN",
+      "routeNote": "adsb.lol route",
+      "dlat": 39.861698,
+      "dlon": -104.672997,
+      "olat": 40.777199,
+      "olon": -73.872597
     },
     {
       "callsign": "DAL8927",
@@ -282,10 +290,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SJC SJC",
+      "dest": "HNL HNL",
+      "route": "SJC-HNL",
+      "routeNote": "adsb.lol route",
+      "olat": 37.362598,
+      "olon": -121.929001,
+      "dlat": 21.318701,
+      "dlon": -157.921997
     },
     {
       "callsign": "UAL8156",
@@ -347,10 +359,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YEG YEG",
+      "dest": "YYC YYC",
+      "route": "YEG-YYC",
+      "routeNote": "adsbdb route",
+      "olat": 53.3097,
+      "olon": -113.58,
+      "dlat": 51.1139,
+      "dlon": -114.02
     }
   ]
 }
