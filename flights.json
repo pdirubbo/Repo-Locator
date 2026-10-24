@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-24T04:14:14Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-24T04:15:07Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9798",
@@ -39,10 +39,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "SJU SJU",
+      "route": "MIA-SJU",
+      "routeNote": "adsb.lol route",
+      "olat": 25.7932,
+      "olon": -80.290604,
+      "dlat": 18.4394,
+      "dlon": -66.001801
     },
     {
       "callsign": "DAL8830",
@@ -104,10 +108,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MEM Memphis",
+      "dest": "HPN HPN",
+      "route": "MEM-HPN",
+      "routeNote": "adsbdb route",
+      "olat": 35.0424,
+      "olon": -89.9767,
+      "dlat": 41.067,
+      "dlon": -73.7076
     },
     {
       "callsign": "DAL8945",
@@ -190,10 +198,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "SJU SJU",
+      "route": "MIA-SJU",
+      "routeNote": "adsbdb route",
+      "olat": 25.7932,
+      "olon": -80.2906,
+      "dlat": 18.4394,
+      "dlon": -66.0018
     },
     {
       "callsign": "GTI8838",
@@ -209,10 +221,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "NLU NLU",
+      "dest": "LGG LGG",
+      "route": "NLU-UIO-MIA-LGG",
+      "routeNote": "adsb.lol route",
+      "olat": 19.755301,
+      "olon": -99.016403,
+      "dlat": 50.637402,
+      "dlon": 5.44322
     },
     {
       "callsign": "HLF9870",
@@ -228,10 +244,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ONT ONT",
+      "dest": "FOC FOC",
+      "route": "ONT-FOC",
+      "routeNote": "adsb.lol route",
+      "olat": 34.056,
+      "olon": -117.600998,
+      "dlat": 25.935101,
+      "dlon": 119.663002
     },
     {
       "callsign": "LTG8506",
@@ -247,10 +267,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MAO MAO",
+      "dest": "BRU BRU",
+      "route": "MAO-UIO-MIA-BRU",
+      "routeNote": "adsb.lol route",
+      "olat": -3.03861,
+      "olon": -60.049702,
+      "dlat": 50.901402,
+      "dlon": 4.48444
     },
     {
       "callsign": "UAL8110",
@@ -289,10 +313,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LGA LGA",
+      "dest": "YUL YUL",
+      "route": "LGA-YUL",
+      "routeNote": "adsb.lol route",
+      "olat": 40.777199,
+      "olon": -73.872597,
+      "dlat": 45.4706,
+      "dlon": -73.740799
     }
   ]
 }
