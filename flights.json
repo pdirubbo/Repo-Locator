@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-25T14:34:45Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-25T14:35:38Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "ATN8347",
@@ -16,10 +16,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ATL Atlanta",
+      "dest": "ILN ILN",
+      "route": "ATL-ILN",
+      "routeNote": "adsbdb route",
+      "olat": 33.6367,
+      "olon": -84.4281,
+      "dlat": 39.4279,
+      "dlon": -83.7921
     },
     {
       "callsign": "DAL8796",
@@ -167,10 +171,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "HSV HSV",
+      "dest": "TNA TNA",
+      "route": "HSV-LUX-TNA",
+      "routeNote": "adsb.lol route",
+      "olat": 34.637199,
+      "olon": -86.775101,
+      "dlat": 36.857201,
+      "dlon": 117.216003
     },
     {
       "callsign": "GTI8228",
@@ -253,10 +261,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BOS Boston",
+      "dest": "GRU GRU",
+      "route": "BOS-GRU",
+      "routeNote": "adsb.lol route",
+      "olat": 42.3643,
+      "olon": -71.005203,
+      "dlat": -23.435556,
+      "dlon": -46.473057
     },
     {
       "callsign": "VXP9638",
@@ -272,10 +284,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAL LAL",
+      "dest": "ADW ADW",
+      "route": "LAL-ADW",
+      "routeNote": "adsbdb route",
+      "olat": 27.9889,
+      "olon": -82.0186,
+      "dlat": 38.8108,
+      "dlon": -76.867
     }
   ]
 }
