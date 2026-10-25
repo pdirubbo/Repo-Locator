@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-25T22:15:23Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-25T22:16:15Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9608",
@@ -58,10 +58,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BOS Boston",
+      "dest": "SEA Seattle",
+      "route": "BOS-SEA",
+      "routeNote": "adsbdb route",
+      "olat": 42.3643,
+      "olon": -71.0052,
+      "dlat": 47.449,
+      "dlon": -122.309
     },
     {
       "callsign": "CKS9705",
@@ -77,10 +81,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "OSC OSC",
+      "dest": "CVG Cincinnati",
+      "route": "OSC-CVG",
+      "routeNote": "adsbdb route",
+      "dlat": 39.0488,
+      "dlon": -84.6678,
+      "olat": 44.4516,
+      "olon": -83.3941
     },
     {
       "callsign": "DAL8868",
@@ -209,10 +217,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "RNO RNO",
+      "dest": "ORD Chicago",
+      "route": "RNO-ORD",
+      "routeNote": "adsbdb route",
+      "dlat": 41.9786,
+      "dlon": -87.9048,
+      "olat": 39.4991,
+      "olon": -119.768
     },
     {
       "callsign": "SKW9912",
@@ -249,10 +261,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GRU GRU",
+      "dest": "MCO Orlando",
+      "route": "GRU-MCO",
+      "routeNote": "adsb.lol route",
+      "dlat": 28.429399,
+      "dlon": -81.308998,
+      "olat": -23.435556,
+      "olon": -46.473057
     },
     {
       "callsign": "UAL8135",
@@ -333,10 +349,10 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DYS Abilene",
+      "dest": "LAL Lakeland",
+      "route": "DYS-LAL",
+      "routeNote": "FlightAware"
     },
     {
       "callsign": "WJA9459",
@@ -352,10 +368,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "TQO TQO",
+      "dest": "YUL YUL",
+      "route": "TQO-YUL",
+      "routeNote": "adsbdb route",
+      "olat": 20.1721,
+      "olon": -87.66027,
+      "dlat": 45.4706,
+      "dlon": -73.7408
     }
   ]
 }
