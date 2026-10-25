@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-25T17:47:21Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-25T17:48:25Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "ANA8402",
@@ -60,10 +60,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ATL Atlanta",
+      "dest": "PHL Philadelphia",
+      "route": "ATL-PHL",
+      "routeNote": "adsb.lol route",
+      "olat": 33.6367,
+      "olon": -84.428101,
+      "dlat": 39.871899,
+      "dlon": -75.241096
     },
     {
       "callsign": "DAL8945",
@@ -125,10 +129,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "TNA TNA",
+      "dest": "LUX LUX",
+      "route": "TNA-GYD-EMA-LUX",
+      "routeNote": "adsb.lol route",
+      "olat": 36.857201,
+      "olon": 117.216003,
+      "dlat": 49.626598,
+      "dlon": 6.21152
     },
     {
       "callsign": "GTI8037",
@@ -234,10 +242,12 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "NRT Tokyo",
+      "route": "ORD-NRT",
+      "routeNote": "FlightAware",
+      "olat": 41.9742,
+      "olon": -87.9073
     },
     {
       "callsign": "QTR8075",
@@ -253,10 +263,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "NBO NBO",
+      "dest": "DOH DOH",
+      "route": "NBO-LGG-DOH",
+      "routeNote": "adsb.lol route",
+      "olat": -1.31924,
+      "olon": 36.927799,
+      "dlat": 25.273056,
+      "dlon": 51.608056
     },
     {
       "callsign": "SCX8011",
@@ -272,10 +286,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MSP Minneapolis",
+      "dest": "EAU EAU",
+      "route": "MSP-EAU",
+      "routeNote": "adsbdb route",
+      "olat": 44.882,
+      "olon": -93.2218,
+      "dlat": 44.8658,
+      "dlon": -91.4843
     },
     {
       "callsign": "SCX8185",
@@ -291,10 +309,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DTW Detroit",
+      "dest": "GPT GPT",
+      "route": "DTW-GPT",
+      "routeNote": "adsbdb route",
+      "olat": 42.2124,
+      "olon": -83.3534,
+      "dlat": 30.4073,
+      "dlon": -89.0701
     },
     {
       "callsign": "SWA9002",
