@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-25T05:59:35Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-25T06:00:32Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "ASA9681",
@@ -37,10 +37,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LGA LGA",
+      "dest": "DEN Denver",
+      "route": "LGA-DEN",
+      "routeNote": "adsb.lol route",
+      "dlat": 39.861698,
+      "dlon": -104.672997,
+      "olat": 40.777199,
+      "olon": -73.872597
     },
     {
       "callsign": "DAL8894",
@@ -144,10 +148,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CUN CUN",
+      "dest": "MKE MKE",
+      "route": "CUN-MKE",
+      "routeNote": "adsbdb route",
+      "olat": 21.0365,
+      "olon": -86.8771,
+      "dlat": 42.9472,
+      "dlon": -87.8966
     },
     {
       "callsign": "QTR8102",
@@ -163,10 +171,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "DOH DOH",
+      "route": "ORD-AMS-DOH",
+      "routeNote": "adsb.lol route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 25.273056,
+      "dlon": 51.608056
     },
     {
       "callsign": "SCX8417",
@@ -182,10 +194,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PBI PBI",
+      "dest": "BWI Baltimore",
+      "route": "PBI-BWI",
+      "routeNote": "adsbdb route",
+      "dlat": 39.1754,
+      "dlon": -76.6683,
+      "olat": 26.6832,
+      "olon": -80.0956
     },
     {
       "callsign": "SCX8680",
@@ -268,10 +284,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YVR YVR",
+      "dest": "SJC SJC",
+      "route": "YVR-SJC",
+      "routeNote": "adsbdb route",
+      "olat": 49.1939,
+      "olon": -123.184,
+      "dlat": 37.3626,
+      "dlon": -121.929
     }
   ]
 }
