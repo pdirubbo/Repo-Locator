@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-25T10:43:29Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-25T10:44:04Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "CAO8419",
@@ -83,10 +83,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PVG PVG",
+      "dest": "FRA FRA",
+      "route": "PVG-FRA",
+      "routeNote": "adsb.lol route",
+      "olat": 31.1434,
+      "olon": 121.805,
+      "dlat": 50.026402,
+      "dlon": 8.54313
     },
     {
       "callsign": "GTI8700",
@@ -125,10 +129,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DWC DWC",
+      "dest": "ICN ICN",
+      "route": "DWC-ICN",
+      "routeNote": "adsbdb route",
+      "olat": 24.89636,
+      "olon": 55.16139,
+      "dlat": 37.4691,
+      "dlon": 126.451
     },
     {
       "callsign": "JBU9010",
@@ -165,10 +173,12 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SLC Salt Lake City",
+      "dest": "AFW Fort Worth",
+      "route": "SLC-AFW",
+      "routeNote": "FlightAware",
+      "olat": 40.7884,
+      "olon": -111.9778
     },
     {
       "callsign": "SCX8403",
