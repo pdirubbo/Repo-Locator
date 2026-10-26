@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-26T21:27:50Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-26T21:28:17Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9783",
@@ -81,10 +81,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MEM Memphis",
+      "dest": "GDL GDL",
+      "route": "MEM-GDL",
+      "routeNote": "adsb.lol route",
+      "olat": 35.0424,
+      "olon": -89.9767,
+      "dlat": 20.521799,
+      "dlon": -103.310997
     },
     {
       "callsign": "GTI8230",
@@ -253,10 +257,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CAK CAK",
+      "dest": "ACY ACY",
+      "route": "CAK-ACY",
+      "routeNote": "adsbdb route",
+      "olat": 40.9161,
+      "olon": -81.4422,
+      "dlat": 39.4576,
+      "dlon": -74.5772
     },
     {
       "callsign": "UAL8118",
