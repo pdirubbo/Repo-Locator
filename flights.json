@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-26T05:00:44Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-26T05:01:09Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAE8775",
@@ -16,10 +16,10 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LUX Luxembourg",
+      "dest": "HSV Huntsville",
+      "route": "LUX-HSV",
+      "routeNote": "FlightAware"
     },
     {
       "callsign": "AAL9793",
@@ -125,10 +125,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DWC DWC",
+      "dest": "NLU NLU",
+      "route": "DWC-FRA-NLU",
+      "routeNote": "adsb.lol route",
+      "olat": 24.896667,
+      "olon": 55.161389,
+      "dlat": 19.755301,
+      "dlon": -99.016403
     }
   ]
 }
