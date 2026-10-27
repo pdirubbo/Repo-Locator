@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-27T10:51:52Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-27T10:52:26Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "FDX9650",
@@ -39,10 +39,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MEX MEX",
+      "dest": "AUS AUS",
+      "route": "MEX-AUS",
+      "routeNote": "adsbdb route",
+      "olat": 19.4363,
+      "olon": -99.0721,
+      "dlat": 30.19754,
+      "dlon": -97.66202
     },
     {
       "callsign": "KAL8245",
@@ -81,10 +85,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BOS Boston",
+      "dest": "PHL Philadelphia",
+      "route": "BOS-PHL",
+      "routeNote": "adsb.lol route",
+      "olat": 42.3643,
+      "olon": -71.005203,
+      "dlat": 39.871899,
+      "dlon": -75.241096
     },
     {
       "callsign": "UPS9776",
@@ -100,10 +108,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAN LAN",
+      "dest": "RFD RFD",
+      "route": "LAN-RFD",
+      "routeNote": "adsb.lol route",
+      "olat": 42.778702,
+      "olon": -84.587402,
+      "dlat": 42.1954,
+      "dlon": -89.097198
     }
   ]
 }
