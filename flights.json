@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-27T16:04:38Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-27T16:05:37Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "ASA9801",
@@ -39,10 +39,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YYZ YYZ",
+      "dest": "DTW Detroit",
+      "route": "YYZ-DTW",
+      "routeNote": "adsbdb route",
+      "dlat": 42.2124,
+      "dlon": -83.3534,
+      "olat": 43.6772,
+      "olon": -79.6306
     },
     {
       "callsign": "ENY9865",
@@ -58,10 +62,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "TYS TYS",
+      "route": "ORD-TYS",
+      "routeNote": "adsbdb route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 35.811,
+      "dlon": -83.994
     },
     {
       "callsign": "QTR8166",
@@ -98,10 +106,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PDX PDX",
+      "dest": "SEA Seattle",
+      "route": "PDX-SEA",
+      "routeNote": "adsb.lol route",
+      "dlat": 47.449001,
+      "dlon": -122.308998,
+      "olat": 45.588699,
+      "olon": -122.598
     },
     {
       "callsign": "SCX8134",
@@ -117,10 +129,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GPT GPT",
+      "dest": "PVD PVD",
+      "route": "GPT-PVD",
+      "routeNote": "adsbdb route",
+      "olat": 30.4073,
+      "olon": -89.0701,
+      "dlat": 41.72504,
+      "dlon": -71.42567
     },
     {
       "callsign": "SCX8241",
@@ -203,10 +219,12 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PIT Pittsburgh",
+      "dest": "BIF Fort Bliss/El Paso/",
+      "route": "PIT-BIF",
+      "routeNote": "FlightAware",
+      "olat": 40.4915,
+      "olon": -80.2329
     }
   ]
 }
