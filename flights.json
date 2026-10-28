@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-28T09:34:19Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-28T09:34:48Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AZU8704",
@@ -37,10 +37,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "OSC OSC",
+      "dest": "MEM Memphis",
+      "route": "OSC-MEM",
+      "routeNote": "adsbdb route",
+      "dlat": 35.0424,
+      "dlon": -89.9767,
+      "olat": 44.4516,
+      "olon": -83.3941
     },
     {
       "callsign": "GTI8542",
@@ -56,10 +60,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DFW Dallas",
+      "dest": "HHN HHN",
+      "route": "DFW-WRI-HHN",
+      "routeNote": "adsb.lol route",
+      "olat": 32.896801,
+      "olon": -97.038002,
+      "dlat": 49.9487,
+      "dlon": 7.26389
     },
     {
       "callsign": "TAM8190",
