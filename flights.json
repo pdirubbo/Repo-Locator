@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-28T16:14:38Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-28T16:15:52Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9603",
@@ -37,10 +37,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "IND IND",
+      "dest": "PWM PWM",
+      "route": "IND-PWM",
+      "routeNote": "adsbdb route",
+      "olat": 39.7173,
+      "olon": -86.2944,
+      "dlat": 43.6462,
+      "dlon": -70.3093
     },
     {
       "callsign": "AJI9048",
@@ -56,10 +60,12 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YIP Detroit",
+      "dest": "SDF Louisville",
+      "route": "YIP-SDF",
+      "routeNote": "FlightAware",
+      "dlat": 38.1744,
+      "dlon": -85.736
     },
     {
       "callsign": "ANA8402",
@@ -138,10 +144,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DTW Detroit",
+      "dest": "PHL Philadelphia",
+      "route": "DTW-PHL",
+      "routeNote": "adsbdb route",
+      "olat": 42.2124,
+      "olon": -83.3534,
+      "dlat": 39.8719,
+      "dlon": -75.2411
     },
     {
       "callsign": "FDX9010",
@@ -180,10 +190,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "HSV HSV",
+      "dest": "TNA TNA",
+      "route": "HSV-LUX-TNA",
+      "routeNote": "adsb.lol route",
+      "olat": 34.637199,
+      "olon": -86.775101,
+      "dlat": 36.857201,
+      "dlon": 117.216003
     },
     {
       "callsign": "GTI8904",
@@ -245,10 +259,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BUF BUF",
+      "dest": "ACY ACY",
+      "route": "BUF-ACY",
+      "routeNote": "adsbdb route",
+      "olat": 42.9405,
+      "olon": -78.7322,
+      "dlat": 39.4576,
+      "dlon": -74.5772
     },
     {
       "callsign": "SCX8243",
@@ -264,10 +282,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PIT Pittsburgh",
+      "dest": "PHL Philadelphia",
+      "route": "PIT-PHL",
+      "routeNote": "adsbdb route",
+      "olat": 40.4915,
+      "olon": -80.2329,
+      "dlat": 39.8719,
+      "dlon": -75.2411
     },
     {
       "callsign": "VXP9645",
@@ -283,10 +305,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BDL BDL",
+      "dest": "LAL LAL",
+      "route": "BDL-LAL",
+      "routeNote": "adsbdb route",
+      "olat": 41.93851,
+      "olon": -72.68807,
+      "dlat": 27.9889,
+      "dlon": -82.0186
     }
   ]
 }
