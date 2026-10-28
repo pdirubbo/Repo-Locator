@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-28T03:11:15Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-28T03:11:56Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9602",
@@ -16,10 +16,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "AFW AFW",
+      "dest": "DFW Dallas",
+      "route": "AFW-DFW",
+      "routeNote": "adsbdb route",
+      "dlat": 32.8968,
+      "dlon": -97.038,
+      "olat": 32.9876,
+      "olon": -97.3188
     },
     {
       "callsign": "AAL9784",
@@ -79,10 +83,10 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CNO Chino",
+      "dest": "ADS Dallas",
+      "route": "CNO-ADS",
+      "routeNote": "FlightAware"
     },
     {
       "callsign": "GTI8542",
@@ -121,10 +125,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ONT ONT",
+      "dest": "FOC FOC",
+      "route": "ONT-FOC",
+      "routeNote": "adsb.lol route",
+      "olat": 34.056,
+      "olon": -117.600998,
+      "dlat": 25.935101,
+      "dlon": 119.663002
     },
     {
       "callsign": "JBU8595",
@@ -205,10 +213,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SJU SJU",
+      "dest": "SDF Louisville",
+      "route": "SJU-SDF",
+      "routeNote": "adsbdb route",
+      "dlat": 38.1744,
+      "dlon": -85.736,
+      "olat": 18.4394,
+      "olon": -66.0018
     }
   ]
 }
