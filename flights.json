@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-28T21:03:41Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-28T21:04:47Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9605",
@@ -81,10 +81,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CVG Cincinnati",
+      "dest": "GRK GRK",
+      "route": "CVG-GRK",
+      "routeNote": "adsbdb route",
+      "olat": 39.0488,
+      "olon": -84.6678,
+      "dlat": 31.0672,
+      "dlon": -97.8289
     },
     {
       "callsign": "AZU8706",
@@ -257,10 +261,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "IFP IFP",
+      "dest": "RST RST",
+      "route": "IFP-RST",
+      "routeNote": "adsbdb route",
+      "olat": 35.1574,
+      "olon": -114.56,
+      "dlat": 43.9083,
+      "dlon": -92.5
     },
     {
       "callsign": "SCX8142",
@@ -276,10 +284,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GPT GPT",
+      "dest": "MEM Memphis",
+      "route": "GPT-MEM",
+      "routeNote": "adsbdb route",
+      "dlat": 35.0424,
+      "dlon": -89.9767,
+      "olat": 30.4073,
+      "olon": -89.0701
     },
     {
       "callsign": "SCX8242",
@@ -295,10 +307,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ABQ ABQ",
+      "dest": "MFE MFE",
+      "route": "ABQ-MFE",
+      "routeNote": "adsbdb route",
+      "olat": 35.0402,
+      "olon": -106.609,
+      "dlat": 26.17614,
+      "dlon": -98.23797
     },
     {
       "callsign": "SWA8700",
@@ -314,10 +330,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PAE PAE",
+      "dest": "PHX Phoenix",
+      "route": "PAE-PHX",
+      "routeNote": "adsb.lol route",
+      "dlat": 33.434299,
+      "dlon": -112.012001,
+      "olat": 47.9063,
+      "olon": -122.281998
     },
     {
       "callsign": "TAM8087",
@@ -333,10 +353,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "GRU GRU",
+      "route": "LAX-GRU",
+      "routeNote": "adsb.lol route",
+      "olat": 33.942501,
+      "olon": -118.407997,
+      "dlat": -23.435556,
+      "dlon": -46.473057
     },
     {
       "callsign": "TAM8194",
