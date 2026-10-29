@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-29T06:29:11Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-29T06:30:14Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "BWA8044",
@@ -16,10 +16,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "KIN KIN",
+      "route": "MIA-KIN",
+      "routeNote": "adsb.lol route",
+      "olat": 25.7932,
+      "olon": -80.290604,
+      "dlat": 17.935699,
+      "dlon": -76.787498
     },
     {
       "callsign": "DAL8840",
@@ -35,10 +39,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "DAL DAL",
+      "route": "LAX-DAL",
+      "routeNote": "adsbdb route",
+      "olat": 33.9425,
+      "olon": -118.408,
+      "dlat": 32.8471,
+      "dlon": -96.8518
     },
     {
       "callsign": "DAL8926",
@@ -77,10 +85,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "NLU NLU",
+      "dest": "FRA FRA",
+      "route": "NLU-GDL-FRA",
+      "routeNote": "adsb.lol route",
+      "olat": 19.755301,
+      "olon": -99.016403,
+      "dlat": 50.026402,
+      "dlon": 8.54313
     },
     {
       "callsign": "GEC8405",
@@ -96,10 +108,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PVG PVG",
+      "dest": "FRA FRA",
+      "route": "PVG-DWC-FRA",
+      "routeNote": "adsb.lol route",
+      "olat": 31.1434,
+      "olon": 121.805,
+      "dlat": 50.026402,
+      "dlon": 8.54313
     },
     {
       "callsign": "GTI8865",
@@ -115,10 +131,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LUX LUX",
+      "dest": "HSV HSV",
+      "route": "LUX-IND-HSV",
+      "routeNote": "adsb.lol route",
+      "olat": 49.626598,
+      "olon": 6.21152,
+      "dlat": 34.637199,
+      "dlon": -86.775101
     },
     {
       "callsign": "KAL8261",
@@ -157,10 +177,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ATL Atlanta",
+      "dest": "FRA FRA",
+      "route": "ATL-FRA",
+      "routeNote": "adsb.lol route",
+      "olat": 33.6367,
+      "olon": -84.428101,
+      "dlat": 50.026402,
+      "dlon": 8.54313
     },
     {
       "callsign": "SCX8707",
@@ -176,10 +200,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LUK LUK",
+      "dest": "PHL Philadelphia",
+      "route": "LUK-PHL",
+      "routeNote": "adsbdb route",
+      "dlat": 39.8719,
+      "dlon": -75.2411,
+      "olat": 39.1033,
+      "olon": -84.4186
     },
     {
       "callsign": "UAE9394",
@@ -195,10 +223,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "DWC DWC",
+      "route": "ORD-DWC",
+      "routeNote": "adsb.lol route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 24.896667,
+      "dlon": 55.161389
     }
   ]
 }
