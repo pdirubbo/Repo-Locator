@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-29T23:14:13Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-29T23:14:59Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "DAL8849",
@@ -154,10 +154,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "JFK New York",
+      "dest": "SAL SAL",
+      "route": "JFK-SAL",
+      "routeNote": "adsbdb route",
+      "olat": 40.6398,
+      "olon": -73.7789,
+      "dlat": 13.4409,
+      "dlon": -89.0557
     },
     {
       "callsign": "JBU8627",
@@ -217,10 +221,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PVD PVD",
+      "dest": "IND IND",
+      "route": "PVD-IND",
+      "routeNote": "adsbdb route",
+      "olat": 41.72504,
+      "olon": -71.42567,
+      "dlat": 39.7173,
+      "dlon": -86.2944
     },
     {
       "callsign": "SCX8149",
@@ -236,10 +244,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GPT GPT",
+      "dest": "MKE MKE",
+      "route": "GPT-MKE",
+      "routeNote": "adsbdb route",
+      "olat": 30.4073,
+      "olon": -89.0701,
+      "dlat": 42.9472,
+      "dlon": -87.8966
     },
     {
       "callsign": "SCX8704",
@@ -347,10 +359,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GRU GRU",
+      "dest": "MCO Orlando",
+      "route": "GRU-MCO",
+      "routeNote": "adsb.lol route",
+      "dlat": 28.429399,
+      "dlon": -81.308998,
+      "olat": -23.435556,
+      "olon": -46.473057
     },
     {
       "callsign": "UAL8111",
@@ -433,10 +449,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PDX PDX",
+      "dest": "ONT ONT",
+      "route": "PDX-ONT",
+      "routeNote": "adsb.lol route",
+      "olat": 45.588699,
+      "olon": -122.598,
+      "dlat": 34.056,
+      "dlon": -117.600998
     }
   ]
 }
