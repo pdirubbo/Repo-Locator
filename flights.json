@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-29T13:31:38Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-29T13:32:16Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AJT8440",
@@ -16,10 +16,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SXM SXM",
+      "dest": "MIA Miami",
+      "route": "SXM-MIA",
+      "routeNote": "adsbdb route",
+      "dlat": 25.7932,
+      "dlon": -80.2906,
+      "olat": 18.041,
+      "olon": -63.1089
     },
     {
       "callsign": "DAL8843",
@@ -58,10 +62,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CAK CAK",
+      "dest": "PHL Philadelphia",
+      "route": "CAK-PHL",
+      "routeNote": "adsbdb route",
+      "dlat": 39.8719,
+      "dlon": -75.2411,
+      "olat": 40.9161,
+      "olon": -81.4422
     },
     {
       "callsign": "KII9145",
@@ -77,10 +85,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "EWR Newark",
+      "dest": "BDA BDA",
+      "route": "EWR-BDA",
+      "routeNote": "adsb.lol route",
+      "olat": 40.692501,
+      "olon": -74.168701,
+      "dlat": 32.363998,
+      "dlon": -64.678703
     },
     {
       "callsign": "SCX8017",
@@ -96,10 +108,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MSP Minneapolis",
+      "dest": "IFP IFP",
+      "route": "MSP-GTF-IFP",
+      "routeNote": "adsb.lol route",
+      "olat": 44.882,
+      "olon": -93.221802,
+      "dlat": 35.157398,
+      "dlon": -114.559998
     },
     {
       "callsign": "UPS9303",
