@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-30T02:35:43Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-30T02:36:07Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "CSN8031",
@@ -16,10 +16,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SZX SZX",
+      "dest": "MEX MEX",
+      "route": "SZX-MEX",
+      "routeNote": "adsb.lol route",
+      "olat": 22.639299,
+      "olon": 113.810997,
+      "dlat": 19.4363,
+      "dlon": -99.072098
     },
     {
       "callsign": "QTR8170",
@@ -104,10 +108,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SFO San Francisco",
+      "dest": "BWI Baltimore",
+      "route": "SFO-BWI",
+      "routeNote": "adsb.lol route",
+      "olat": 37.618999,
+      "olon": -122.375,
+      "dlat": 39.1754,
+      "dlon": -76.668297
     }
   ]
 }
