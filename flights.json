@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30T23:24:18Z",
+  "updated": "2026-10-30T23:40:28Z",
   "source": "routes",
   "flights": [
     {
@@ -460,10 +460,10 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "TIJ Tijuana",
+      "dest": "TIJ Tijuana",
+      "route": "TIJ-TIJ",
+      "routeNote": "FlightAware"
     }
   ]
 }
