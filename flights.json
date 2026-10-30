@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-30T23:23:14Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-30T23:24:18Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "ASA9450",
@@ -37,10 +37,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MLB MLB",
+      "dest": "SEA Seattle",
+      "route": "MLB-SEA",
+      "routeNote": "adsb.lol route",
+      "dlat": 47.449001,
+      "dlon": -122.308998,
+      "olat": 28.1028,
+      "olon": -80.645302
     },
     {
       "callsign": "ASA9680",
@@ -56,10 +60,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SJC SJC",
+      "dest": "SEA Seattle",
+      "route": "SJC-SEA",
+      "routeNote": "adsbdb route",
+      "dlat": 47.449,
+      "dlon": -122.309,
+      "olat": 37.3626,
+      "olon": -121.929
     },
     {
       "callsign": "ASA9723",
@@ -98,10 +106,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BFI BFI",
+      "dest": "PDX PDX",
+      "route": "BFI-PDX",
+      "routeNote": "adsbdb route",
+      "olat": 47.53,
+      "olon": -122.302,
+      "dlat": 45.5887,
+      "dlon": -122.598
     },
     {
       "callsign": "BBQ9804",
@@ -247,10 +259,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CHS CHS",
+      "dest": "MSY MSY",
+      "route": "CHS-MSY",
+      "routeNote": "adsbdb route",
+      "olat": 32.8986,
+      "olon": -80.0405,
+      "dlat": 29.9934,
+      "dlon": -90.258
     },
     {
       "callsign": "SCX8215",
@@ -310,10 +326,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ATL Atlanta",
+      "dest": "CMH CMH",
+      "route": "ATL-CMH",
+      "routeNote": "adsbdb route",
+      "olat": 33.6367,
+      "olon": -84.4281,
+      "dlat": 39.998,
+      "dlon": -82.8919
     },
     {
       "callsign": "SWA9001",
@@ -417,10 +437,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GEG GEG",
+      "dest": "STL STL",
+      "route": "GEG-STL",
+      "routeNote": "adsb.lol route",
+      "olat": 47.6199,
+      "olon": -117.533997,
+      "dlat": 38.748699,
+      "dlon": -90.370003
     },
     {
       "callsign": "VOI9465",
