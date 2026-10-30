@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-30T08:56:09Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-30T08:56:44Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AJT8543",
@@ -16,10 +16,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "BOG BOG",
+      "route": "MIA-SJU-BOG",
+      "routeNote": "adsb.lol route",
+      "olat": 25.7932,
+      "olon": -80.290604,
+      "dlat": 4.70159,
+      "dlon": -74.1469
     },
     {
       "callsign": "CAO8416",
@@ -35,10 +39,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "PVG PVG",
+      "route": "LAX-PVG",
+      "routeNote": "adsb.lol route",
+      "olat": 33.942501,
+      "olon": -118.407997,
+      "dlat": 31.1434,
+      "dlon": 121.805
     },
     {
       "callsign": "FDX9623",
@@ -54,10 +62,12 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MEM Memphis",
+      "dest": "CDG Paris",
+      "route": "MEM-CDG",
+      "routeNote": "FlightAware",
+      "olat": 35.0424,
+      "olon": -89.9767
     },
     {
       "callsign": "GTI8676",
