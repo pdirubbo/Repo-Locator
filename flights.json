@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-31T14:45:23Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-31T14:46:12Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "DAL8844",
@@ -16,10 +16,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YYZ YYZ",
+      "dest": "DTW Detroit",
+      "route": "YYZ-DTW",
+      "routeNote": "adsbdb route",
+      "dlat": 42.2124,
+      "dlon": -83.3534,
+      "olat": 43.6772,
+      "olon": -79.6306
     },
     {
       "callsign": "DAL8845",
@@ -56,10 +60,10 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BFM Mobile",
+      "dest": "TPA Tampa",
+      "route": "BFM-TPA",
+      "routeNote": "FlightAware"
     },
     {
       "callsign": "JBU8597",
@@ -75,10 +79,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "JFK New York",
+      "dest": "MLB MLB",
+      "route": "JFK-MLB",
+      "routeNote": "adsbdb route",
+      "olat": 40.6398,
+      "olon": -73.7789,
+      "dlat": 28.1028,
+      "dlon": -80.6453
     },
     {
       "callsign": "KYE9723",
@@ -94,10 +102,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "HAN HAN",
+      "route": "LAX-ICN-HAN",
+      "routeNote": "adsb.lol route",
+      "olat": 33.942501,
+      "olon": -118.407997,
+      "dlat": 21.221201,
+      "dlon": 105.806999
     },
     {
       "callsign": "QXE9986",
@@ -113,10 +125,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PDX PDX",
+      "dest": "MCN MCN",
+      "route": "PDX-MCN",
+      "routeNote": "adsb.lol route",
+      "olat": 45.588699,
+      "olon": -122.598,
+      "dlat": 32.692799,
+      "dlon": -83.6492
     },
     {
       "callsign": "TAM8086",
@@ -132,10 +148,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GRU GRU",
+      "dest": "LAX Los Angeles",
+      "route": "GRU-LAX",
+      "routeNote": "adsb.lol route",
+      "dlat": 33.942501,
+      "dlon": -118.407997,
+      "olat": -23.435556,
+      "olon": -46.473057
     }
   ]
 }
