@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-31T21:53:11Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-31T21:54:44Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9780",
@@ -16,10 +16,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PVD PVD",
+      "dest": "CLT Charlotte",
+      "route": "PVD-CLT",
+      "routeNote": "adsbdb route",
+      "dlat": 35.214,
+      "dlon": -80.9431,
+      "olat": 41.72504,
+      "olon": -71.42567
     },
     {
       "callsign": "AAL9782",
@@ -58,10 +62,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PAE PAE",
+      "dest": "GSO GSO",
+      "route": "PAE-GSO",
+      "routeNote": "adsbdb route",
+      "olat": 47.9063,
+      "olon": -122.282,
+      "dlat": 36.0978,
+      "dlon": -79.9373
     },
     {
       "callsign": "AZG8588",
@@ -77,10 +85,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "HHN HHN",
+      "route": "ORD-HHN",
+      "routeNote": "adsbdb route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 49.9487,
+      "dlon": 7.26389
     },
     {
       "callsign": "DAL8800",
@@ -165,10 +177,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PHL Philadelphia",
+      "dest": "ATL Atlanta",
+      "route": "PHL-ATL",
+      "routeNote": "adsbdb route",
+      "olat": 39.8719,
+      "olon": -75.2411,
+      "dlat": 33.6367,
+      "dlon": -84.4281
     },
     {
       "callsign": "DAL9907",
@@ -251,10 +267,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "HAN HAN",
+      "route": "ORD-ICN-HAN",
+      "routeNote": "adsb.lol route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 21.221201,
+      "dlon": 105.806999
     },
     {
       "callsign": "JBU8701",
@@ -293,10 +313,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PVD PVD",
+      "dest": "PVU PVU",
+      "route": "PVD-PVU",
+      "routeNote": "adsbdb route",
+      "olat": 41.72504,
+      "olon": -71.42567,
+      "dlat": 40.2192,
+      "dlon": -111.723
     },
     {
       "callsign": "SCX8014",
@@ -312,10 +336,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "IFP IFP",
+      "dest": "CWA CWA",
+      "route": "IFP-CWA",
+      "routeNote": "adsbdb route",
+      "olat": 35.1574,
+      "olon": -114.56,
+      "dlat": 44.7776,
+      "dlon": -89.6668
     },
     {
       "callsign": "SCX8244",
@@ -331,10 +359,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "HRL HRL",
+      "dest": "MAF MAF",
+      "route": "HRL-MAF",
+      "routeNote": "adsbdb route",
+      "olat": 26.2285,
+      "olon": -97.6544,
+      "dlat": 31.9425,
+      "dlon": -102.202
     },
     {
       "callsign": "SCX8415",
@@ -350,10 +382,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MQY MQY",
+      "dest": "MSN MSN",
+      "route": "MQY-MSN",
+      "routeNote": "adsbdb route",
+      "olat": 36.009,
+      "olon": -86.5201,
+      "dlat": 43.1399,
+      "dlon": -89.3375
     },
     {
       "callsign": "SCX8650",
@@ -369,10 +405,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "OAK OAK",
+      "dest": "YIP YIP",
+      "route": "OAK-YIP",
+      "routeNote": "adsb.lol route",
+      "olat": 37.721298,
+      "olon": -122.221001,
+      "dlat": 42.2379,
+      "dlon": -83.530403
     },
     {
       "callsign": "SCX8710",
@@ -388,10 +428,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "FLL FLL",
+      "dest": "EWR Newark",
+      "route": "FLL-EWR",
+      "routeNote": "adsbdb route",
+      "dlat": 40.6925,
+      "dlon": -74.1687,
+      "olat": 26.0726,
+      "olon": -80.1527
     },
     {
       "callsign": "SCX8718",
@@ -451,10 +495,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "GRU GRU",
+      "route": "LAX-GRU",
+      "routeNote": "adsb.lol route",
+      "olat": 33.942501,
+      "olon": -118.407997,
+      "dlat": -23.435556,
+      "dlon": -46.473057
     },
     {
       "callsign": "UAL8172",
@@ -493,10 +541,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "NGU NGU",
+      "dest": "LCK LCK",
+      "route": "NGU-LCK",
+      "routeNote": "adsbdb route",
+      "olat": 36.9376,
+      "olon": -76.2893,
+      "dlat": 39.8138,
+      "dlon": -82.9278
     }
   ]
 }
