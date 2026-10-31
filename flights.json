@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-31T08:43:07Z",
-  "source": "adsb+tfms",
+  "updated": "2026-10-31T08:43:31Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "DAL8842",
@@ -39,10 +39,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "NLU NLU",
+      "dest": "FRA FRA",
+      "route": "NLU-GDL-FRA",
+      "routeNote": "adsb.lol route",
+      "olat": 19.755301,
+      "olon": -99.016403,
+      "dlat": 50.026402,
+      "dlon": 8.54313
     },
     {
       "callsign": "GTI8084",
@@ -58,10 +62,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BWI Baltimore",
+      "dest": "HHN HHN",
+      "route": "BWI-NGU-HHN",
+      "routeNote": "adsb.lol route",
+      "olat": 39.1754,
+      "olon": -76.668297,
+      "dlat": 49.9487,
+      "dlon": 7.26389
     },
     {
       "callsign": "UAL8129",
