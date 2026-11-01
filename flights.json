@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-01T00:28:48Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-01T00:29:31Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9731",
@@ -58,10 +58,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MCO Orlando",
+      "dest": "VCP VCP",
+      "route": "MCO-VCP",
+      "routeNote": "adsb.lol route",
+      "olat": 28.429399,
+      "olon": -81.308998,
+      "dlat": -23.007401,
+      "dlon": -47.134499
     },
     {
       "callsign": "AZU8730",
@@ -274,10 +278,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "FRA FRA",
+      "dest": "NLU NLU",
+      "route": "FRA-NLU",
+      "routeNote": "adsb.lol route",
+      "olat": 50.026402,
+      "olon": 8.54313,
+      "dlat": 19.755301,
+      "dlon": -99.016403
     },
     {
       "callsign": "GTI8052",
@@ -339,10 +347,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "IFP IFP",
+      "dest": "CWA CWA",
+      "route": "IFP-CWA",
+      "routeNote": "adsbdb route",
+      "olat": 35.1574,
+      "olon": -114.56,
+      "dlat": 44.7776,
+      "dlon": -89.6668
     },
     {
       "callsign": "SCX8708",
@@ -404,10 +416,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SJC SJC",
+      "dest": "SEA Seattle",
+      "route": "SJC-SEA",
+      "routeNote": "adsb.lol route",
+      "dlat": 47.449001,
+      "dlon": -122.308998,
+      "olat": 37.362598,
+      "olon": -121.929001
     },
     {
       "callsign": "SWA8504",
@@ -515,10 +531,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "ABY ABY",
+      "route": "MIA-ABY",
+      "routeNote": "adsb.lol route",
+      "olat": 25.7932,
+      "olon": -80.290604,
+      "dlat": 31.5355,
+      "dlon": -84.194504
     }
   ]
 }
