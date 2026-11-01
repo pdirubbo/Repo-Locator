@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-01T18:35:11Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-01T18:36:33Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "ASA9430",
@@ -37,10 +37,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LGG LGG",
+      "dest": "CVG Cincinnati",
+      "route": "LGG-CVG",
+      "routeNote": "adsbdb route",
+      "dlat": 39.0488,
+      "dlon": -84.6678,
+      "olat": 50.6374,
+      "olon": 5.44322
     },
     {
       "callsign": "DAL8786",
@@ -77,10 +81,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DTW Detroit",
+      "dest": "MSN MSN",
+      "route": "DTW-MSN-DTW",
+      "routeNote": "adsb.lol route",
+      "olat": 42.212399,
+      "olon": -83.353401,
+      "dlat": 43.1399,
+      "dlon": -89.337502
     },
     {
       "callsign": "DAL8817",
@@ -140,10 +148,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YYZ YYZ",
+      "dest": "MSP Minneapolis",
+      "route": "YYZ-MSP",
+      "routeNote": "adsb.lol route",
+      "dlat": 44.882,
+      "dlon": -93.221802,
+      "olat": 43.6772,
+      "olon": -79.6306
     },
     {
       "callsign": "DAL8936",
@@ -159,10 +171,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "IND IND",
+      "route": "MIA-IND",
+      "routeNote": "adsbdb route",
+      "olat": 25.7932,
+      "olon": -80.2906,
+      "dlat": 39.7173,
+      "dlon": -86.2944
     },
     {
       "callsign": "DAL9960",
@@ -247,10 +263,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MEM Memphis",
+      "dest": "SWF SWF",
+      "route": "MEM-SWF",
+      "routeNote": "adsbdb route",
+      "olat": 35.0424,
+      "olon": -89.9767,
+      "dlat": 41.5041,
+      "dlon": -74.1048
     },
     {
       "callsign": "MXY9767",
@@ -289,10 +309,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MSP Minneapolis",
+      "dest": "CWA CWA",
+      "route": "MSP-CWA",
+      "routeNote": "adsbdb route",
+      "olat": 44.882,
+      "olon": -93.2218,
+      "dlat": 44.7776,
+      "dlon": -89.6668
     },
     {
       "callsign": "SCX8185",
@@ -308,10 +332,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DTW Detroit",
+      "dest": "GPT GPT",
+      "route": "DTW-GPT",
+      "routeNote": "adsbdb route",
+      "olat": 42.2124,
+      "olon": -83.3534,
+      "dlat": 30.4073,
+      "dlon": -89.0701
     },
     {
       "callsign": "SKW9799",
@@ -327,10 +355,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BOI BOI",
+      "dest": "SFO San Francisco",
+      "route": "BOI-SFO",
+      "routeNote": "adsbdb route",
+      "dlat": 37.619,
+      "dlon": -122.375,
+      "olat": 43.5644,
+      "olon": -116.223
     },
     {
       "callsign": "SWA9002",
@@ -346,10 +378,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAS Las Vegas",
+      "dest": "CMH CMH",
+      "route": "LAS-CMH",
+      "routeNote": "adsb.lol route",
+      "olat": 36.080101,
+      "olon": -115.152,
+      "dlat": 39.998001,
+      "dlon": -82.891899
     },
     {
       "callsign": "SWA9003",
