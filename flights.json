@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-01T22:18:02Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-01T22:18:46Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "DAL8817",
@@ -175,10 +175,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DEN Denver",
+      "dest": "CMH CMH",
+      "route": "DEN-CMH",
+      "routeNote": "adsbdb route",
+      "olat": 39.8617,
+      "olon": -104.673,
+      "dlat": 39.998,
+      "dlon": -82.8919
     },
     {
       "callsign": "GTI8606",
@@ -217,10 +221,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "CHS CHS",
+      "route": "ORD-CHS",
+      "routeNote": "adsbdb route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 32.8986,
+      "dlon": -80.0405
     },
     {
       "callsign": "JIA9950",
@@ -236,10 +244,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PHL Philadelphia",
+      "dest": "CAK CAK",
+      "route": "PHL-CAK",
+      "routeNote": "adsbdb route",
+      "olat": 39.8719,
+      "olon": -75.2411,
+      "dlat": 40.9161,
+      "dlon": -81.4422
     },
     {
       "callsign": "SCX8016",
@@ -255,10 +267,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "IFP IFP",
+      "dest": "RST RST",
+      "route": "IFP-RST",
+      "routeNote": "adsbdb route",
+      "olat": 35.1574,
+      "olon": -114.56,
+      "dlat": 43.9083,
+      "dlon": -92.5
     },
     {
       "callsign": "SCX8115",
@@ -274,10 +290,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GGG GGG",
+      "dest": "GPT GPT",
+      "route": "GGG-GPT",
+      "routeNote": "adsbdb route",
+      "olat": 32.384,
+      "olon": -94.7115,
+      "dlat": 30.4073,
+      "dlon": -89.0701
     },
     {
       "callsign": "TAM8186",
