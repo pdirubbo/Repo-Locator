@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-01T13:43:59Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-01T13:44:36Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AZU8705",
@@ -16,10 +16,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "FLL FLL",
+      "dest": "VCP VCP",
+      "route": "FLL-VCP",
+      "routeNote": "adsb.lol route",
+      "olat": 26.072599,
+      "olon": -80.152702,
+      "dlat": -23.007401,
+      "dlon": -47.134499
     },
     {
       "callsign": "CAO8420",
@@ -35,10 +39,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "PVG PVG",
+      "route": "LAX-PVG",
+      "routeNote": "adsb.lol route",
+      "olat": 33.942501,
+      "olon": -118.407997,
+      "dlat": 31.1434,
+      "dlon": 121.805
     },
     {
       "callsign": "DAL8788",
@@ -75,10 +83,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "NLU NLU",
+      "dest": "FRA FRA",
+      "route": "NLU-GDL-FRA",
+      "routeNote": "adsb.lol route",
+      "olat": 19.755301,
+      "olon": -99.016403,
+      "dlat": 50.026402,
+      "dlon": 8.54313
     },
     {
       "callsign": "GTI8037",
@@ -163,10 +175,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YYZ YYZ",
+      "dest": "CVG Cincinnati",
+      "route": "YYZ-CVG",
+      "routeNote": "adsbdb route",
+      "dlat": 39.0488,
+      "dlon": -84.6678,
+      "olat": 43.6772,
+      "olon": -79.6306
     }
   ]
 }
