@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-02T08:06:23Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-02T08:06:52Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAE8111",
@@ -16,10 +16,10 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "HSV Huntsville",
+      "dest": "LUX Luxembourg",
+      "route": "HSV-LUX",
+      "routeNote": "FlightAware"
     },
     {
       "callsign": "GTI8006",
@@ -35,10 +35,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "TNA TNA",
+      "dest": "LUX LUX",
+      "route": "TNA-GYD-EMA-LUX",
+      "routeNote": "adsb.lol route",
+      "olat": 36.857201,
+      "olon": 117.216003,
+      "dlat": 49.626598,
+      "dlon": 6.21152
     },
     {
       "callsign": "GTI8084",
