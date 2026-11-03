@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-03T07:20:00Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-03T07:20:31Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAY9323",
@@ -16,10 +16,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PIE PIE",
+      "dest": "VPS VPS",
+      "route": "PIE-VPS",
+      "routeNote": "adsbdb route",
+      "olat": 27.9102,
+      "olon": -82.6874,
+      "dlat": 30.4832,
+      "dlon": -86.5254
     },
     {
       "callsign": "AJT8241",
@@ -35,10 +39,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "BOG BOG",
+      "route": "MIA-SJU-BOG",
+      "routeNote": "adsb.lol route",
+      "olat": 25.7932,
+      "olon": -80.290604,
+      "dlat": 4.70159,
+      "dlon": -74.1469
     },
     {
       "callsign": "BBQ8301",
@@ -54,10 +62,12 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SLC Salt Lake City",
+      "dest": "CMH Columbus",
+      "route": "SLC-CMH",
+      "routeNote": "FlightAware",
+      "olat": 40.7884,
+      "olon": -111.9778
     },
     {
       "callsign": "GTI8230",
