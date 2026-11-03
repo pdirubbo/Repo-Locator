@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-03T15:17:34Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-03T15:18:18Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "JBU8352",
@@ -16,10 +16,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "JFK New York",
+      "dest": "BOS Boston",
+      "route": "JFK-BOS",
+      "routeNote": "adsb.lol route",
+      "olat": 40.639801,
+      "olon": -73.7789,
+      "dlat": 42.3643,
+      "dlon": -71.005203
     },
     {
       "callsign": "JIA9952",
@@ -35,10 +39,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CLT Charlotte",
+      "dest": "CVG Cincinnati",
+      "route": "CLT-CVG",
+      "routeNote": "adsbdb route",
+      "olat": 35.214,
+      "olon": -80.9431,
+      "dlat": 39.0488,
+      "dlon": -84.6678
     },
     {
       "callsign": "LEX8362",
@@ -54,10 +62,12 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "TEB Teterboro",
+      "route": "MIA-TEB",
+      "routeNote": "FlightAware",
+      "olat": 25.7959,
+      "olon": -80.287
     },
     {
       "callsign": "SCX8123",
@@ -94,10 +104,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CMH CMH",
+      "dest": "BUF BUF",
+      "route": "CMH-BUF",
+      "routeNote": "adsbdb route",
+      "olat": 39.998,
+      "olon": -82.8919,
+      "dlat": 42.9405,
+      "dlon": -78.7322
     },
     {
       "callsign": "SKW9920",
