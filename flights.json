@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-03T21:02:21Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-03T21:03:37Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9601",
@@ -37,10 +37,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CVG Cincinnati",
+      "dest": "AUS AUS",
+      "route": "CVG-AUS",
+      "routeNote": "adsbdb route",
+      "olat": 39.0488,
+      "olon": -84.6678,
+      "dlat": 30.19754,
+      "dlon": -97.66202
     },
     {
       "callsign": "AAY9109",
@@ -56,10 +60,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CVG Cincinnati",
+      "dest": "PIE PIE",
+      "route": "CVG-PIE",
+      "routeNote": "adsbdb route",
+      "olat": 39.0488,
+      "olon": -84.6678,
+      "dlat": 27.9102,
+      "dlon": -82.6874
     },
     {
       "callsign": "ASA9341",
@@ -117,10 +125,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "EWR Newark",
+      "dest": "SBN SBN",
+      "route": "EWR-SBN",
+      "routeNote": "adsb.lol route",
+      "olat": 40.692501,
+      "olon": -74.168701,
+      "dlat": 41.708698,
+      "dlon": -86.317299
     },
     {
       "callsign": "DAL8932",
@@ -249,10 +261,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "JFK New York",
+      "dest": "ATL Atlanta",
+      "route": "JFK-ATL",
+      "routeNote": "adsbdb route",
+      "olat": 40.6398,
+      "olon": -73.7789,
+      "dlat": 33.6367,
+      "dlon": -84.4281
     },
     {
       "callsign": "DAL9970",
@@ -268,10 +284,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BOS Boston",
+      "dest": "DTW Detroit",
+      "route": "BOS-DTW",
+      "routeNote": "adsbdb route",
+      "olat": 42.3643,
+      "olon": -71.0052,
+      "dlat": 42.2124,
+      "dlon": -83.3534
     },
     {
       "callsign": "FDX9659",
@@ -352,10 +372,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CHS CHS",
+      "dest": "BDL BDL",
+      "route": "CHS-BDL",
+      "routeNote": "adsbdb route",
+      "olat": 32.8986,
+      "olon": -80.0405,
+      "dlat": 41.93851,
+      "dlon": -72.68807
     },
     {
       "callsign": "QTR8142",
@@ -415,10 +439,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BHM BHM",
+      "dest": "DAL DAL",
+      "route": "BHM-DAL",
+      "routeNote": "adsbdb route",
+      "olat": 33.5629,
+      "olon": -86.7535,
+      "dlat": 32.8471,
+      "dlon": -96.8518
     },
     {
       "callsign": "TAM8194",
@@ -455,10 +483,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YYZ YYZ",
+      "dest": "DEL DEL",
+      "route": "YYZ-DEL",
+      "routeNote": "adsbdb route",
+      "olat": 43.6772,
+      "olon": -79.6306,
+      "dlat": 28.5665,
+      "dlon": 77.1031
     },
     {
       "callsign": "UAL8184",
