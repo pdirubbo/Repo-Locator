@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-05T16:35:05Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-05T16:35:43Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AZG8587",
@@ -37,10 +37,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "HHN HHN",
+      "dest": "UAB UAB",
+      "route": "HHN-UAB",
+      "routeNote": "adsb.lol route",
+      "olat": 49.9487,
+      "olon": 7.26389,
+      "dlat": 37.002102,
+      "dlon": 35.4259
     },
     {
       "callsign": "JIA9950",
@@ -56,10 +60,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PHL Philadelphia",
+      "dest": "CAK CAK",
+      "route": "PHL-CAK",
+      "routeNote": "adsbdb route",
+      "olat": 39.8719,
+      "olon": -75.2411,
+      "dlat": 40.9161,
+      "dlon": -81.4422
     },
     {
       "callsign": "KAL8250",
@@ -75,10 +83,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ATL Atlanta",
+      "dest": "ANC ANC",
+      "route": "ATL-ANC",
+      "routeNote": "adsbdb route",
+      "olat": 33.6367,
+      "olon": -84.4281,
+      "dlat": 61.1744,
+      "dlon": -149.996
     },
     {
       "callsign": "POE9923",
@@ -94,10 +106,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YOW YOW",
+      "dest": "YYZ YYZ",
+      "route": "YOW-YYZ",
+      "routeNote": "adsbdb route",
+      "olat": 45.3225,
+      "olon": -75.6692,
+      "dlat": 43.6772,
+      "dlon": -79.6306
     },
     {
       "callsign": "SCX8134",
@@ -113,10 +129,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GPT GPT",
+      "dest": "PVD PVD",
+      "route": "GPT-PVD",
+      "routeNote": "adsbdb route",
+      "olat": 30.4073,
+      "olon": -89.0701,
+      "dlat": 41.72504,
+      "dlon": -71.42567
     },
     {
       "callsign": "SCX8186",
@@ -155,10 +175,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LBE LBE",
+      "dest": "ACY ACY",
+      "route": "LBE-ACY",
+      "routeNote": "adsbdb route",
+      "olat": 40.2759,
+      "olon": -79.4048,
+      "dlat": 39.4576,
+      "dlon": -74.5772
     },
     {
       "callsign": "UAL8107",
@@ -174,10 +198,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "IAD Dulles",
+      "dest": "TPA TPA",
+      "route": "IAD-TPA",
+      "routeNote": "adsbdb route",
+      "olat": 38.9445,
+      "olon": -77.4558,
+      "dlat": 27.9755,
+      "dlon": -82.5332
     },
     {
       "callsign": "UPS9305",
@@ -193,10 +221,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ONT ONT",
+      "dest": "LGB LGB",
+      "route": "ONT-LGB",
+      "routeNote": "adsbdb route",
+      "olat": 34.056,
+      "olon": -117.601,
+      "dlat": 33.8177,
+      "dlon": -118.152
     }
   ]
 }
