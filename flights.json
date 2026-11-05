@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-05T22:13:42Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-05T22:15:07Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9601",
@@ -37,10 +37,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ICN ICN",
+      "dest": "DFW Dallas",
+      "route": "ICN-DFW",
+      "routeNote": "adsb.lol route",
+      "dlat": 32.896801,
+      "dlon": -97.038002,
+      "olat": 37.469101,
+      "olon": 126.450996
     },
     {
       "callsign": "AAL9740",
@@ -56,10 +60,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DFW Dallas",
+      "dest": "BIF BIF",
+      "route": "DFW-BIF",
+      "routeNote": "adsb.lol route",
+      "olat": 32.896801,
+      "olon": -97.038002,
+      "dlat": 31.849501,
+      "dlon": -106.379997
     },
     {
       "callsign": "AAL9742",
@@ -75,10 +83,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "HKG HKG",
+      "route": "LAX-NRT-HKG",
+      "routeNote": "adsb.lol route",
+      "olat": 33.942501,
+      "olon": -118.407997,
+      "dlat": 22.308901,
+      "dlon": 113.915001
     },
     {
       "callsign": "ASA9681",
@@ -94,10 +106,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YVR YVR",
+      "dest": "MEX MEX",
+      "route": "YVR-MEX",
+      "routeNote": "adsb.lol route",
+      "olat": 49.193901,
+      "olon": -123.183998,
+      "dlat": 19.4363,
+      "dlon": -99.072098
     },
     {
       "callsign": "DAL9984",
@@ -157,10 +173,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CVG Cincinnati",
+      "dest": "ORD Chicago",
+      "route": "CVG-ORD",
+      "routeNote": "adsbdb route",
+      "olat": 39.0488,
+      "olon": -84.6678,
+      "dlat": 41.9786,
+      "dlon": -87.9048
     },
     {
       "callsign": "GTI8030",
@@ -264,10 +284,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "CNF CNF",
+      "route": "MIA-CNF",
+      "routeNote": "adsbdb route",
+      "olat": 25.7932,
+      "olon": -80.2906,
+      "dlat": -19.63571,
+      "dlon": -43.96693
     },
     {
       "callsign": "QTR8165",
@@ -283,10 +307,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "DOH DOH",
+      "route": "ORD-DOH",
+      "routeNote": "adsb.lol route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 25.273056,
+      "dlon": 51.608056
     },
     {
       "callsign": "QXE9987",
@@ -302,10 +330,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PDX PDX",
+      "dest": "SFO San Francisco",
+      "route": "PDX-SFO",
+      "routeNote": "adsbdb route",
+      "dlat": 37.619,
+      "dlon": -122.375,
+      "olat": 45.5887,
+      "olon": -122.598
     },
     {
       "callsign": "SCX8014",
@@ -321,10 +353,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "IFP IFP",
+      "dest": "CWA CWA",
+      "route": "IFP-CWA",
+      "routeNote": "adsbdb route",
+      "olat": 35.1574,
+      "olon": -114.56,
+      "dlat": 44.7776,
+      "dlon": -89.6668
     },
     {
       "callsign": "SCX8136",
@@ -382,10 +418,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BIF BIF",
+      "dest": "TCM TCM",
+      "route": "BIF-TCM",
+      "routeNote": "adsbdb route",
+      "olat": 31.8495,
+      "olon": -106.38,
+      "dlat": 47.1377,
+      "dlon": -122.476
     }
   ]
 }
