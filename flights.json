@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-05T01:35:22Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-05T01:36:12Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AJT8346",
@@ -37,10 +37,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ILN ILN",
+      "dest": "OPF OPF",
+      "route": "ILN-OPF",
+      "routeNote": "adsbdb route",
+      "olat": 39.4279,
+      "olon": -83.7921,
+      "dlat": 25.907,
+      "dlon": -80.2784
     },
     {
       "callsign": "DAL8840",
@@ -79,10 +83,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SJU SJU",
+      "dest": "ELP ELP",
+      "route": "SJU-ELP",
+      "routeNote": "adsb.lol route",
+      "olat": 18.4394,
+      "olon": -66.001801,
+      "dlat": 31.807199,
+      "dlon": -106.377998
     },
     {
       "callsign": "GTI8005",
@@ -98,10 +106,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "HSV HSV",
+      "dest": "TNA TNA",
+      "route": "HSV-LUX-TNA",
+      "routeNote": "adsb.lol route",
+      "olat": 34.637199,
+      "olon": -86.775101,
+      "dlat": 36.857201,
+      "dlon": 117.216003
     },
     {
       "callsign": "GTI8092",
@@ -140,10 +152,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CHS CHS",
+      "dest": "RDU RDU",
+      "route": "CHS-RDU",
+      "routeNote": "adsbdb route",
+      "olat": 32.8986,
+      "olon": -80.0405,
+      "dlat": 35.8776,
+      "dlon": -78.7875
     },
     {
       "callsign": "UAL8113",
@@ -228,10 +244,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "ABY ABY",
+      "route": "MIA-ABY",
+      "routeNote": "adsb.lol route",
+      "olat": 25.7932,
+      "olon": -80.290604,
+      "dlat": 31.5355,
+      "dlon": -84.194504
     },
     {
       "callsign": "UPS9785",
@@ -289,10 +309,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PDX PDX",
+      "dest": "ONT ONT",
+      "route": "PDX-ONT",
+      "routeNote": "adsb.lol route",
+      "olat": 45.588699,
+      "olon": -122.598,
+      "dlat": 34.056,
+      "dlon": -117.600998
     },
     {
       "callsign": "XAA9935",
