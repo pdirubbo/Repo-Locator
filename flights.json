@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-05T08:25:10Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-05T08:25:44Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "CAO8411",
@@ -60,10 +60,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YYZ YYZ",
+      "dest": "DTW Detroit",
+      "route": "YYZ-DTW",
+      "routeNote": "adsbdb route",
+      "dlat": 42.2124,
+      "dlon": -83.3534,
+      "olat": 43.6772,
+      "olon": -79.6306
     },
     {
       "callsign": "DAL8929",
@@ -125,10 +129,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "FOC FOC",
+      "route": "LAX-FOC",
+      "routeNote": "adsbdb route",
+      "olat": 33.9425,
+      "olon": -118.408,
+      "dlat": 25.9351,
+      "dlon": 119.663
     },
     {
       "callsign": "QTR8148",
@@ -144,10 +152,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ATL Atlanta",
+      "dest": "FRA FRA",
+      "route": "ATL-FRA",
+      "routeNote": "adsb.lol route",
+      "olat": 33.6367,
+      "olon": -84.428101,
+      "dlat": 50.026402,
+      "dlon": 8.54313
     }
   ]
 }
