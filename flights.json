@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-06T09:31:51Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-06T09:32:24Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "EAL8270",
@@ -16,10 +16,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ELP ELP",
+      "dest": "CCS CCS",
+      "route": "ELP-CCS",
+      "routeNote": "adsbdb route",
+      "olat": 31.8072,
+      "olon": -106.378,
+      "dlat": 10.60119,
+      "dlon": -66.99122
     },
     {
       "callsign": "GTI8089",
@@ -35,10 +39,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "HHN HHN",
+      "dest": "SAT SAT",
+      "route": "HHN-POB-BIF-SAT",
+      "routeNote": "adsb.lol route",
+      "olat": 49.9487,
+      "olon": 7.26389,
+      "dlat": 29.533701,
+      "dlon": -98.469803
     },
     {
       "callsign": "QTR8171",
@@ -54,10 +62,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ATL Atlanta",
+      "dest": "DOH DOH",
+      "route": "ATL-DOH",
+      "routeNote": "adsb.lol route",
+      "olat": 33.6367,
+      "olon": -84.428101,
+      "dlat": 25.273056,
+      "dlon": 51.608056
     }
   ]
 }
