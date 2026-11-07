@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-07T07:12:30Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-07T07:13:01Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9735",
@@ -37,10 +37,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "SJU SJU",
+      "route": "MIA-SJU",
+      "routeNote": "adsb.lol route",
+      "olat": 25.7932,
+      "olon": -80.290604,
+      "dlat": 18.4394,
+      "dlon": -66.001801
     },
     {
       "callsign": "CAO8417",
@@ -98,10 +102,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MAO MAO",
+      "dest": "BRU BRU",
+      "route": "MAO-UIO-MIA-BRU",
+      "routeNote": "adsb.lol route",
+      "olat": -3.03861,
+      "olon": -60.049702,
+      "dlat": 50.901402,
+      "dlon": 4.48444
     },
     {
       "callsign": "SWA8512",
@@ -117,10 +125,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MDW MDW",
+      "dest": "PVD PVD",
+      "route": "MDW-PVD",
+      "routeNote": "adsbdb route",
+      "olat": 41.786,
+      "olon": -87.7524,
+      "dlat": 41.72504,
+      "dlon": -71.42567
     },
     {
       "callsign": "SWA9009",
