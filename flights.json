@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-07T18:25:40Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-07T18:26:17Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9601",
@@ -37,10 +37,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LHR LHR",
+      "dest": "DFW Dallas",
+      "route": "LHR-DFW",
+      "routeNote": "adsb.lol route",
+      "dlat": 32.896801,
+      "dlon": -97.038002,
+      "olat": 51.4706,
+      "olon": -0.461941
     },
     {
       "callsign": "ASA9885",
@@ -144,10 +148,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BOS Boston",
+      "dest": "JFK New York",
+      "route": "BOS-SYR-JFK",
+      "routeNote": "adsb.lol route",
+      "olat": 42.3643,
+      "olon": -71.005203,
+      "dlat": 40.639801,
+      "dlon": -73.7789
     },
     {
       "callsign": "GTI8275",
@@ -209,10 +217,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MSP Minneapolis",
+      "dest": "IFP IFP",
+      "route": "MSP-GTF-IFP",
+      "routeNote": "adsb.lol route",
+      "olat": 44.882,
+      "olon": -93.221802,
+      "dlat": 35.157398,
+      "dlon": -114.559998
     },
     {
       "callsign": "SWA8503",
@@ -297,10 +309,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CUN CUN",
+      "dest": "YQB YQB",
+      "route": "CUN-YQB",
+      "routeNote": "adsbdb route",
+      "olat": 21.0365,
+      "olon": -86.8771,
+      "dlat": 46.7911,
+      "dlon": -71.3933
     }
   ]
 }
