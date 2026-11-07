@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-07T22:05:28Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-07T22:06:12Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9603",
@@ -60,10 +60,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ABE ABE",
+      "dest": "GRR GRR",
+      "route": "ABE-GRR",
+      "routeNote": "adsbdb route",
+      "olat": 40.65177,
+      "olon": -75.4428,
+      "dlat": 42.8808,
+      "dlon": -85.5228
     },
     {
       "callsign": "BBQ9089",
@@ -79,10 +83,12 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "SSC Sumter",
+      "route": "MIA-SSC",
+      "routeNote": "FlightAware",
+      "olat": 25.7959,
+      "olon": -80.287
     },
     {
       "callsign": "DAL8783",
@@ -209,10 +215,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CMH CMH",
+      "dest": "DFW Dallas",
+      "route": "CMH-DFW",
+      "routeNote": "adsbdb route",
+      "dlat": 32.8968,
+      "dlon": -97.038,
+      "olat": 39.998,
+      "olon": -82.8919
     },
     {
       "callsign": "MXY9749",
@@ -228,10 +238,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MCO Orlando",
+      "dest": "MSY MSY",
+      "route": "MCO-MSY",
+      "routeNote": "adsbdb route",
+      "olat": 28.4294,
+      "olon": -81.309,
+      "dlat": 29.9934,
+      "dlon": -90.258
     },
     {
       "callsign": "QTR8177",
@@ -270,10 +284,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GRU GRU",
+      "dest": "MCO Orlando",
+      "route": "GRU-MCO",
+      "routeNote": "adsb.lol route",
+      "dlat": 28.429399,
+      "dlon": -81.308998,
+      "olat": -23.435556,
+      "olon": -46.473057
     }
   ]
 }
