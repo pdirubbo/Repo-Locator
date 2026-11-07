@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-07T13:57:36Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-07T13:58:25Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9702",
@@ -39,10 +39,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "DAL DAL",
+      "route": "LAX-DAL",
+      "routeNote": "adsbdb route",
+      "olat": 33.9425,
+      "olon": -118.408,
+      "dlat": 32.8471,
+      "dlon": -96.8518
     },
     {
       "callsign": "DAL9974",
@@ -104,10 +108,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CLT Charlotte",
+      "dest": "CVG Cincinnati",
+      "route": "CLT-CVG",
+      "routeNote": "adsbdb route",
+      "olat": 35.214,
+      "olon": -80.9431,
+      "dlat": 39.0488,
+      "dlon": -84.6678
     },
     {
       "callsign": "JIA9955",
@@ -123,10 +131,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MEM Memphis",
+      "dest": "DCA Washington",
+      "route": "MEM-DCA",
+      "routeNote": "adsbdb route",
+      "olat": 35.0424,
+      "olon": -89.9767,
+      "dlat": 38.8521,
+      "dlon": -77.0377
     },
     {
       "callsign": "POE9924",
@@ -142,10 +154,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YOW YOW",
+      "dest": "YYZ YYZ",
+      "route": "YOW-YYZ",
+      "routeNote": "adsbdb route",
+      "olat": 45.3225,
+      "olon": -75.6692,
+      "dlat": 43.6772,
+      "dlon": -79.6306
     },
     {
       "callsign": "RPA9931",
@@ -161,10 +177,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "IND IND",
+      "dest": "PIT Pittsburgh",
+      "route": "IND-PIT",
+      "routeNote": "adsbdb route",
+      "dlat": 40.4915,
+      "dlon": -80.2329,
+      "olat": 39.7173,
+      "olon": -86.2944
     },
     {
       "callsign": "SWA8500",
@@ -203,10 +223,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "OAK OAK",
+      "dest": "SJC SJC",
+      "route": "OAK-SJC",
+      "routeNote": "adsb.lol route",
+      "olat": 37.721298,
+      "olon": -122.221001,
+      "dlat": 37.362598,
+      "dlon": -121.929001
     },
     {
       "callsign": "TAM8086",
