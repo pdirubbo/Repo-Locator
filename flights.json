@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-08T01:17:29Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-08T01:18:34Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9751",
@@ -16,10 +16,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CVG Cincinnati",
+      "dest": "DCA Washington",
+      "route": "CVG-DCA",
+      "routeNote": "adsbdb route",
+      "olat": 39.0488,
+      "olon": -84.6678,
+      "dlat": 38.8521,
+      "dlon": -77.0377
     },
     {
       "callsign": "AAL9828",
@@ -35,10 +39,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ATL Atlanta",
+      "dest": "CMH CMH",
+      "route": "ATL-CMH",
+      "routeNote": "adsbdb route",
+      "olat": 33.6367,
+      "olon": -84.4281,
+      "dlat": 39.998,
+      "dlon": -82.8919
     },
     {
       "callsign": "ANA8407",
@@ -54,10 +62,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAX Los Angeles",
+      "dest": "NRT NRT",
+      "route": "LAX-NRT",
+      "routeNote": "adsb.lol route",
+      "olat": 33.942501,
+      "olon": -118.407997,
+      "dlat": 35.764702,
+      "dlon": 140.386002
     },
     {
       "callsign": "ASA9463",
@@ -73,10 +85,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "RDU RDU",
+      "dest": "GSO GSO",
+      "route": "RDU-GSO",
+      "routeNote": "adsb.lol route",
+      "olat": 35.877602,
+      "olon": -78.787498,
+      "dlat": 36.097801,
+      "dlon": -79.937302
     },
     {
       "callsign": "ASA9646",
@@ -115,10 +131,10 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ICT Wichita",
+      "dest": "RNO Reno",
+      "route": "ICT-RNO",
+      "routeNote": "FlightAware"
     },
     {
       "callsign": "CSN8031",
@@ -134,10 +150,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SZX SZX",
+      "dest": "MEX MEX",
+      "route": "SZX-MEX",
+      "routeNote": "adsb.lol route",
+      "olat": 22.639299,
+      "olon": 113.810997,
+      "dlat": 19.4363,
+      "dlon": -99.072098
     },
     {
       "callsign": "DAL8899",
@@ -174,10 +194,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ATL Atlanta",
+      "dest": "SAL SAL",
+      "route": "ATL-SAL",
+      "routeNote": "adsbdb route",
+      "olat": 33.6367,
+      "olon": -84.4281,
+      "dlat": 13.4409,
+      "dlon": -89.0557
     },
     {
       "callsign": "FFT9582",
@@ -193,10 +217,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MCO Orlando",
+      "dest": "CLE CLE",
+      "route": "MCO-CLE",
+      "routeNote": "adsbdb route",
+      "olat": 28.4294,
+      "olon": -81.309,
+      "dlat": 41.4117,
+      "dlon": -81.8498
     },
     {
       "callsign": "FFT9895",
@@ -212,10 +240,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "TUL TUL",
+      "dest": "DEN Denver",
+      "route": "TUL-DEN",
+      "routeNote": "adsbdb route",
+      "dlat": 39.8617,
+      "dlon": -104.673,
+      "olat": 36.1984,
+      "olon": -95.8881
     },
     {
       "callsign": "GTI8052",
