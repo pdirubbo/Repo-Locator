@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-08T22:32:43Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-08T22:33:23Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "DAL8841",
@@ -62,10 +62,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CVG Cincinnati",
+      "dest": "LBE LBE",
+      "route": "CVG-LBE",
+      "routeNote": "adsbdb route",
+      "olat": 39.0488,
+      "olon": -84.6678,
+      "dlat": 40.2759,
+      "dlon": -79.4048
     },
     {
       "callsign": "SCX8235",
@@ -81,10 +85,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "IFP IFP",
+      "dest": "SEA Seattle",
+      "route": "IFP-SEA",
+      "routeNote": "adsbdb route",
+      "dlat": 47.449,
+      "dlon": -122.309,
+      "olat": 35.1574,
+      "olon": -114.56
     },
     {
       "callsign": "SCX8261",
@@ -100,10 +108,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MSY MSY",
+      "dest": "RNO RNO",
+      "route": "MSY-RNO",
+      "routeNote": "adsbdb route",
+      "olat": 29.9934,
+      "olon": -90.258,
+      "dlat": 39.4991,
+      "dlon": -119.768
     },
     {
       "callsign": "TAM8186",
@@ -119,10 +131,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GRU GRU",
+      "dest": "MCO Orlando",
+      "route": "GRU-MCO",
+      "routeNote": "adsb.lol route",
+      "dlat": 28.429399,
+      "dlon": -81.308998,
+      "olat": -23.435556,
+      "olon": -46.473057
     },
     {
       "callsign": "UAL8172",
