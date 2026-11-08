@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-08T14:23:15Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-08T14:23:51Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9783",
@@ -16,10 +16,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PHL Philadelphia",
+      "dest": "ORD Chicago",
+      "route": "PHL-ORD",
+      "routeNote": "adsbdb route",
+      "olat": 39.8719,
+      "olon": -75.2411,
+      "dlat": 41.9786,
+      "dlon": -87.9048
     },
     {
       "callsign": "BWA8041",
@@ -56,10 +60,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DFW Dallas",
+      "dest": "OSC OSC",
+      "route": "DFW-OSC",
+      "routeNote": "adsbdb route",
+      "olat": 32.8968,
+      "olon": -97.038,
+      "dlat": 44.4516,
+      "dlon": -83.3941
     },
     {
       "callsign": "DAL8838",
@@ -75,10 +83,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BOS Boston",
+      "dest": "SFO San Francisco",
+      "route": "BOS-SFO",
+      "routeNote": "adsbdb route",
+      "olat": 42.3643,
+      "olon": -71.0052,
+      "dlat": 37.619,
+      "dlon": -122.375
     },
     {
       "callsign": "GTI8037",
@@ -117,10 +129,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ATL Atlanta",
+      "dest": "ICN ICN",
+      "route": "ATL-ANC-ICN",
+      "routeNote": "adsb.lol route",
+      "olat": 33.6367,
+      "olon": -84.428101,
+      "dlat": 37.469101,
+      "dlon": 126.450996
     },
     {
       "callsign": "QTR8149",
