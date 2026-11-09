@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-09T08:43:47Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-09T08:44:29Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAE8111",
@@ -16,10 +16,10 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "HSV Huntsville",
+      "dest": "LUX Luxembourg",
+      "route": "HSV-LUX",
+      "routeNote": "FlightAware"
     },
     {
       "callsign": "AJT8722",
@@ -35,10 +35,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SDQ SDQ",
+      "dest": "MIA Miami",
+      "route": "SDQ-MIA",
+      "routeNote": "adsbdb route",
+      "dlat": 25.7932,
+      "dlon": -80.2906,
+      "olat": 18.4297,
+      "olon": -69.6689
     },
     {
       "callsign": "DAL8783",
