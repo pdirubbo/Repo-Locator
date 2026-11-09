@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-09T01:52:28Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-09T01:53:24Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9601",
@@ -39,10 +39,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SJU SJU",
+      "dest": "STI STI",
+      "route": "SJU-STI",
+      "routeNote": "adsbdb route",
+      "olat": 18.4394,
+      "olon": -66.0018,
+      "dlat": 19.4061,
+      "dlon": -70.6047
     },
     {
       "callsign": "BAW9603",
@@ -58,10 +62,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "LHR LHR",
+      "route": "ORD-LHR",
+      "routeNote": "adsbdb route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 51.4706,
+      "dlon": -0.46194
     },
     {
       "callsign": "FFT9402",
@@ -77,10 +85,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAS Las Vegas",
+      "dest": "PHX Phoenix",
+      "route": "LAS-PHX",
+      "routeNote": "adsbdb route",
+      "olat": 36.0801,
+      "olon": -115.152,
+      "dlat": 33.4353,
+      "dlon": -112.00591
     },
     {
       "callsign": "GTI8249",
@@ -119,10 +131,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PDX PDX",
+      "dest": "MCN MCN",
+      "route": "PDX-MCN",
+      "routeNote": "adsb.lol route",
+      "olat": 45.588699,
+      "olon": -122.598,
+      "dlat": 32.692799,
+      "dlon": -83.6492
     },
     {
       "callsign": "RPA9934",
@@ -138,10 +154,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PVD PVD",
+      "dest": "IND IND",
+      "route": "PVD-IND",
+      "routeNote": "adsbdb route",
+      "olat": 41.72504,
+      "olon": -71.42567,
+      "dlat": 39.7173,
+      "dlon": -86.2944
     },
     {
       "callsign": "SCX8155",
@@ -157,10 +177,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "HPN HPN",
+      "dest": "GPT GPT",
+      "route": "HPN-GPT",
+      "routeNote": "adsbdb route",
+      "olat": 41.067,
+      "olon": -73.7076,
+      "dlat": 30.4073,
+      "dlon": -89.0701
     },
     {
       "callsign": "SCX8695",
