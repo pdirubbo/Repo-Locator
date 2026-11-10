@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-10T09:18:32Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-10T09:18:52Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "FDX9622",
@@ -37,10 +37,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PVG PVG",
+      "dest": "FRA FRA",
+      "route": "PVG-FRA",
+      "routeNote": "adsb.lol route",
+      "olat": 31.1434,
+      "olon": 121.805,
+      "dlat": 50.026402,
+      "dlon": 8.54313
     }
   ]
 }
