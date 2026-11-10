@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-10T22:18:29Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-10T22:19:09Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "BWA8046",
@@ -16,10 +16,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "KIN KIN",
+      "route": "MIA-KIN",
+      "routeNote": "adsb.lol route",
+      "olat": 25.7932,
+      "olon": -80.290604,
+      "dlat": 17.935699,
+      "dlon": -76.787498
     },
     {
       "callsign": "DAL8926",
@@ -58,10 +62,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MSY MSY",
+      "dest": "EWR Newark",
+      "route": "MSY-EWR",
+      "routeNote": "adsbdb route",
+      "dlat": 40.6925,
+      "dlon": -74.1687,
+      "olat": 29.9934,
+      "olon": -90.258
     },
     {
       "callsign": "GTI8030",
@@ -119,10 +127,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PHX Phoenix",
+      "dest": "MKE MKE",
+      "route": "PHX-MKE",
+      "routeNote": "adsbdb route",
+      "olat": 33.4353,
+      "olon": -112.00591,
+      "dlat": 42.9472,
+      "dlon": -87.8966
     },
     {
       "callsign": "TAM8186",
@@ -138,10 +150,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GRU GRU",
+      "dest": "MCO Orlando",
+      "route": "GRU-MCO",
+      "routeNote": "adsb.lol route",
+      "dlat": 28.429399,
+      "dlon": -81.308998,
+      "olat": -23.435556,
+      "olon": -46.473057
     }
   ]
 }
