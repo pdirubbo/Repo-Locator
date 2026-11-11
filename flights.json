@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-11T08:42:07Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-11T08:42:45Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AJT8342",
@@ -16,10 +16,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SJU SJU",
+      "dest": "MIA Miami",
+      "route": "SJU-MIA",
+      "routeNote": "adsb.lol route",
+      "dlat": 25.7932,
+      "dlon": -80.290604,
+      "olat": 18.4394,
+      "olon": -66.001801
     },
     {
       "callsign": "DAL8931",
@@ -81,10 +85,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "NLU NLU",
+      "dest": "FRA FRA",
+      "route": "NLU-MTY-FRA",
+      "routeNote": "adsb.lol route",
+      "olat": 19.755301,
+      "olon": -99.016403,
+      "dlat": 50.026402,
+      "dlon": 8.54313
     },
     {
       "callsign": "GTI8094",
@@ -100,10 +108,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PVG PVG",
+      "dest": "UIO UIO",
+      "route": "PVG-ANC-DFW-LIM-UIO",
+      "routeNote": "adsb.lol route",
+      "olat": 31.1434,
+      "olon": 121.805,
+      "dlat": -0.129167,
+      "dlon": -78.3575
     },
     {
       "callsign": "GTI8107",
@@ -142,10 +154,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BWI Baltimore",
+      "dest": "EWR Newark",
+      "route": "BWI-EWR",
+      "routeNote": "adsbdb route",
+      "olat": 39.1754,
+      "olon": -76.6683,
+      "dlat": 40.6925,
+      "dlon": -74.1687
     },
     {
       "callsign": "UPS9301",
