@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-11T01:57:49Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-11T01:58:32Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "GTI8236",
@@ -37,10 +37,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SJK SJK",
+      "dest": "BRU BRU",
+      "route": "SJK-UIO-MIA-BRU",
+      "routeNote": "adsb.lol route",
+      "olat": -23.2292,
+      "olon": -45.8615,
+      "dlat": 50.901402,
+      "dlon": 4.48444
     },
     {
       "callsign": "SCX8217",
@@ -56,10 +60,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CVG Cincinnati",
+      "dest": "ALB ALB",
+      "route": "CVG-ALB",
+      "routeNote": "adsbdb route",
+      "olat": 39.0488,
+      "olon": -84.6678,
+      "dlat": 42.7483,
+      "dlon": -73.8017
     },
     {
       "callsign": "UAL8169",
@@ -121,10 +129,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "ABY ABY",
+      "route": "MIA-ABY",
+      "routeNote": "adsb.lol route",
+      "olat": 25.7932,
+      "olon": -80.290604,
+      "dlat": 31.5355,
+      "dlon": -84.194504
     },
     {
       "callsign": "UPS9871",
@@ -140,10 +152,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PDX PDX",
+      "dest": "ONT ONT",
+      "route": "PDX-ONT",
+      "routeNote": "adsb.lol route",
+      "olat": 45.588699,
+      "olon": -122.598,
+      "dlat": 34.056,
+      "dlon": -117.600998
     },
     {
       "callsign": "VXP9903",
@@ -159,10 +175,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "HVN HVN",
+      "dest": "MIA Miami",
+      "route": "HVN-MIA",
+      "routeNote": "adsbdb route",
+      "dlat": 25.7932,
+      "dlon": -80.2906,
+      "olat": 41.2637,
+      "olon": -72.8868
     }
   ]
 }
