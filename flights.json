@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-12T03:34:12Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-12T03:35:25Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAY9201",
@@ -16,10 +16,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "PIT Pittsburgh",
+      "dest": "CVG Cincinnati",
+      "route": "PIT-CVG",
+      "routeNote": "adsbdb route",
+      "olat": 40.4915,
+      "olon": -80.2329,
+      "dlat": 39.0488,
+      "dlon": -84.6678
     },
     {
       "callsign": "AJT8443",
@@ -35,10 +39,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MIA Miami",
+      "dest": "SJU SJU",
+      "route": "MIA-SJU",
+      "routeNote": "adsb.lol route",
+      "olat": 25.7932,
+      "olon": -80.290604,
+      "dlat": 18.4394,
+      "dlon": -66.001801
     },
     {
       "callsign": "DAL8842",
@@ -100,10 +108,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MEM Memphis",
+      "dest": "MEX MEX",
+      "route": "MEM-MEX",
+      "routeNote": "adsb.lol route",
+      "olat": 35.0424,
+      "olon": -89.9767,
+      "dlat": 19.4363,
+      "dlon": -99.072098
     },
     {
       "callsign": "GTI8098",
@@ -142,10 +154,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "JFK New York",
+      "dest": "EHU EHU",
+      "route": "JFK-ANC-EHU",
+      "routeNote": "adsb.lol route",
+      "olat": 40.639801,
+      "olon": -73.7789,
+      "dlat": 30.342778,
+      "dlon": 115.029722
     },
     {
       "callsign": "GTI8755",
@@ -161,10 +177,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ICN ICN",
+      "dest": "SZX SZX",
+      "route": "ICN-SZX",
+      "routeNote": "adsb.lol route",
+      "olat": 37.469101,
+      "olon": 126.450996,
+      "dlat": 22.639299,
+      "dlon": 113.810997
     },
     {
       "callsign": "GTI8914",
@@ -180,10 +200,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "RFD RFD",
+      "dest": "PVG PVG",
+      "route": "RFD-PVG",
+      "routeNote": "adsb.lol route",
+      "olat": 42.1954,
+      "olon": -89.097198,
+      "dlat": 31.1434,
+      "dlon": 121.805
     },
     {
       "callsign": "JBU8716",
@@ -222,10 +246,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MCO Orlando",
+      "dest": "GRU GRU",
+      "route": "MCO-GRU",
+      "routeNote": "adsb.lol route",
+      "olat": 28.429399,
+      "olon": -81.308998,
+      "dlat": -23.435556,
+      "dlon": -46.473057
     },
     {
       "callsign": "UAE9919",
@@ -241,10 +269,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DXB DXB",
+      "dest": "UIO UIO",
+      "route": "DXB-ZAZ-MEX-UIO",
+      "routeNote": "adsb.lol route",
+      "olat": 25.2528,
+      "olon": 55.364399,
+      "dlat": -0.129167,
+      "dlon": -78.3575
     },
     {
       "callsign": "UAE9963",
@@ -375,10 +407,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "DEN Denver",
+      "dest": "CID CID",
+      "route": "DEN-CID",
+      "routeNote": "adsbdb route",
+      "olat": 39.8617,
+      "olon": -104.673,
+      "dlat": 41.8847,
+      "dlon": -91.7108
     }
   ]
 }
