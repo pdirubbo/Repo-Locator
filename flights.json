@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-12T11:44:29Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-12T11:44:50Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAY9200",
@@ -16,10 +16,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "CVG Cincinnati",
+      "dest": "ABE ABE",
+      "route": "CVG-ABE",
+      "routeNote": "adsbdb route",
+      "olat": 39.0488,
+      "olon": -84.6678,
+      "dlat": 40.65177,
+      "dlon": -75.4428
     },
     {
       "callsign": "BWA8045",
