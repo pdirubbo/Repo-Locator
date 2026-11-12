@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-12T19:08:44Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-12T19:09:10Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "ATN9703",
@@ -108,10 +108,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BOS Boston",
+      "dest": "HPN HPN",
+      "route": "BOS-HPN",
+      "routeNote": "adsbdb route",
+      "olat": 42.3643,
+      "olon": -71.0052,
+      "dlat": 41.067,
+      "dlon": -73.7076
     },
     {
       "callsign": "JBU8400",
@@ -150,10 +154,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BFM BFM",
+      "dest": "TPA TPA",
+      "route": "BFM-TPA",
+      "routeNote": "adsbdb route",
+      "olat": 30.6268,
+      "olon": -88.0681,
+      "dlat": 27.9755,
+      "dlon": -82.5332
     },
     {
       "callsign": "QTR8835",
@@ -169,10 +177,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "ORD Chicago",
+      "dest": "MXP MXP",
+      "route": "ORD-MXP",
+      "routeNote": "adsbdb route",
+      "olat": 41.9786,
+      "olon": -87.9048,
+      "dlat": 45.6306,
+      "dlon": 8.72811
     },
     {
       "callsign": "RCH8075",
@@ -207,10 +219,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MSN MSN",
+      "dest": "IFP IFP",
+      "route": "MSN-IFP",
+      "routeNote": "adsbdb route",
+      "olat": 43.1399,
+      "olon": -89.3375,
+      "dlat": 35.1574,
+      "dlon": -114.56
     },
     {
       "callsign": "SCX8453",
@@ -226,10 +242,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MSP Minneapolis",
+      "dest": "CHO CHO",
+      "route": "MSP-CHO",
+      "routeNote": "adsbdb route",
+      "olat": 44.882,
+      "olon": -93.2218,
+      "dlat": 38.1386,
+      "dlon": -78.4529
     },
     {
       "callsign": "SCX8682",
@@ -266,10 +286,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GRU GRU",
+      "dest": "MCO Orlando",
+      "route": "GRU-MCO",
+      "routeNote": "adsbdb route",
+      "dlat": 28.4294,
+      "dlon": -81.309,
+      "olat": -23.43194,
+      "olon": -46.46778
     },
     {
       "callsign": "UAL8139",
