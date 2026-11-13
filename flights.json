@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-13T06:39:43Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-13T06:40:28Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "GEC8223",
@@ -16,10 +16,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "NLU NLU",
+      "dest": "FRA FRA",
+      "route": "NLU-MTY-FRA",
+      "routeNote": "adsb.lol route",
+      "olat": 19.755301,
+      "olon": -99.016403,
+      "dlat": 50.026402,
+      "dlon": 8.54313
     },
     {
       "callsign": "GEC8405",
@@ -56,10 +60,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "HHN HHN",
+      "dest": "BIF BIF",
+      "route": "HHN-BWI-NZY-BIF",
+      "routeNote": "adsb.lol route",
+      "olat": 49.9487,
+      "olon": 7.26389,
+      "dlat": 31.849501,
+      "dlon": -106.379997
     },
     {
       "callsign": "KAL8255",
@@ -165,10 +173,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YYZ YYZ",
+      "dest": "DEL DEL",
+      "route": "YYZ-DEL",
+      "routeNote": "adsbdb route",
+      "olat": 43.6772,
+      "olon": -79.6306,
+      "dlat": 28.5665,
+      "dlon": 77.1031
     },
     {
       "callsign": "UAL8163",
@@ -184,10 +196,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LIH LIH",
+      "dest": "SFO San Francisco",
+      "route": "LIH-SFO",
+      "routeNote": "adsbdb route",
+      "dlat": 37.619,
+      "dlon": -122.375,
+      "olat": 21.976,
+      "olon": -159.339
     },
     {
       "callsign": "UAL8187",
@@ -249,10 +265,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LGA LGA",
+      "dest": "YYZ YYZ",
+      "route": "LGA-YYZ",
+      "routeNote": "adsbdb route",
+      "olat": 40.7772,
+      "olon": -73.8726,
+      "dlat": 43.6772,
+      "dlon": -79.6306
     },
     {
       "callsign": "UAL8284",
