@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-13T21:01:50Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-13T21:02:18Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "AAL9828",
@@ -240,10 +240,14 @@
       "band": "8",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "IAH Houston",
+      "dest": "GRK GRK",
+      "route": "IAH-GRK",
+      "routeNote": "adsbdb route",
+      "olat": 29.9844,
+      "olon": -95.3414,
+      "dlat": 31.0672,
+      "dlon": -97.8289
     },
     {
       "callsign": "JBU8354",
@@ -280,10 +284,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BOS Boston",
+      "dest": "CHO CHO",
+      "route": "BOS-CHO",
+      "routeNote": "adsbdb route",
+      "olat": 42.3643,
+      "olon": -71.0052,
+      "dlat": 38.1386,
+      "dlon": -78.4529
     },
     {
       "callsign": "JBU8779",
@@ -299,10 +307,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SYR SYR",
+      "dest": "ATL Atlanta",
+      "route": "SYR-ATL",
+      "routeNote": "adsbdb route",
+      "dlat": 33.6367,
+      "dlon": -84.4281,
+      "olat": 43.1112,
+      "olon": -76.1063
     },
     {
       "callsign": "QXE9985",
@@ -318,10 +330,14 @@
       "band": "9",
       "cargo": false,
       "regional": true,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "GEG GEG",
+      "dest": "SFO San Francisco",
+      "route": "GEG-SFO",
+      "routeNote": "adsbdb route",
+      "dlat": 37.619,
+      "dlon": -122.375,
+      "olat": 47.6199,
+      "olon": -117.534
     },
     {
       "callsign": "SCX8404",
@@ -337,10 +353,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SHD SHD",
+      "dest": "PIB PIB",
+      "route": "SHD-PIB",
+      "routeNote": "adsbdb route",
+      "olat": 38.2638,
+      "olon": -78.8964,
+      "dlat": 31.4671,
+      "dlon": -89.3371
     },
     {
       "callsign": "SCX8630",
