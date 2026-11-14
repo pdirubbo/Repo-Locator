@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-14T07:39:37Z",
-  "source": "adsb+tfms",
+  "updated": "2026-11-14T07:41:00Z",
+  "source": "routes",
   "flights": [
     {
       "callsign": "FDX9651",
@@ -16,10 +16,14 @@
       "band": "9",
       "cargo": true,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MEM Memphis",
+      "dest": "CDG CDG",
+      "route": "MEM-CDG",
+      "routeNote": "adsbdb route",
+      "olat": 35.0424,
+      "olon": -89.9767,
+      "dlat": 49.0128,
+      "dlon": 2.55
     },
     {
       "callsign": "FFT9333",
@@ -35,10 +39,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LGA LGA",
+      "dest": "DFW Dallas",
+      "route": "LGA-DFW",
+      "routeNote": "adsbdb route",
+      "dlat": 32.8968,
+      "dlon": -97.038,
+      "olat": 40.7772,
+      "olon": -73.8726
     },
     {
       "callsign": "SWA8507",
@@ -75,10 +83,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SJC SJC",
+      "dest": "LAS Las Vegas",
+      "route": "SJC-LAS",
+      "routeNote": "adsbdb route",
+      "dlat": 36.0801,
+      "dlon": -115.152,
+      "olat": 37.3626,
+      "olon": -121.929
     },
     {
       "callsign": "SWA8521",
@@ -94,10 +106,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "SMF SMF",
+      "dest": "SJC SJC",
+      "route": "SMF-SJC",
+      "routeNote": "adsbdb route",
+      "olat": 38.6954,
+      "olon": -121.591,
+      "dlat": 37.3626,
+      "dlon": -121.929
     },
     {
       "callsign": "SWA8810",
@@ -136,10 +152,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "BNA BNA",
+      "dest": "DCA Washington",
+      "route": "BNA-DCA",
+      "routeNote": "adsbdb route",
+      "dlat": 38.8521,
+      "dlon": -77.0377,
+      "olat": 36.1245,
+      "olon": -86.6782
     },
     {
       "callsign": "UAL8225",
@@ -201,10 +221,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "IAH Houston",
+      "dest": "GDL GDL",
+      "route": "IAH-GDL",
+      "routeNote": "adsbdb route",
+      "olat": 29.9844,
+      "olon": -95.3414,
+      "dlat": 20.5218,
+      "dlon": -103.311
     },
     {
       "callsign": "VOI9486",
@@ -220,10 +244,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "LAS Las Vegas",
+      "dest": "TIJ TIJ",
+      "route": "LAS-TIJ",
+      "routeNote": "adsbdb route",
+      "olat": 36.0801,
+      "olon": -115.152,
+      "dlat": 32.5411,
+      "dlon": -116.97
     },
     {
       "callsign": "VOI9487",
@@ -239,10 +267,14 @@
       "band": "9",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "MEX MEX",
+      "dest": "GDL GDL",
+      "route": "MEX-GDL",
+      "routeNote": "adsbdb route",
+      "olat": 19.4363,
+      "olon": -99.0721,
+      "dlat": 20.5218,
+      "dlon": -103.311
     },
     {
       "callsign": "WJA8940",
@@ -258,10 +290,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YYC YYC",
+      "dest": "YXE YXE",
+      "route": "YYC-YXE",
+      "routeNote": "adsbdb route",
+      "olat": 51.1139,
+      "olon": -114.02,
+      "dlat": 52.1708,
+      "dlon": -106.7
     },
     {
       "callsign": "WJA8942",
@@ -277,10 +313,14 @@
       "band": "8",
       "cargo": false,
       "regional": false,
-      "origin": "\u2014",
-      "dest": "\u2014",
-      "route": "",
-      "routeNote": "ADS-B refresh"
+      "origin": "YQB YQB",
+      "dest": "YYZ YYZ",
+      "route": "YQB-YYZ",
+      "routeNote": "adsbdb route",
+      "olat": 46.7911,
+      "olon": -71.3933,
+      "dlat": 43.6772,
+      "dlon": -79.6306
     }
   ]
 }
